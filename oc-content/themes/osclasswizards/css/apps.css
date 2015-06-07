@@ -1,0 +1,71 @@
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:700,400);
+/*
+* Copyright 2015, http://www.osclasswizards.com/
+* Based on bootstrap framework by http://getbootstrap.com/
+*/
+
+/*reset file*/
+
+body {font: 400 12px/25px 'Open Sans', sans-serif;color: #777;
+}
+h1, h2, h3, h4, h5, h6, .listings h2 a, .detail_info h4 a {color: #4f4f4f;
+}
+a, .listings ul li.last a:hover, .language span:hover {color: #a09f9f;
+}
+a:hover, a:active, a:focus, .listings ul li.last a, .listings h2 a:hover, .detail_info h4 a:hover, .sorting a.active, .sort a.current, .language span {color: #3dc697;-webkit-transition: all 0.3s ease-in-out 0s;-moz-transition: all 0.3s ease-in-out 0s;-ms-transition: all 0.3s ease-in-out 0s;-o-transition: all 0.3s ease-in-out 0s;transition: all 0.3s ease-in-out 0s;
+}
+/*input fields*/
+
+input[type=text], input[type=password], textarea, select, .btn {font: 400 12px/35px 'Open Sans', sans-serif;
+}
+input[type=text], input[type=password], textarea, select, div.fancy-select div.trigger, div.fancy-select ul.options {background-color: #fff;border: 1px solid #eaeaea;
+}
+.btn-success:hover, .btn-focus, .contact_button a:hover, .thumbs a:hover {opacity: 0.7;-webkit-transition: all 0.3s ease-in-out 0s;-moz-transition: all 0.3s ease-in-out 0s;-ms-transition: all 0.3s ease-in-out 0s;-o-transition: all 0.3s ease-in-out 0s;transition: all 0.3s ease-in-out 0s;
+}
+/*fash messages*/
+.flashmessage-error, #error_list label, #comment_error_list label, .flashmessage-warning {background: #fed2d3;border: solid 1px #d8929c;color: #6a000c;display: block!important;
+}
+.flashmessage-info, .flashmessage-ok {border: 1px solid #c9e8a9;background-color: #eff8e6;color: #427e38;
+}
+.message_errors h3 a, .message_errors h3, #logo a, #related-searches .footer-links li a, .links a, .pagination span, .pagination a:hover, .listings h2 span, #listing-card-list li h4 span, .contact_button a, #footer, .filters h3, .search_filter li li a, #footer a:hover, #item-post h2 {color: #fff;
+}
+.message_errors h3, .pagination span, #related-searches .footer-links li a, .pagination a:hover, .listings h2 span, #listing-card-list li h4 span, .contact_button a, .title:after, .block h2:after, .search_filter li li a, .filters h3, #listing-card-list, .btn-success, .btn-success:hover, .btn-focus, #item-post h2 {background-color: #3dc697;
+}
+#contact .name, .links a:hover {color: #3dc697;
+}
+#main_search {border-bottom: 5px solid #3dc697;
+}
+.main_header, #main_search, #footer, .language ul, .message_errors h3:hover {background-color: #21292d;
+}
+.page_error, #listing-card-list, #item-content, #comment_form, .comments_list, #contact, #mask_as_form, .dashboard_form form, .block section, .dashboard_watchlist, .user-card figure, .ads_home, .ads_header, .ads_search_top, .ads_search_bottom, .ads_300 {background-color: #f8fbfc;border: 1px solid #eaeaea;
+}
+.title, .block h2 {border-bottom: 2px solid #4f4f4f;
+}
+.wraps form, .listings {border: 1px solid #eaeaea;
+}
+.wraps form {background-color: #f8fbfc;
+}
+.control-label sup {color: #F00;
+}
+#footer {border-top: solid 5px #3dc697;
+}
+/*listings*/
+
+.listings ul, .user_menu li a, .language ul li a:hover, .language ul li a.active {background-color: #f8fbfc;display: block;
+}
+#listing-card-list li {border-bottom: 1px solid #fff;
+}
+#listing-card-list li.premium {background-color: #fff;border-bottom: 1px solid #eaeaea;
+}
+#itemMap {border: solid 5px #fff;
+}
+#useful_info {background-color: #fff;
+}
+.search_filter li li a:hover, #related-searches .footer-links li a:hover {background-color: #21292d;
+}
+/*dashboard user page*/
+
+.user-items .user_menu li.opt_items a, .user-alerts .user_menu li.opt_alerts a, .user-profile .user_menu li.opt_account a, .user-change_email .user_menu li.opt_change_email a, .user-username .user_menu li.opt_change_email a, .user-usernames .user_menu li.opt_change_username a, .user-passowrd_change .user_menu li.opt_change_password a, .user_menu li a:hover {background: #3dc697;color: #fff;
+}
+.select-box-trigger {display: none;
+}
