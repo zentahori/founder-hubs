@@ -20,7 +20,7 @@ define('DB_HOST', 'us-cdbr-iron-east-02.cleardb.net');
 /** Database Table prefix */
 define('DB_TABLE_PREFIX', 'oc_');
 
-define('REL_WEB_URL', '');
+define('REL_WEB_URL', '/osclass/');
 
 define('WEB_PATH', 'https://spider-net.herokuapp.com/');
 
