@@ -82,7 +82,8 @@
           </a> </li>
       </ul>
       <?php
-            echo '<div>' . sprintf(__('Free responsive Osclass theme by <a target="_blank" title="osclasswizards" href="%s">OsclassWizards</a>','osclasswizards'), 'http://osclasswizards.com/') . '</div>';
+            // echo '<div>' . sprintf(__('Free responsive Osclass theme by <a target="_blank" title="osclasswizards" href="%s">OsclassWizards</a>','osclasswizards'), 'http://osclasswizards.com/') . '</div>';
+            echo '<div>' . sprintf(__('Copyright (C) Menatoz, Inc. All Rights Reserved.<br> This website is proudly using the <a target="_blank" title="osclasswizards" href="%s"> classifieds scripts </a> software Osclass','osclasswizards'), 'http://osclasswizards.com/') . '</div>';
         ?>
     </div>
   </div>
