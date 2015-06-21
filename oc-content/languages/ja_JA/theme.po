@@ -2,13 +2,17 @@
 # This file is distributed under the same license as the Bender package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-04-30 09:19:03+0000\n"
+"PO-Revision-Date: 2015-06-21 19:16+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/0.1\n"
+"X-Generator: Poedit 1.8.1\n"
 "Project-Id-Version: Bender\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja\n"
 
 #: functions.php:382
 msgid "Public Profile"
@@ -20,7 +24,7 @@ msgstr "添付ファイル"
 
 #: main.php:41
 msgid "There aren't listings available at this moment"
-msgstr "条件に一致する情報は、現在ありません。"
+msgstr "条件に一致する情報は、ありません。"
 
 #: search.php:75
 msgid "%1$d - %2$d of %3$d listings"
@@ -28,7 +32,7 @@ msgstr "%3$d 件中 %1$d ～ %2$d 件を表示"
 
 #: search.php:121
 msgid "Premium listings"
-msgstr "注目の広告"
+msgstr "注目案件"
 
 msgid "http://osclass.org/"
 msgstr "http://osclass.org/"
@@ -41,11 +45,11 @@ msgstr "Osclass"
 
 #: 404.php:8
 msgid "Sorry but I can't find the page you're looking for"
-msgstr "申し訳ございません。お探しのページを見つける事ができません。"
+msgstr "申し訳ございません。お探しのページは見つかりません。"
 
 #: 404.php:10
 msgid "Let us help you, we have got a few tips for you to find it."
-msgstr "お探しの情報を見つけるためのヒントを教えます。"
+msgstr "情報を見つけるためのヒント"
 
 #: 404.php:13
 msgid "<strong>Search</strong> for it:"
@@ -85,7 +89,7 @@ msgstr "ロゴの推奨サイズ 600x100px"
 
 #: admin/header.php:35
 msgid "<strong>Note:</strong> Uploading another logo will overwrite the current logo."
-msgstr "<strong>注釈</strong>新しいをロゴをアップロードすると既存のロゴが上書きされます。"
+msgstr "<strong>注釈</strong>新しいロゴをアップロードすると既存のロゴが上書きされます。"
 
 #: admin/header.php:43
 msgid "Logo image (png,gif,jpg)"
@@ -97,7 +101,7 @@ msgstr "アップロード"
 
 #: admin/header.php:58
 msgid "The images folder <strong>%s</strong> is not writable on your server"
-msgstr "お使いのサーバーでは、画像フォルダ <strong>%s</strong> は書き込み可能ではありません。"
+msgstr "お使いのサーバーでは、画像フォルダ <strong>%s</strong> は書き込みできません。"
 
 #: admin/header.php:59
 msgid "Osclass can't upload the logo image from the administration panel."
@@ -179,7 +183,8 @@ msgstr "この検索条件を登録する。"
 msgid "Subscribe now"
 msgstr "登録する。"
 
-#: common/head.php:3 item.php:157 loop-single-premium.php:26 loop-single.php:26
+#: common/head.php:3 item.php:157 loop-single-premium.php:26
+#: loop-single.php:26
 msgid "Delete"
 msgstr "削除"
 
@@ -196,7 +201,8 @@ msgstr "問い合わせる"
 msgid "Your name"
 msgstr "お名前"
 
-#: contact.php:41 contact.php:54 item-sidebar.php:84 user-public-sidebar.php:41
+#: contact.php:41 contact.php:54 item-sidebar.php:84
+#: user-public-sidebar.php:41
 msgid "optional"
 msgstr "任意"
 
@@ -240,7 +246,7 @@ msgstr "利用登録する（無料）"
 
 #: footer.php:49 header.php:54
 msgid "Publish your ad for free"
-msgstr "無料で広告を出す"
+msgstr "案件登録"
 
 #: footer.php:64 functions.php:359 user-public-sidebar.php:26
 msgid "Contact"
@@ -256,15 +262,15 @@ msgstr "例：PHPプログラマー"
 
 #: functions.php:340 item-post.php:40
 msgid "Publish a listing"
-msgstr "広告を出す"
+msgstr "案件を出稿する"
 
 #: functions.php:341
 msgid "Edit your listing"
-msgstr "広告を編集する"
+msgstr "案件を編集する"
 
 #: functions.php:342 item-send-friend.php:31
 msgid "Send to a friend"
-msgstr "友達に紹介する"
+msgstr "案件を友達にシェアする"
 
 #: functions.php:343 item-sidebar.php:40
 msgid "Contact publisher"
@@ -292,7 +298,7 @@ msgstr "アカウント"
 
 #: functions.php:349 functions.php:387 search.php:128 user-alerts.php:51
 msgid "Listings"
-msgstr "広告"
+msgstr "案件"
 
 #: functions.php:350 functions.php:392 user-alerts.php:32 user-alerts.php:37
 msgid "Alerts"
@@ -379,7 +385,7 @@ msgstr "価格"
 
 #: item-post.php:83
 msgid "Listing Location"
-msgstr "広告対象エリア"
+msgstr "案件対象エリア"
 
 #: item-post.php:86 user-profile.php:70
 msgid "Country"
@@ -403,20 +409,21 @@ msgstr "住所詳細"
 
 #: item-post.php:119
 msgid "Seller's information"
-msgstr "広告を出した人の情報"
+msgstr "案件を掲載した人の情報"
 
 #: item-post.php:121 item-sidebar.php:59 user-profile.php:46
 #: user-register.php:39
 msgid "Name"
 msgstr "名前"
 
-#: item-post.php:127 user-login.php:38 user-recover.php:37 user-register.php:45
+#: item-post.php:127 user-login.php:38 user-recover.php:37
+#: user-register.php:45
 msgid "E-mail"
 msgstr "E-mail"
 
 #: item-post.php:134
 msgid "Show e-mail on the listing page"
-msgstr "広告ページにメールアドレスを表示"
+msgstr "案件ページにメールアドレスを表示"
 
 #: item-post.php:153 user-change_email.php:59 user-change_password.php:64
 #: user-change_username.php:102 user-profile.php:113
@@ -469,15 +476,15 @@ msgstr "不適切な内容としてマークする"
 
 #: item-sidebar.php:43
 msgid "The listing is expired. You can't contact the publisher."
-msgstr "この広告は期限切れです。広告を出した人に連絡する事はできません。"
+msgstr "この案件は期限切れです。案件を出した人に連絡する事はできません。"
 
 #: item-sidebar.php:47
 msgid "It's your own listing, you can't contact the publisher."
-msgstr "これはあなたの広告です。連絡はできません。"
+msgstr "これはあなたの案件です。連絡はできません。"
 
 #: item-sidebar.php:51
 msgid "You must log in or register a new account in order to contact the advertiser"
-msgstr "広告を出した人に連絡するためには、ログインもしくはアカウントの新規作成が必要です。\n"
+msgstr "案件を出した人に連絡するためには、ログインもしくはアカウントの新規作成が必要です。"
 
 #: item-sidebar.php:61
 msgid "Name: %s"
@@ -529,7 +536,7 @@ msgstr "画像"
 
 #: item.php:113
 msgid "Contact seller"
-msgstr "広告を出した人に問い合わせる"
+msgstr "案件を出した人に問い合わせる"
 
 #: item.php:117
 msgid "Share"
@@ -557,7 +564,7 @@ msgstr "本サイトは、いかなる取引にも関与せず、支払い、発
 
 #: item.php:135
 msgid "Related listings"
-msgstr "関連する広告"
+msgstr "関連する案件"
 
 #: item.php:146
 msgid "Comments"
@@ -589,7 +596,7 @@ msgstr "アクティベート"
 
 #: main.php:38
 msgid "Latest Listings"
-msgstr "最新の広告"
+msgstr "最新の案件"
 
 #: main.php:46 search.php:81
 msgid "Grid"
@@ -597,7 +604,7 @@ msgstr "グリッド"
 
 #: main.php:57
 msgid "See all listings"
-msgstr "全ての広告を見る"
+msgstr "全ての案件を見る"
 
 #: search-sidebar.php:38
 msgid "Your search"
@@ -609,7 +616,7 @@ msgstr "見るものを限定する："
 
 #: search-sidebar.php:54
 msgid "listings with pictures"
-msgstr "画像のある広告"
+msgstr "画像のある案件"
 
 #: search-sidebar.php:62
 msgid "Min"
@@ -637,7 +644,7 @@ msgstr "選択された項目がありません。入力は"
 
 #: search.php:71
 msgid "There are no results matching \"%s\""
-msgstr "\"%s\"にマッチする広告はありませんでした。"
+msgstr "\"%s\"にマッチする案件はありませんでした。"
 
 #: search.php:78
 msgid "Show filters"
@@ -713,11 +720,11 @@ msgstr "パスワードを回復する"
 
 #: user-items.php:41
 msgid "My listings"
-msgstr "あなたの広告"
+msgstr "あなたの案件"
 
 #: user-items.php:43
 msgid "No listings have been added yet"
-msgstr "まだ広告はありません。"
+msgstr "まだ案件はありません。"
 
 #: user-login.php:30
 msgid "Access to your account"
@@ -773,7 +780,7 @@ msgstr "ユーザー詳細"
 
 #: user-public-profile.php:80
 msgid "Latest listings"
-msgstr "最新の広告"
+msgstr "最新の案件"
 
 #: user-recover.php:45
 msgid "Send me a new password"
