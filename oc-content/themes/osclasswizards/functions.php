@@ -42,7 +42,9 @@ DEFINES
     osc_enqueue_script('jquery-fineuploader');
 	
 	if( !osc_get_preference('welcome_message', 'osclasswizards_theme') ) {
-		osc_set_preference('welcome_message', _('Hello Guest, Welcome to OsclassWizards'), 'osclasswizards_theme');
+		// osc_set_preference('welcome_message', _('Hello Guest, Welcome to OsclassWizards'), 'osclasswizards_theme');
+		// No message
+		osc_set_preference('welcome_message', _(''), 'osclasswizards_theme');
     }
 	
 
