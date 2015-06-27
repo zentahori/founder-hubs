@@ -1,5 +1,5 @@
 <br>
-<h2><?php _e('Youtube video', 'youtube'); ?></h2>
+<h2><?php _e('Youtube動画 (オプション)', 'youtube'); ?></h2>
 <div class="box">
     <div class="row">
         <?php printf( __( 'Youtubeのurlを入力してください。<br> 例: <em>%s</em> または <br> <em>%s</em>', 'youtube' ), 'http://www.youtube.com/watch?v=ojqWclLQOxk', 'http://www.youtube.com/v/ojqWclLQOxk') ; ?>
