@@ -1,0 +1,17 @@
+1.01	/ Feb. 2015
+		First public version. Mainly market/composer packaging.
+
+		[+] Using Composer/Bower, 'bump_me' patch
+			- depends now on utils-1.20
+			- depends now on autoloader-1.00
+		[+] Market patch
+			- Plugin update URI
+			- Plugin URI to link to our website.
+		[*] Improved settings page
+			- Some documentation and links to our website.
+			- Using CSSR framework.
+		[!] Fix. for default theme
+			(bug fix on name attribute mainly)
+
+1.00	/ Nov. 2014
+		First release.
