@@ -115,6 +115,7 @@
           <h2>
             <?php _e('Listing Location', 'osclasswizards'); ?>
           </h2>
+<!--  // Country is unnecessary.
           <div class="form-group">
             <label class="control-label" for="country">
               <?php _e('Country', 'osclasswizards'); ?>
@@ -123,6 +124,7 @@
               <?php ItemForm::country_select(osc_get_countries(), osc_user()); ?>
             </div>
           </div>
+-->
           <div class="form-group">
             <label class="control-label" for="region">
               <?php _e('Region', 'osclasswizards'); ?>
@@ -139,6 +141,7 @@
               <?php ItemForm::city_text(osc_user()); ?>
             </div>
           </div>
+<!-- Unnecessary area
           <div class="form-group">
             <label class="control-label" for="cityArea">
               <?php _e('City Area', 'osclasswizards'); ?>
@@ -156,6 +159,7 @@
             </div>
           </div>
         </div>
+-->
         <!-- seller info -->
         <?php if(!osc_is_web_user_logged_in() ) { ?>
         <div class="box seller_info">
