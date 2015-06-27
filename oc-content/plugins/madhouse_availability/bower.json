@@ -1,0 +1,21 @@
+{
+  "name": "madhouse_availability",
+  "version": "1.01",
+  "authors": [
+    "MADHOUSE <contact.wearemadhouse@gmail.com>"
+  ],
+  "description": "This plugin extends a category of items to store availability attributes",
+  "main": "index.php",
+  "license": "Apache-2.0",
+  "homepage": "http://wearemadhouse.wordpress.com",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "cssr": "git@bitbucket.org:muchmuch/cssr.git#1.01"
+  }
+}
