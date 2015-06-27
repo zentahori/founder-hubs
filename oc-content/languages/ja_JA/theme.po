@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Bender package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-06-21 19:16+0900\n"
+"PO-Revision-Date: 2015-06-28 00:26+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -226,7 +226,7 @@ msgstr "送信"
 
 #: footer.php:34 header.php:42
 msgid "Hi %s"
-msgstr "%s さん、こんにちわ。"
+msgstr "%s さん、こんにちは！"
 
 #: footer.php:35 header.php:43
 msgid "My account"
@@ -262,7 +262,7 @@ msgstr "例：PHPプログラマー"
 
 #: functions.php:340 item-post.php:40
 msgid "Publish a listing"
-msgstr "案件を出稿する"
+msgstr "案件を掲載する"
 
 #: functions.php:341
 msgid "Edit your listing"
@@ -381,7 +381,7 @@ msgstr "詳細"
 
 #: item-post.php:72 search-sidebar.php:61
 msgid "Price"
-msgstr "価格"
+msgstr "希望金額"
 
 #: item-post.php:83
 msgid "Listing Location"
@@ -389,7 +389,7 @@ msgstr "案件対象エリア"
 
 #: item-post.php:86 user-profile.php:70
 msgid "Country"
-msgstr "国"
+msgstr "国内/海外"
 
 #: item-post.php:92 user-profile.php:76
 msgid "Region"
@@ -544,23 +544,23 @@ msgstr "シェア"
 
 #: item.php:123
 msgid "Useful information"
-msgstr "有益な情報"
+msgstr "参考情報"
 
 #: item.php:125
 msgid "Avoid scams by acting locally or paying with PayPal"
-msgstr "直接会うか、PayPalで支払うことによって、詐欺を回避できます。"
+msgstr "有料であなたの掲載案件をプレミアムとして登録することができます。プレミアム案件にて掲載されるとより注目が集まりやすなり、コンタクト数も増えます。"
 
 #: item.php:126
 msgid "Never pay with Western Union, Moneygram or other anonymous payment services"
-msgstr "Western Union、Moneygramその他、匿名の支払いサービスは避けましょう。"
+msgstr "実際に案件交渉が進んできたら、実際に当事者同士で会ってみましょう。顔の見えない関係性よりも、実際に会うことでお互いの信頼感を得ることができます。"
 
 #: item.php:127
 msgid "Don't buy or sell outside of your country. Don't accept cashier cheques from outside your country"
-msgstr "あなたの国以外での売買はやめましょう。国外からのチェック払いを受け付けてはいけません。"
+msgstr "誹謗中傷等はやめましょう。第三者に不利益を及ぼすと当サイトが判断した案件は、削除されることがあります。"
 
 #: item.php:128
 msgid "This site is never involved in any transaction, and does not handle payments, shipping, guarantee transactions, provide escrow services, or offer \"buyer protection\" or \"seller certification\""
-msgstr "本サイトは、いかなる取引にも関与せず、支払い、発送、取引の保証、エスクローサービスの提供、購入者の保護や売り主の保証といった事は一切行いません。"
+msgstr "本サイトはいかなる取引にも関与せず、当事者間でのトラブルや金銭的問題には一切の責任を持ちません。また、ここでの取引はその一切を保証するものではございません。"
 
 #: item.php:135
 msgid "Related listings"
