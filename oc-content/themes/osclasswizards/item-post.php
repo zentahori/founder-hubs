@@ -67,6 +67,14 @@
             <?php //ItemForm::category_select(null, null, __('Select a category', 'osclasswizards')); ?>
           </div>
         </div>
+        <?php
+        /*** Moved from the bottom ***/
+            if($edit) {
+                ItemForm::plugin_edit_item();
+            } else {
+                ItemForm::plugin_post_item();
+            }
+        ?>
         <div class="form-group">
           <label class="control-label" for="title[<?php echo osc_locale_code(); ?>]">
             <?php _e('Title', 'osclasswizards'); ?>
@@ -193,11 +201,11 @@
         </div>
         <?php
                         }
-                        if($edit) {
-                            ItemForm::plugin_edit_item();
-                        } else {
-                            ItemForm::plugin_post_item();
-                        }
+//                        if($edit) {
+//                            ItemForm::plugin_edit_item();
+//                        } else {
+//                            ItemForm::plugin_post_item();
+//                        }
                         ?>
         <div class="form-group">
           <?php if( osc_recaptcha_items_enabled() ) { ?>
