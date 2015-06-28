@@ -1290,7 +1290,7 @@
         }
     });
 </script>
-<div id="plugin-hook">
+<div id="plugin-hook" class="form-group">
 </div>
 <?php
         }
