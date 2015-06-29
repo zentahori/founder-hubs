@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Bender package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-06-28 00:26+0900\n"
+"PO-Revision-Date: 2015-06-30 00:07+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -232,8 +232,8 @@ msgstr "%s さん、こんにちは！"
 msgid "My account"
 msgstr "マイアカウント"
 
-#: footer.php:36 header.php:44
-msgid "Logout"
+#: footer.php:55 header.php:70
+msgid "Log out"
 msgstr "ログアウト"
 
 #: footer.php:39 functions.php:355 header.php:47 item-sidebar.php:54
@@ -259,6 +259,14 @@ msgstr "言語："
 #: functions.php:29
 msgid "ie. PHP Programmer"
 msgstr "例：PHPプログラマー"
+
+#: functions.php:251
+msgid "Categories"
+msgstr "カテゴリー一覧"
+
+#: functions.php:300
+msgid "See more listings..."
+msgstr "もっと案件を見る"
 
 #: functions.php:340 item-post.php:40
 msgid "Publish a listing"
@@ -367,7 +375,7 @@ msgstr "カテゴリを選択してください。"
 msgid "General Information"
 msgstr "一般情報"
 
-#: item-post.php:53
+#: item-post.php:53 item.php:76
 msgid "Category"
 msgstr "カテゴリ"
 
@@ -514,11 +522,13 @@ msgstr "上に表示されている文字を入力してください。"
 msgid "Help"
 msgstr "ヘルプ"
 
-#: item.php:55
-msgid "<strong class=\"publish\">Published date</strong>: %1$s"
-msgstr "<strong class=\"publish\">公開日</strong>: %1$s"
+#: item.php:80
+#, php-format
+msgid "<strong>Published date</strong>: %1$s"
+msgstr "<strong>公開日</strong>: %1$s"
 
-#: item.php:58
+#: item.php:83
+#, php-format
 msgid "<strong class=\"update\">Modified date:</strong> %1$s"
 msgstr "<strong class=\"update\">更新日:</strong> %1$s"
 
@@ -585,6 +595,27 @@ msgstr "コメントを書く（スパムや誹謗中傷などのコメントは
 #: item.php:202
 msgid "Comment"
 msgstr "コメント"
+
+#: loop-grid.php:58 loop-grid.php:111 loop-grid.php:166
+#: loop-list.php:56 loop-list.php:181
+#: loop-search-grid.php:57 loop-search-grid.php:112
+#: loop-search-grid.php:169 loop-search-list.php:56
+#: loop-search-list.php:120 loop-search-list.php:186
+#: loop-user-grid.php:56 loop-user-grid.php:160
+#: loop-user-list.php:55 loop-user-list.php:159
+msgid "Premium"
+msgstr "プレミアム"
+
+#: loop-grid.php:63 loop-grid.php:116 loop-grid.php:171
+#: loop-list.php:67 loop-list.php:126 loop-list.php:192
+#: loop-search-grid.php:62 loop-search-grid.php:117
+#: loop-search-grid.php:174 loop-search-list.php:67
+#: loop-search-list.php:131 loop-search-list.php:197
+#: loop-user-grid.php:61 loop-user-grid.php:112
+#: loop-user-grid.php:165 loop-user-list.php:60
+#: loop-user-list.php:111 loop-user-list.php:164
+msgid "Date"
+msgstr "日付"
 
 #: loop-single-premium.php:26 loop-single.php:26
 msgid "This action can not be undone. Are you sure you want to continue?"
@@ -710,6 +741,10 @@ msgstr "このユーザー名は利用可能です"
 msgid "The username is NOT available"
 msgstr "このユーザー名は利用できません"
 
+#: user-change_username.php:96
+msgid "Change Username"
+msgstr "ユーザー名を変更する"
+
 #: user-change_username.php:94
 msgid "Username"
 msgstr "ユーザー名"
@@ -725,6 +760,10 @@ msgstr "あなたの案件"
 #: user-items.php:43
 msgid "No listings have been added yet"
 msgstr "まだ案件はありません。"
+
+#: user-login.php:35
+msgid "Please Log In"
+msgstr "ログインしてください"
 
 #: user-login.php:30
 msgid "Access to your account"
@@ -797,6 +836,10 @@ msgstr "パスワードをもう一度入力してください。"
 #: user-register.php:62
 msgid "Passwords don't match"
 msgstr "パスワードが一致しません。"
+
+#: user-register.php:87
+msgid "Create An Account"
+msgstr "アカウント作成"
 
 #: user-register.php:69
 msgid "Create"
