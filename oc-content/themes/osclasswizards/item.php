@@ -73,7 +73,9 @@
       <ul class="item-header">
         <!-- Added category -->
         <li>
-          <?php if ( osc_item_category() !== '' ) { printf( __('<strong>Category</strong>: %1$s', 'osclasswizards'), osc_format_date( osc_item_category() ) ); } ?>
+          <?php if ( osc_item_category() !== '' ) { ?> 
+          <strong><?php _e('Category', 'osclasswizards');?>:</strong><?php osc_item_category(); ?>
+          <?php } ?>
         </li>
         <li>
           <?php if( osc_price_enabled_at_items() ) { ?>
