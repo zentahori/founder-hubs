@@ -71,6 +71,10 @@
     <div id="item-content">
       <h1 class="title"> <strong><?php echo osc_item_title(); ?></strong></h1>
       <ul class="item-header">
+        <!-- Added category -->
+        <li>
+          <?php if ( osc_item_category() !== '' ) { printf( __('<strong>Category</strong>: %1$s', 'osclasswizards'), osc_format_date( osc_item_category() ) ); } ?>
+        </li>
         <li>
           <?php if( osc_price_enabled_at_items() ) { ?>
           <strong><?php _e('Price', 'osclasswizards');?>:</strong><?php echo osc_item_formated_price(); ?>
