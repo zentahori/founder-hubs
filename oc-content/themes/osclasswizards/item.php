@@ -117,7 +117,7 @@
       </div>
       <?php } ?>
       <?php } ?>
-      <div id="description">
+      <div id="description" style="background-color : #FFFFFF">
         <p><?php echo osc_item_description(); ?></p>
         <div id="custom_fields">
           <?php if( osc_count_item_meta() >= 1 ) { ?>
