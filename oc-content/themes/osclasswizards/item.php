@@ -117,6 +117,13 @@
       </div>
       <?php } ?>
       <?php } ?>
+      <ul>
+        <li>
+          <strong>
+            <?php _e("Description", "osclasswizards"); ?>:
+          </strong>
+        </li>
+      </ul>
       <div id="description">
         <p style="background-color: #ffffff"><?php echo osc_item_description(); ?></p>
         <div id="custom_fields">
