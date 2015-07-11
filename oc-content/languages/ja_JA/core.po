@@ -2,13 +2,17 @@
 # This file is distributed under the same license as the Core package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-04-30 09:19:03+0000\n"
+"PO-Revision-Date: 2015-07-11 17:39+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/0.1\n"
+"X-Generator: Poedit 1.8.1\n"
 "Project-Id-Version: Core\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja\n"
 
 #: oc-admin/plugins.php:323 oc-admin/themes/modern/plugins/index.php:73
 msgid "Problems with this plugin? Ask for support."
@@ -1004,7 +1008,7 @@ msgstr "出品者へお問合せ下さい"
 
 #: oc-includes/osclass/helpers/hItems.php:1113
 msgid "Free"
-msgstr "無料"
+msgstr "なし"
 
 #: oc-includes/osclass/helpers/hSearch.php:51
 msgid "Newly listed"
@@ -3643,8 +3647,8 @@ msgid "Edit"
 msgstr "編集"
 
 #: oc-admin/admins.php:326 oc-admin/admins.php:366 oc-admin/comments.php:261
-#: oc-admin/items.php:826 oc-admin/languages.php:370 oc-admin/languages.php:426
-#: oc-admin/media.php:139 oc-admin/pages.php:283
+#: oc-admin/items.php:826 oc-admin/languages.php:370
+#: oc-admin/languages.php:426 oc-admin/media.php:139 oc-admin/pages.php:283
 #: oc-admin/themes/modern/admins/index.php:176
 #: oc-admin/themes/modern/admins/index.php:187
 #: oc-admin/themes/modern/appearance/index.php:108
@@ -3974,7 +3978,8 @@ msgstr "%sに戻る"
 msgid "Username"
 msgstr "ユーザー名"
 
-#: oc-admin/gui/login.php:48 oc-admin/themes/modern/settings/mailserver.php:134
+#: oc-admin/gui/login.php:48
+#: oc-admin/themes/modern/settings/mailserver.php:134
 #: oc-admin/themes/modern/users/frm.php:291
 #: oc-includes/osclass/install-functions.php:654
 #: oc-includes/osclass/install-functions.php:749
@@ -4124,7 +4129,8 @@ msgstr "管理者種別<em>(必須)</em>"
 msgid "Current password"
 msgstr "現在のパスワード"
 
-#: oc-admin/gui/forgot_password.php:47 oc-admin/themes/modern/admins/frm.php:97
+#: oc-admin/gui/forgot_password.php:47
+#: oc-admin/themes/modern/admins/frm.php:97
 #: oc-admin/themes/modern/users/frm.php:293
 msgid "New password"
 msgstr "新しいパスワード"

@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Bender package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-06-30 00:07+0900\n"
+"PO-Revision-Date: 2015-07-11 18:53+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.1\n"
+"X-Generator: Poedit 1.8.2\n"
 "Project-Id-Version: Bender\n"
 "POT-Creation-Date: \n"
 "Last-Translator: \n"
@@ -385,7 +385,7 @@ msgstr "タイトル"
 
 #: item-post.php:65 user-profile.php:106
 msgid "Description"
-msgstr "詳細"
+msgstr "案件詳細"
 
 #: item-post.php:72 search-sidebar.php:61
 msgid "Price"
@@ -596,23 +596,19 @@ msgstr "コメントを書く（スパムや誹謗中傷などのコメントは
 msgid "Comment"
 msgstr "コメント"
 
-#: loop-grid.php:58 loop-grid.php:111 loop-grid.php:166
-#: loop-list.php:56 loop-list.php:181
-#: loop-search-grid.php:57 loop-search-grid.php:112
-#: loop-search-grid.php:169 loop-search-list.php:56
-#: loop-search-list.php:120 loop-search-list.php:186
-#: loop-user-grid.php:56 loop-user-grid.php:160
+#: loop-grid.php:58 loop-grid.php:111 loop-grid.php:166 loop-list.php:56
+#: loop-list.php:181 loop-search-grid.php:57 loop-search-grid.php:112
+#: loop-search-grid.php:169 loop-search-list.php:56 loop-search-list.php:120
+#: loop-search-list.php:186 loop-user-grid.php:56 loop-user-grid.php:160
 #: loop-user-list.php:55 loop-user-list.php:159
 msgid "Premium"
 msgstr "プレミアム"
 
-#: loop-grid.php:63 loop-grid.php:116 loop-grid.php:171
-#: loop-list.php:67 loop-list.php:126 loop-list.php:192
-#: loop-search-grid.php:62 loop-search-grid.php:117
-#: loop-search-grid.php:174 loop-search-list.php:67
-#: loop-search-list.php:131 loop-search-list.php:197
-#: loop-user-grid.php:61 loop-user-grid.php:112
-#: loop-user-grid.php:165 loop-user-list.php:60
+#: loop-grid.php:63 loop-grid.php:116 loop-grid.php:171 loop-list.php:67
+#: loop-list.php:126 loop-list.php:192 loop-search-grid.php:62
+#: loop-search-grid.php:117 loop-search-grid.php:174 loop-search-list.php:67
+#: loop-search-list.php:131 loop-search-list.php:197 loop-user-grid.php:61
+#: loop-user-grid.php:112 loop-user-grid.php:165 loop-user-list.php:60
 #: loop-user-list.php:111 loop-user-list.php:164
 msgid "Date"
 msgstr "日付"
