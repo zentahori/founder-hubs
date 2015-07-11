@@ -30,9 +30,14 @@
     <h1>
         <strong><?php _e('Your watchlist', 'watchlist'); ?></strong>
     </h1>
+<!--
     <div id="sidebar">
         <?php echo osc_private_user_menu(); ?>
     </div>
+-->
+    <?php
+        osc_current_web_theme_path('user-sidebar.php');
+    ?>
     <div id="main">
         <?php if (osc_count_items() == 0) { ?>
         <h3><?php _e('You don\'t have any items yet', 'watchlist'); ?></h3>
