@@ -2,13 +2,17 @@
 # This file is distributed under the same license as the Flash Messages package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2014-04-30 09:19:04+0000\n"
+"PO-Revision-Date: 2015-07-12 01:04+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: GlotPress/0.1\n"
+"X-Generator: Poedit 1.8.2\n"
 "Project-Id-Version: Flash Messages\n"
+"POT-Creation-Date: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: ja\n"
 
 #: oc-admin/items.php:669
 msgid "Title Length has to be a numeric value"
@@ -103,7 +107,7 @@ msgstr "メーッセージの送信中にエラーが発生しました。"
 #: oc-includes/osclass/controller/item.php:52
 #: oc-includes/osclass/controller/item.php:101
 msgid "Only registered users are allowed to post listings"
-msgstr "登録ユーザーだけが、広告をだすことができます。"
+msgstr "登録ユーザーのみ案件を掲載することができます。"
 
 #: oc-includes/osclass/controller/item.php:166
 msgid "Your listing has been published"
@@ -429,12 +433,13 @@ msgstr "テーマのフォルダーが書き込み可能になっていません
 msgid "The theme has been installed correctly"
 msgstr "テーマがインストールされました。"
 
-#: oc-admin/appearance.php:58 oc-admin/languages.php:71 oc-admin/plugins.php:64
+#: oc-admin/appearance.php:58 oc-admin/languages.php:71
+#: oc-admin/plugins.php:64
 msgid "The zip file is not valid"
 msgstr "ZIPファイルが有効なものではありません。"
 
-#: oc-admin/appearance.php:61 oc-admin/languages.php:74 oc-admin/plugins.php:67
-#: oc-admin/tools.php:59
+#: oc-admin/appearance.php:61 oc-admin/languages.php:74
+#: oc-admin/plugins.php:67 oc-admin/tools.php:59
 msgid "No file was uploaded"
 msgstr "ファイルはアップロードされませんでした。"
 
