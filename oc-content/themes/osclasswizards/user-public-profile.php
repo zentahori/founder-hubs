@@ -65,6 +65,9 @@
 ?>
 
 <div class="row">
+  <?php
+      osc_current_web_theme_path('user-sidebar.php');
+  ?>
   <div class="col-sm-4 col-md-3">
     <div class="user-card">
       <figure><img class="img-responsive" src="http://www.gravatar.com/avatar/<?php echo md5( strtolower( trim( osc_user_email() ) ) ); ?>?s=400&d=<?php echo osc_current_web_theme_url('images/default.gif') ; ?>" /></figure>
