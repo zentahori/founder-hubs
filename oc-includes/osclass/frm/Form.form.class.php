@@ -59,7 +59,7 @@
 
         static protected function generic_textarea($name, $value) {
             $name = osc_esc_html($name);
-            echo '<textarea id="' . preg_replace('|([^_a-zA-Z0-9-]+)|', '', $name) . '" name="' . $name . '" rows="10">' . $value . '</textarea>';
+            echo '<textarea id="' . preg_replace('|([^_a-zA-Z0-9-]+)|', '', $name) . '" name="' . $name . '" rows="20">' . $value . '</textarea>';
         }
 
     }

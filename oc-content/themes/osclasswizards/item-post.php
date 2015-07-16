@@ -88,7 +88,11 @@
             <?php _e('Description', 'osclasswizards'); ?>
           </label>
           <div class="controls">
-            <?php ItemForm::description_textarea('description',osc_locale_code(), osc_esc_html( osclasswizards_item_description() )); ?>
+            <?php
+              $id = osc_category_id(); 
+              echo $id;
+              ItemForm::description_textarea('description',osc_locale_code(), osc_esc_html( get_desc_template($id) . osclasswizards_item_description() )); 
+            ?>
           </div>
         </div>
         <?php if( osc_price_enabled_at_items() ) { ?>
