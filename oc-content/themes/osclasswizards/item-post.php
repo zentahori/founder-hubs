@@ -90,7 +90,6 @@
           <div class="controls">
             <?php
               $id = osc_category_id(); 
-              echo $id;
               ItemForm::description_textarea('description',osc_locale_code(), osc_esc_html( get_desc_template($id) . osclasswizards_item_description() )); 
             ?>
           </div>
