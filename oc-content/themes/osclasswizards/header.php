@@ -64,7 +64,7 @@
           <?php } ?>
           <?php if( osc_users_enabled() ) { ?>
           <?php if( osc_is_web_user_logged_in() ) { ?>
-          <li class="first logged"> <span><?php echo sprintf(__('Hi %s', 'osclasswizards'), osc_logged_user_name() . '!'); ?> </span> <strong><a href="<?php echo osc_user_dashboard_url(); ?>">
+          <li class="first logged"> <span><?php echo sprintf(__('Hi %s', 'osclasswizards'), osc_logged_user_name()); ?> </span> <strong><a href="<?php echo osc_user_dashboard_url(); ?>">
             | <?php _e('My account', 'osclasswizards'); ?>
             </a></strong> <a href="<?php echo osc_user_logout_url(); ?>">
             | <?php _e('Log out', 'osclasswizards'); ?>
