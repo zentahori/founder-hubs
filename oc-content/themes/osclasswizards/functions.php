@@ -376,10 +376,10 @@ FUNCTIONS
     }
     // added this function for description template in founder hubs
     if( !function_exists('get_desc_template') ) {
-        function get_desc_template($id) {
-            if ($id == 96) {
+        function get_desc_template($target) {
+            if ($target == "project") {
                 $template = "[起業内容]\n\n[投資内訳・起業必要物]\n\n[予想収益]\n\n[投資家への還元方法]\n\n[起業家自己PR]\n\n";
-            } else if ($id == 97) {
+            } else if ($target == "investment") {
                 $template = "[資格・条件]\n\n[投資の目的]\n\n[重点ポイント]\n\n[投資迄の流れ]\n\n[サポート体制]\n\n";
             } else
                 $template = "";

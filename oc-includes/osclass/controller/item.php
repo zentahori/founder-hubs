@@ -92,7 +92,14 @@
 
                     osc_run_hook('post_item');
 
-                    $this->doView('item-post.php');
+                    // for target selection
+                    $target = Params::getParam('target');
+                    if ($target == "project") 
+                        $this->doView('item-post-project.php');
+                    else if ($target == "investment")
+                        $this->doView('item-post-investment.php');
+                    else
+                        $this->doView('item-post.php');
                 break;
                 case 'item_add_post': //post_item
                     osc_csrf_check();

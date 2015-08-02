@@ -342,6 +342,34 @@
     }
 
     /**
+     *  Create automatically the url to post an item for project
+     *
+     * @return string
+     */
+    function osc_item_post_url_for_project() {
+        if ( osc_rewrite_enabled() ) {
+            $path = osc_base_url() . osc_get_preference('rewrite_item_new');
+        } else {
+            $path = osc_base_url(true) . '?page=item&action=item_add&target=project';
+        }
+        return $path;
+    }
+
+    /**
+     *  Create automatically the url to post an item for investment
+     *
+     * @return string
+     */
+    function osc_item_post_url_for_investment() {
+        if ( osc_rewrite_enabled() ) {
+            $path = osc_base_url() . osc_get_preference('rewrite_item_new');
+        } else {
+            $path = osc_base_url(true) . '?page=item&action=item_add&target=investment';
+        }
+        return $path;
+    }
+
+    /**
      * Create automatically the url of a category
      *
      * @param string $pattern

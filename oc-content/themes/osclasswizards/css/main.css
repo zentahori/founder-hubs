@@ -188,7 +188,7 @@ div.fancy-select ul.options li.hover {background-color: #3dc697;color: #fff;
 }
 .links a {display: block;font-size: 15px;font-weight: 700;text-transform: uppercase;
 }
-.publish {float: right;
+.publish {float: right;margin: 10px;
 }
 #main_search {padding: 15px 0;
 }
