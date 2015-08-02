@@ -47,7 +47,7 @@ msgstr "Osclass"
 msgid "Sorry but I can't find the page you're looking for"
 msgstr "申し訳ございません。お探しのページは見つかりません。"
 
-#: 404.php:10
+#: 404.php:37
 msgid "Let us help you, we have got a few tips for you to find it."
 msgstr "情報を見つけるためのヒント"
 
