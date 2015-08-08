@@ -110,16 +110,8 @@
         </ul>
         <div class="publish">
           <?php if( osc_users_enabled() || ( !osc_users_enabled() && !osc_reg_user_post() )) { ?>
-          <a class="btn btn-success" href="<?php echo osc_item_post_url_for_project() ; ?>">
-          <?php _e("Publish your new project for free", 'osclasswizards');?>
-          </a>
-          <?php } ?>
-
-          <font color="white" size=4> <?php _e('Publish your new project', 'osclasswizards'); ?> </font>
-
-          <?php if( osc_users_enabled() || ( !osc_users_enabled() && !osc_reg_user_post() )) { ?>
-          <a class="btn btn-success" href="<?php echo osc_item_post_url_for_investment() ; ?>">
-          <?php _e("Publish your new investment offer for free", 'osclasswizards');?>
+          <a class="btn btn-success" href="<?php echo osc_item_post_url_in_category() ; ?>">
+          <?php _e("Publish your ad for free", 'osclasswizards');?>
           </a>
           <?php } ?>
         </div>

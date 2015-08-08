@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Bender package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-08-01 22:39+0900\n"
+"PO-Revision-Date: 2015-07-11 18:53+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.1\n"
+"X-Generator: Poedit 1.8.2\n"
 "Project-Id-Version: Bender\n"
 "POT-Creation-Date: \n"
 "Last-Translator: \n"
@@ -244,17 +244,9 @@ msgstr "ログイン"
 msgid "Register for a free account"
 msgstr "利用登録する（無料）"
 
-#: footer.php:49 header.php:114
-msgid "Publish your new investment offer for free"
-msgstr "投資家の方はこちら"
-
-#: footer.php:49 header.php:121
-msgid "Publish your new project for free"
-msgstr "起業家の方はこちら"
-
-#: header.php:119
-msgid "Publish your new project"
-msgstr "←案件登録する→"
+#: footer.php:49 header.php:54
+msgid "Publish your ad for free"
+msgstr "案件登録"
 
 #: footer.php:64 functions.php:359 user-public-sidebar.php:26
 msgid "Contact"
