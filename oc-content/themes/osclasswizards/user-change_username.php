@@ -108,6 +108,7 @@ $(document).ready(function() {
         <label class="control-label" for="s_username">
           <?php _e('Username', OSCLASSWIZARDS_THEME_FOLDER); ?>
         </label>
+          <br><?php _e("* Username is not shown in the front page. This is used for an identifier in the atabase.", OSCLASSWIZARDS_THEME_FOLDER);?>
         <div class="controls">
           <input type="text" name="s_username" id="s_username" value="" />
           <div id="available"></div>
@@ -123,4 +124,5 @@ $(document).ready(function() {
     </form></div>
   </div>
 </div>
+
 <?php osc_current_web_theme_path('footer.php') ; ?>
