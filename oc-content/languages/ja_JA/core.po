@@ -2,7 +2,7 @@
 # This file is distributed under the same license as the Core package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-07-11 17:39+0900\n"
+"PO-Revision-Date: 2015-08-08 19:39+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -354,12 +354,12 @@ msgstr "検索結果"
 #: oc-includes/osclass/classes/Breadcrumb.php:322
 #: oc-includes/osclass/functions.php:190
 msgid "Publish a listing"
-msgstr "広告を公開する"
+msgstr "案件を公開する"
 
 #: oc-includes/osclass/classes/Breadcrumb.php:323
 #: oc-includes/osclass/functions.php:191
 msgid "Edit your listing"
-msgstr "広告を編修する"
+msgstr "案件を編修する"
 
 #: oc-includes/osclass/classes/Breadcrumb.php:324
 #: oc-includes/osclass/functions.php:192
@@ -388,7 +388,7 @@ msgstr "ページ"
 
 #: oc-includes/osclass/functions.php:222
 msgid "Show all listings"
-msgstr "全ての広告を表示"
+msgstr "全ての案件を表示"
 
 #: oc-includes/osclass/classes/Breadcrumb.php:338
 #: oc-includes/osclass/functions.php:257
@@ -407,7 +407,7 @@ msgstr "新しいアカウントを作成する"
 
 #: oc-includes/osclass/functions.php:267
 msgid "Manage my listings"
-msgstr "広告を管理"
+msgstr "案件を管理"
 
 #: oc-includes/osclass/functions.php:268
 msgid "Manage my alerts"
@@ -772,7 +772,7 @@ msgstr "アカウント"
 
 #: oc-includes/osclass/classes/Breadcrumb.php:331
 msgid "My listings"
-msgstr "自分の出している広告"
+msgstr "自分の出している案件"
 
 #: oc-includes/osclass/classes/Breadcrumb.php:332
 msgid "My alerts"
@@ -1192,7 +1192,7 @@ msgstr "pm"
 
 #: oc-includes/osclass/helpers/hUtils.php:172
 msgid "Manage your listings"
-msgstr "広告を管理"
+msgstr "案件を管理"
 
 #: oc-includes/osclass/helpers/hUtils.php:173
 msgid "Manage your alerts"
@@ -1500,7 +1500,7 @@ msgstr "アカウンティング、ファイナンス"
 
 #: oc-includes/osclass/installer/basic_data.php:79
 msgid "Advertising - Public Relations"
-msgstr "広告、PR"
+msgstr "案件PR"
 
 #: oc-includes/osclass/installer/basic_data.php:80
 msgid "Arts - Entertainment - Publishing"
@@ -1798,7 +1798,7 @@ msgstr ".PNG形式の画像である必要があります"
 
 #: oc-admin/themes/modern/settings/permalinks.php:592
 msgid "User listings"
-msgstr "ユーザーの公開している広告"
+msgstr "ユーザーの公開している案件"
 
 #: oc-admin/themes/modern/upgrade/index.php:66
 msgid "Upgrade now"
@@ -1934,7 +1934,7 @@ msgstr[0] "%s 個のエリアが削除されました"
 
 #: oc-admin/themes/modern/admins/frm.php:83
 msgid "Administrators have total control over all aspects of your installation, while moderators are only allowed to moderate listings, comments and media files"
-msgstr "管理者権限を持つユーザーは、Osclassに対して全ての権限を持っています。モデレーターは広告の管理ができるだけです。"
+msgstr "管理者権限を持つユーザーは、Osclassに対して全ての権限を持っています。モデレーターは案件の管理ができるだけです。"
 
 #: oc-admin/themes/modern/admins/frm.php:92
 msgid "If you want to change your password, type your current password here. Otherwise, leave this blank."
@@ -1954,7 +1954,7 @@ msgstr "1日"
 
 #: oc-admin/themes/modern/admins/index.php:20
 msgid "Add users who can manage your page. You can add admins or moderators: admins have access to the whole admin panel while moderators can only modify listings and see stats."
-msgstr "ページを管理できるユーザーを追加してください。管理者またはモデレーターを追加できます。管理者は管理者用パネル全体に対してアクセス権を持ちますが、モデレーターは広告の管理と統計の閲覧ができるだけです。"
+msgstr "ページを管理できるユーザーを追加してください。管理者またはモデレーターを追加できます。管理者は管理者用パネル全体に対してアクセス権を持ちますが、モデレーターは案件の管理と統計の閲覧ができるだけです。"
 
 #: oc-admin/themes/modern/items/frm.php:258
 msgid "Update expiration?"
@@ -2047,7 +2047,7 @@ msgstr "Ajaxエラーです。もう一度お試しください。"
 
 #: oc-admin/themes/modern/categories/index.php:25
 msgid "Add, edit or delete the categories or subcategories in which users can post listings. Reorder sections by dragging and dropping, or nest a subcategory in an expanded category. <strong>Be careful</strong>: If you delete a category, all listings associated will also be deleted!"
-msgstr "広告のカテゴリ、サブカテゴリを追加・編集・削除します。ドラッグアンドドロップで順番の入れ替えやサブカテゴリの包含などの操作ができます。<strong>注意</strong>: カテゴリを削除すると、そのカテゴリに分類された広告も全て失われます！"
+msgstr "案件のカテゴリ、サブカテゴリを追加・編集・削除します。ドラッグアンドドロップで順番の入れ替えやサブカテゴリの包含などの操作ができます。<strong>注意</strong>: カテゴリを削除すると、そのカテゴリに分類された案件も全て失われます！"
 
 #: oc-admin/themes/modern/categories/index.php:100
 msgid "Note: You must expand the category in order to make it a subcategory."
@@ -2064,7 +2064,7 @@ msgstr "カテゴリを削除"
 
 #: oc-admin/themes/modern/categories/index.php:382
 msgid "<strong>WARNING</strong>: This will also delete the listings under that category. This action cannot be undone. Are you sure you want to continue?"
-msgstr "<strong>注意</strong>: この操作によって、本カテゴリに分類された広告も全て削除されます。この操作はやり直しができません。本当に続けますか？"
+msgstr "<strong>注意</strong>: この操作によって、本カテゴリに分類された案件も全て削除されます。この操作はやり直しができません。本当に続けますか？"
 
 #: oc-admin/themes/modern/comments/frm.php:75
 msgid "Registered user"
@@ -2072,7 +2072,7 @@ msgstr "登録ユーザー"
 
 #: oc-admin/themes/modern/comments/index.php:20
 msgid "Manage the comments that users publish on the listings on your site. You can also edit, delete, activate or block comments."
-msgstr "広告につけられたコメントを管理できます。編集、削除、ブロックなどができます。"
+msgstr "案件につけられたコメントを管理できます。編集、削除、ブロックなどができます。"
 
 #: oc-admin/themes/modern/items/frm.php:218
 msgid "Ip Address"
@@ -2093,7 +2093,7 @@ msgstr "凡例"
 
 #: oc-admin/themes/modern/emails/index.php:20
 msgid "Modify the emails your site's users receive when they join your site, when someone shows interest in their ad, to recover their password... <strong>Be careful</strong>: don't modify any of the words that appear within brackets."
-msgstr "新規登録時、広告に対して反応があった時、パスワードを復旧したい時など、ユーザーが受け取る各種メールを編集するにはこちらから。<strong>注意</strong>: 括弧書きされた単語は編集しないでください。"
+msgstr "新規登録時、案件に対して反応があった時、パスワードを復旧したい時など、ユーザーが受け取る各種メールを編集するにはこちらから。<strong>注意</strong>: 括弧書きされた単語は編集しないでください。"
 
 #: oc-admin/themes/modern/emails/index.php:33
 msgid "Email templates &raquo; %s"
@@ -2109,7 +2109,7 @@ msgstr "属性を適用したいカテゴリを選択してください："
 
 #: oc-admin/themes/modern/fields/index.php:26
 msgid "Create new fields for users to fill out when they publish a listing. You can require extra  information such as the number of bedrooms in real estate listings or fuel type in car listings, for example."
-msgstr "広告を公開するときにユーザーに入力を求めたい追加項目を作成します。追加項目の例としては、不動産の広告であればベッドルームの数、自動車の広告であれば燃料種別などです。"
+msgstr "案件を公開するときにユーザーに入力を求めたい追加項目を作成します。追加項目の例としては、不動産の案件であればベッドルームの数、自動車の案件であれば燃料種別などです。"
 
 #: oc-admin/themes/modern/functions.php:63
 msgid "Thank you for using <a href=\"%s\" target=\"_blank\">Osclass</a>"
@@ -2117,7 +2117,7 @@ msgstr "<a href=\"%s\" target=\"_blank\">Osclass</a>のご利用ありがとう�
 
 #: oc-admin/themes/modern/items/index.php:22
 msgid "Manage all the listings on your site: edit, delete or block the latest listings published. You can also filter by several parameters: user, region, city, etc."
-msgstr "編集、削除、ブロックなど、公開された広告の管理ができます。ユーザー、地方、市区町村など複数の条件でフィルターもできます。"
+msgstr "編集、削除、ブロックなど、公開された案件の管理ができます。ユーザー、地方、市区町村など複数の条件でフィルターもできます。"
 
 #: oc-admin/themes/modern/items/index.php:226
 #: oc-admin/themes/modern/items/index.php:325
@@ -2135,31 +2135,31 @@ msgstr "本当に選択されたアイテムを%sしてもいいですか？"
 
 #: oc-admin/themes/modern/items/reported.php:141
 msgid "Are you sure you want to clear all the reportings of the selected items?"
-msgstr "選択された広告に関して、全ての報告をクリアしますか？"
+msgstr "選択された案件に関して、全ての報告をクリアしますか？"
 
 #: oc-admin/themes/modern/items/reported.php:142
 msgid "Are you sure you want to clear the spam reportings of the selected items?"
-msgstr "選択された広告に関して、スパムという報告をクリアしますか？"
+msgstr "選択された案件に関して、スパムという報告をクリアしますか？"
 
 #: oc-admin/themes/modern/items/reported.php:143
 msgid "Are you sure you want to clear the misclassified reportings of the selected items?"
-msgstr "選択された広告に関して、誤った分類という報告をクリアしますか？"
+msgstr "選択された案件に関して、誤った分類という報告をクリアしますか？"
 
 #: oc-admin/themes/modern/items/reported.php:144
 msgid "Are you sure you want to clear the duplicated reportings of the selected items?"
-msgstr "選択された広告に関して、二重投稿という報告をクリアしますか？"
+msgstr "選択された案件に関して、二重投稿という報告をクリアしますか？"
 
 #: oc-admin/themes/modern/items/reported.php:145
 msgid "Are you sure you want to clear the expired reportings of the selected items?"
-msgstr "選択された広告に関して、期限切れという報告をクリアしますか？"
+msgstr "選択された案件に関して、期限切れという報告をクリアしますか？"
 
 #: oc-admin/themes/modern/items/reported.php:146
 msgid "Are you sure you want to clear the offensive reportings of the selected items?"
-msgstr "選択された広告に関して、悪意のある投稿という報告をクリアしますか？"
+msgstr "選択された案件に関して、悪意のある投稿という報告をクリアしますか？"
 
 #: oc-admin/themes/modern/items/settings.php:20
 msgid "Modify the general settings for your listings. Decide if users have to register in order to publish something, the number of pictures allowed for each listing, etc."
-msgstr "一般的な広告設定を編集するにはこちらから。ユーザーが広告を掲載する際のユーザー登録の要否や、各広告に登録できる画像の数の設定などがあります。"
+msgstr "一般的な案件設定を編集するにはこちらから。ユーザーが案件を掲載する際のユーザー登録の要否や、各案件に登録できる画像の数の設定などがあります。"
 
 #: oc-admin/themes/modern/items/settings.php:84
 msgid "If the value is set to zero, there is no wait period"
@@ -2167,19 +2167,19 @@ msgstr "値が0に設定されていれば、待ち時間はありません"
 
 #: oc-admin/themes/modern/items/settings.php:95
 msgid "After %s validated listings the user doesn't need to validate the listings any more"
-msgstr "広告の検証を%s回行った後は、ユーザーは広告の検証をする必要がなくなります"
+msgstr "案件の検証を%s回行った後は、ユーザーは案件の検証をする必要がなくなります"
 
 #: oc-admin/themes/modern/items/settings.php:128
 msgid "Allow attached files in contact publisher form"
-msgstr "広告をだした人に連絡する際、添付ファイルを許可する"
+msgstr "案件をだした人に連絡する際、添付ファイルを許可する"
 
 #: oc-admin/themes/modern/items/settings.php:145
 msgid "Send admin a copy of the \"contact publisher\" email"
-msgstr "「広告を出した人に連絡する」メール送信時に、管理者にCC送信する"
+msgstr "「案件を出した人に連絡する」メール送信時に、管理者にCC送信する"
 
 #: oc-admin/themes/modern/items/settings.php:151
 msgid "Send admin a copy to \"share listing\" email"
-msgstr "「広告をシェアする」メール送信時に、管理者にCC送信する"
+msgstr "「案件をシェアする」メール送信時に、管理者にCC送信する"
 
 #: oc-admin/themes/modern/items/settings.php:196
 msgid "If the value is zero, it means an unlimited number of images is allowed"
@@ -2310,7 +2310,7 @@ msgstr "最終更新内容"
 
 #: oc-admin/themes/modern/media/index.php:20
 msgid "Manage the images that users have uploaded along with their listings. You can delete them without deleting the whole listing if the image is inappropriate or doesn’t match the listing."
-msgstr "ユーザーが広告に添付した画像の管理ができます。不適切または広告と無関係の画像がある場合に、広告を残したまま画像のみ削除できます。"
+msgstr "ユーザーが案件に添付した画像の管理ができます。不適切または案件と無関係の画像がある場合に、案件を残したまま画像のみ削除できます。"
 
 #: oc-admin/themes/modern/media/index.php:58
 msgid "Delete media"
@@ -2375,7 +2375,7 @@ msgstr "ページあたりコメント数：数字のみ入力可"
 
 #: oc-admin/themes/modern/settings/comments.php:80
 msgid "Modify the options that allow your users to publish comments on your site's listings."
-msgstr "掲載されている広告に対してつけられるコメントを、ユーザーが公開する権限を編集するにはこちらから。"
+msgstr "掲載されている案件に対してつけられるコメントを、ユーザーが公開する権限を編集するにはこちらから。"
 
 #: oc-admin/themes/modern/settings/comments.php:93
 msgid "Comment Settings &raquo; %s"
@@ -2407,11 +2407,11 @@ msgstr "新しいコメントが投稿されました"
 
 #: oc-admin/themes/modern/settings/comments.php:156
 msgid "There's a new comment on his listing"
-msgstr "広告に新しいコメントがあります"
+msgstr "案件に新しいコメントがあります"
 
 #: oc-admin/themes/modern/settings/currencies.php:20
 msgid "Add new currencies or edit existing currencies so users can publish listings in their country's currency."
-msgstr "ユーザーが自国の通貨で広告を投稿できるように、新しい通貨を追加する、もしくは既存の通貨を編集する"
+msgstr "ユーザーが自国の通貨で案件を投稿できるように、新しい通貨を追加する、もしくは既存の通貨を編集する"
 
 #: oc-admin/themes/modern/settings/currencies.php:133
 msgid "Are you sure you want to %s the selected currencies?"
@@ -2435,19 +2435,19 @@ msgstr "通貨の記号"
 
 #: oc-admin/themes/modern/settings/index.php:65
 msgid "Listings shown in RSS feed: this field is required"
-msgstr "RSSフィードに表示する広告：必須"
+msgstr "RSSフィードに表示する案件：必須"
 
 #: oc-admin/themes/modern/settings/index.php:66
 msgid "Listings shown in RSS feed: this field must only contain numeric characters"
-msgstr "RSSフィードに表示する広告：数字のみ入力可"
+msgstr "RSSフィードに表示する案件：数字のみ入力可"
 
 #: oc-admin/themes/modern/settings/index.php:69
 msgid "Latest listings shown: this field is required"
-msgstr "最新の広告を表示：必須"
+msgstr "最新の案件を表示：必須"
 
 #: oc-admin/themes/modern/settings/index.php:70
 msgid "Latest listings shown: this field must only contain numeric characters"
-msgstr "最新の広告を表示：数字のみ入力可"
+msgstr "最新の案件を表示：数字のみ入力可"
 
 #: oc-admin/themes/modern/settings/index.php:74
 msgid "The search page shows: this field must only contain numeric characters"
@@ -2455,11 +2455,11 @@ msgstr "検索ページの表示件数：このフィールドは数字しか入
 
 #: oc-admin/themes/modern/settings/index.php:126
 msgid "Change the basic configuration of your Osclass. From here, you can modify variables such as the site’s name, the default currency or how lists of listings are displayed. <strong>Be careful</strong> when modifying default values if you're not sure what you're doing!"
-msgstr "Osclassの基本設定を変更する。サイト名、通貨、広告の表示方法などを設定できます。<strong>注意</strong> 初期値の変更に伴う影響範囲を正しく認識するようにしてください。"
+msgstr "Osclassの基本設定を変更する。サイト名、通貨、案件の表示方法などを設定できます。<strong>注意</strong> 初期値の変更に伴う影響範囲を正しく認識するようにしてください。"
 
 #: oc-admin/themes/modern/settings/index.php:266
 msgid "Latest listings shown"
-msgstr "最新の広告を表示"
+msgstr "最新の案件を表示"
 
 #: oc-admin/themes/modern/settings/index.php:269
 msgid "at most"
@@ -2475,7 +2475,7 @@ msgstr "カテゴリ設定"
 
 #: oc-admin/themes/modern/settings/index.php:286
 msgid "Allow users to select a parent category as a category when inserting or editing a listing "
-msgstr "広告を登録または編集する際、カテゴリーとして親カテゴリを選択する事を許可する"
+msgstr "案件を登録または編集する際、カテゴリーとして親カテゴリを選択する事を許可する"
 
 #: oc-admin/themes/modern/settings/index.php:310
 msgid "Allow Osclass to run a built-in <a href=\"%s\" target=\"_blank\">cron</a> automatically without setting crontab"
@@ -2521,7 +2521,7 @@ msgstr "最大サイズ：数字のみ入力可"
 
 #: oc-admin/themes/modern/settings/media.php:148
 msgid "Manage the options for the images users can upload along with their listings. You can limit their size, the number of images per ad, include a watermark, etc."
-msgstr "広告に添付できる画像に関する各種オプションを管理します。画像サイズ、画像点数、ウォーターマークを含めるかどうかなどを設定可能です。"
+msgstr "案件に添付できる画像に関する各種オプションを管理します。画像サイズ、画像点数、ウォーターマークを含めるかどうかなどを設定可能です。"
 
 #: oc-admin/themes/modern/settings/media.php:175
 msgid "Image sizes"
@@ -2601,11 +2601,11 @@ msgstr "クエリの保存期間"
 
 #: oc-admin/themes/modern/settings/spamNbots.php:24
 msgid "Keep spammers from publishing on your site by configuring reCAPTCHA and Akismet. Be careful: in order to use these services, you must register on their sites first and follow their instructions."
-msgstr "スパマーが広告を投稿することをreCAPTCHAとAkismetで防ぐ。注意：サービスの利用には、各サイトでの登録および手続きが必要です。"
+msgstr "スパマーが案件を投稿することをreCAPTCHAとAkismetで防ぐ。注意：サービスの利用には、各サイトでの登録および手続きが必要です。"
 
 #: oc-admin/themes/modern/stats/comments.php:41
 msgid "See how many comments the listings published on your site have received."
-msgstr "サイト上の広告につけられたコメント件数を確認する"
+msgstr "サイト上の案件につけられたコメント件数を確認する"
 
 #: oc-admin/themes/modern/stats/comments.php:54
 msgid "Comment Statistics &raquo; %s"
@@ -2650,7 +2650,7 @@ msgstr "新規登録者数"
 
 #: oc-admin/themes/modern/stats/reports.php:38
 msgid "See how many listings from your site have been reported as spam, expired, duplicate, etc."
-msgstr "サイト上の広告のうち、何件がスパム、期限切れ、二重登録等と報告された件数を確認する"
+msgstr "サイト上の案件のうち、何件がスパム、期限切れ、二重登録等と報告された件数を確認する"
 
 #: oc-admin/themes/modern/stats/reports.php:51
 msgid "Report Statistics &raquo; %s"
@@ -2670,7 +2670,7 @@ msgstr "ユーザー統計&raquo; %s"
 
 #: oc-admin/themes/modern/tools/backup.php:37
 msgid "Save a backup of all of your site's information: listings, users and configuration. You can save a backup on your server or on your computer."
-msgstr "サイトの全情報のバックアップを保存：広告、ユーザー、各種設定が対象です。サーバー上もしくは自分のコンピューター上に保存することができます。"
+msgstr "サイトの全情報のバックアップを保存：案件、ユーザー、各種設定が対象です。サーバー上もしくは自分のコンピューター上に保存することができます。"
 
 #: oc-admin/themes/modern/tools/backup.php:69
 msgid "<strong>WARNING</strong>: If you don't specify a backup folder, the backup files will be created in the root of your Osclass installation."
@@ -2758,7 +2758,7 @@ msgstr "本当にこのアラートを削除してもよろしいですか？"
 
 #: oc-admin/themes/modern/users/ban.php:20
 msgid "Add, edit or delete ban rules. Keep in mind that ban rules prevent users to register, publish or comment on listings."
-msgstr "禁止ルールを追加・編集・削除する。禁止ルールはユーザーの登録、広告の公開、広告へのコメントを防ぐためのものです。"
+msgstr "禁止ルールを追加・編集・削除する。禁止ルールはユーザーの登録、案件の公開、案件へのコメントを防ぐためのものです。"
 
 #: oc-admin/themes/modern/users/ban.php:36
 msgid "Manage ban rules &raquo; %s"
@@ -2846,7 +2846,7 @@ msgstr "<b>カテゴリ:</b> %s"
 
 #: oc-admin/themes/modern/users/index.php:20
 msgid "Add, edit or delete information associated to registered users. Keep in mind that deleting a user also deletes all the listings the user published."
-msgstr "登録ユーザーに関連する情報を追加・編集・削除する。ユーザーを削除すると、そのユーザーが登録した広告も一緒に削除されます。"
+msgstr "登録ユーザーに関連する情報を追加・編集・削除する。ユーザーを削除すると、そのユーザーが登録した案件も一緒に削除されます。"
 
 #: oc-admin/themes/modern/users/index.php:317
 msgid "Delete user"
@@ -2912,7 +2912,7 @@ msgstr "ユーザーの電子メール"
 
 #: oc-includes/osclass/classes/EmailVariables.php:60
 msgid "List of listings, used when send alerts"
-msgstr "広告一覧、通知を送る際に使用"
+msgstr "案件一覧、通知を送る際に使用"
 
 #: oc-includes/osclass/classes/EmailVariables.php:64
 msgid "Title of your site"
@@ -2952,35 +2952,35 @@ msgstr "コメント本文"
 
 #: oc-includes/osclass/classes/EmailVariables.php:73
 msgid "Listing url"
-msgstr "広告URL"
+msgstr "案件URL"
 
 #: oc-includes/osclass/classes/EmailVariables.php:74
 msgid "Listing list"
-msgstr "広告一覧"
+msgstr "案件一覧"
 
 #: oc-includes/osclass/classes/EmailVariables.php:75
 msgid "Listing title"
-msgstr "広告タイトル"
+msgstr "案件タイトル"
 
 #: oc-includes/osclass/classes/EmailVariables.php:76
 msgid "Listing id"
-msgstr "広告ID"
+msgstr "案件ID"
 
 #: oc-includes/osclass/classes/EmailVariables.php:77
 msgid "Link for edit listing"
-msgstr "広告編集用リンク"
+msgstr "案件編集用リンク"
 
 #: oc-includes/osclass/classes/EmailVariables.php:78
 msgid "Url for edit listing"
-msgstr "広告の編集用URL"
+msgstr "案件の編集用URL"
 
 #: oc-includes/osclass/classes/EmailVariables.php:79
 msgid "Delete listing link"
-msgstr "広告削除用リンク"
+msgstr "案件削除用リンク"
 
 #: oc-includes/osclass/classes/EmailVariables.php:80
 msgid "Delete listing url"
-msgstr "広告削除URL"
+msgstr "案件削除URL"
 
 #: oc-includes/osclass/classes/EmailVariables.php:81
 msgid "Change user password link"
@@ -3004,7 +3004,7 @@ msgstr "送付を希望する友達のメールアドレス"
 
 #: oc-includes/osclass/classes/EmailVariables.php:86
 msgid "Question about your listing"
-msgstr "広告に関してお問い合わせ"
+msgstr "案件に関してお問い合わせ"
 
 #: oc-includes/osclass/classes/EmailVariables.php:87
 msgid "Contact name"
@@ -3016,11 +3016,11 @@ msgstr "ユーザー電話番号"
 
 #: oc-includes/osclass/classes/EmailVariables.php:89
 msgid "Listing description"
-msgstr "広告の詳細説明"
+msgstr "案件の詳細説明"
 
 #: oc-includes/osclass/classes/EmailVariables.php:90
 msgid "Listing description in all languages"
-msgstr "広告の詳細説明を全言語で表示する"
+msgstr "案件の詳細説明を全言語で表示する"
 
 #: oc-includes/osclass/classes/EmailVariables.php:91
 msgid "Listing price"
@@ -3028,15 +3028,15 @@ msgstr "掲載各区"
 
 #: oc-includes/osclass/classes/EmailVariables.php:92
 msgid "Listing country"
-msgstr "広告対象国"
+msgstr "案件対象国"
 
 #: oc-includes/osclass/classes/EmailVariables.php:93
 msgid "Listing region"
-msgstr "広告される地方"
+msgstr "案件される地方"
 
 #: oc-includes/osclass/classes/EmailVariables.php:94
 msgid "Listing city"
-msgstr "広告される市区町村"
+msgstr "案件される市区町村"
 
 #: oc-includes/osclass/classes/datatables/AlertsDataTable.php:56
 msgid "Alert"
@@ -3093,7 +3093,7 @@ msgstr "Description はもっと長くする必要があります"
 
 #: oc-includes/osclass/frm/Item.form.class.php:1180
 msgid "Sorry, you have reached the maximum number of images per listing"
-msgstr "申し訳ありません。１広告あたりの最大画像数を超過しました。"
+msgstr "申し訳ありません。１案件あたりの最大画像数を超過しました。"
 
 #: oc-includes/osclass/frm/Language.form.class.php:142
 msgid "Number of decimals: this field must only contain numeric characters"
@@ -3290,11 +3290,11 @@ msgstr "Osclassに利用統計やクラッシュレポートを自動送信し�
 
 #: oc-includes/osclass/installer/basic_data.php:104
 msgid "Example Ad"
-msgstr "広告の例"
+msgstr "案件の例"
 
 #: oc-includes/osclass/installer/basic_data.php:105
 msgid "Description of the example ad. Insert here some usefull description of your ad."
-msgstr "サンプル広告の詳細。広告に関する有用な説明をここに加えましょう。"
+msgstr "サンプル案件の詳細。案件に関する有用な説明をここに加えましょう。"
 
 #: oc-includes/osclass/installer/basic_data.php:106
 msgid "Example author"
@@ -3524,7 +3524,7 @@ msgstr "%d日"
 
 #: oc-admin/themes/modern/items/settings.php:162
 msgid "This option will send an email X days before an ad expires to the author. 0 for no email."
-msgstr "この設定では、広告が期限切れになるX日前に広告を出したユーザーに通知メールを送ります。0と設定するとメールが送られません。"
+msgstr "この設定では、案件が期限切れになるX日前に案件を出したユーザーに通知メールを送ります。0と設定するとメールが送られません。"
 
 #: oc-admin/themes/modern/items/settings.php:160
 msgid "days"
@@ -3624,11 +3624,11 @@ msgstr "管理者"
 
 #: oc-includes/osclass/controller/search.php:449
 msgid "Latest listings added"
-msgstr "最新の広告"
+msgstr "最新の案件"
 
 #: oc-includes/osclass/controller/search.php:451
 msgid "Latest listings added in"
-msgstr "最新の広告"
+msgstr "最新の案件"
 
 #: oc-admin/admins.php:325 oc-admin/emails.php:132 oc-admin/languages.php:367
 #: oc-admin/themes/modern/appearance/widgets.php:87
@@ -4021,7 +4021,7 @@ msgstr "新しいパスワードを入手する"
 
 #: oc-admin/themes/modern/main/index.php:181
 msgid "Listings by category"
-msgstr "カテゴリー別の広告"
+msgstr "カテゴリー別の案件"
 
 #: oc-admin/themes/modern/comments/frm.php:37
 #: oc-admin/themes/modern/comments/index.php:25
@@ -4034,7 +4034,7 @@ msgstr "カテゴリー別の広告"
 #: oc-admin/themes/modern/main/index.php:198
 #: oc-includes/osclass/classes/AdminMenu.php:56
 msgid "Listing"
-msgstr "広告"
+msgstr "案件"
 
 #: oc-admin/themes/modern/items/reported.php:25
 #: oc-admin/themes/modern/main/index.php:52
@@ -4042,11 +4042,11 @@ msgstr "広告"
 #: oc-admin/themes/modern/main/index.php:198
 #: oc-includes/osclass/classes/AdminMenu.php:79
 msgid "Listings"
-msgstr "広告"
+msgstr "案件"
 
 #: oc-admin/themes/modern/main/index.php:211
 msgid "There aren't any uploaded listing yet"
-msgstr "アップロードされた広告はありません。"
+msgstr "アップロードされた案件はありません。"
 
 #: oc-admin/themes/modern/main/index.php:220
 #: oc-admin/themes/modern/stats/comments.php:47
@@ -4692,15 +4692,15 @@ msgstr "登録されているカスタムフィールドはありません。"
 #: oc-admin/themes/modern/items/frm.php:33
 #: oc-admin/themes/modern/items/index.php:30
 msgid "Add listing"
-msgstr "広告を追加"
+msgstr "案件を追加"
 
 #: oc-admin/themes/modern/items/frm.php:36
 msgid "Edit listing"
-msgstr "広告を編修"
+msgstr "案件を編修"
 
 #: oc-admin/themes/modern/items/frm.php:37
 msgid "Update listing"
-msgstr "広告をアップデート"
+msgstr "案件をアップデート"
 
 #: oc-admin/themes/modern/items/frm.php:169
 #: oc-admin/themes/modern/items/index.php:190
@@ -4756,12 +4756,12 @@ msgstr "住所"
 
 #: oc-admin/themes/modern/items/index.php:37
 msgid "Manage listings &raquo; %s"
-msgstr "広告の管理 &raquo; %s"
+msgstr "案件の管理 &raquo; %s"
 
 #: oc-admin/themes/modern/items/index.php:85
 #: oc-admin/themes/modern/items/reported.php:58
 msgid "Delete listing"
-msgstr "広告を削除"
+msgstr "案件を削除"
 
 #: oc-admin/themes/modern/items/index.php:126
 #: oc-admin/themes/modern/users/index.php:85
@@ -4840,7 +4840,7 @@ msgstr "フィルタをリセット"
 #: oc-admin/themes/modern/items/index.php:294
 #: oc-includes/osclass/classes/AdminMenu.php:57
 msgid "Manage listings"
-msgstr "広告の管理"
+msgstr "案件の管理"
 
 #: oc-admin/themes/modern/items/index.php:304
 #: oc-admin/themes/modern/items/index.php:305
@@ -4851,7 +4851,7 @@ msgstr "広告の管理"
 #: oc-admin/themes/modern/items/reported.php:124
 #: oc-admin/themes/modern/items/reported.php:125
 msgid "%d Listings"
-msgstr "%d 件の広告"
+msgstr "%d 件の案件"
 
 #: oc-admin/themes/modern/items/index.php:316
 #: oc-admin/themes/modern/users/index.php:262
@@ -4875,7 +4875,7 @@ msgstr "検索"
 #: oc-admin/items.php:829 oc-admin/items.php:830 oc-admin/items.php:831
 #: oc-admin/items.php:832 oc-admin/items.php:833 oc-admin/items.php:834
 msgid "Are you sure you want to %s the selected listings?"
-msgstr "選択された%s件の広告を%sしてもおろしいですか？"
+msgstr "本当にこの案件を%sしてもよろしいですか？"
 
 #: oc-admin/languages.php:382
 msgid "Update here"
@@ -4884,16 +4884,16 @@ msgstr "ここからアップデート"
 #: oc-admin/themes/modern/items/index.php:398
 #: oc-admin/themes/modern/items/reported.php:190
 msgid "Are you sure you want to delete this listing?"
-msgstr "本当にこの広告を削除してもよろしいですか？"
+msgstr "本当にこの案件を削除してもよろしいですか？"
 
 #: oc-admin/themes/modern/items/reported.php:112
 #: oc-includes/osclass/classes/AdminMenu.php:58
 msgid "Reported listings"
-msgstr "報告をうけた広告"
+msgstr "報告をうけた案件"
 
 #: oc-admin/themes/modern/items/reported.php:33
 msgid "Reported listings &raquo; %s"
-msgstr "報告をうけた広告 &raquo; %s"
+msgstr "報告をうけた案件 &raquo; %s"
 
 #: oc-admin/themes/modern/items/reported.php:143
 msgid "Clear Missclassified"
@@ -4920,31 +4920,31 @@ msgstr "不快な投稿"
 
 #: oc-admin/themes/modern/items/settings.php:58
 msgid "Listing Settings &raquo; %s"
-msgstr "広告設定 &raquo; %s"
+msgstr "案件設定 &raquo; %s"
 
 #: oc-admin/themes/modern/items/settings.php:66
 msgid "Listing Settings"
-msgstr "広告設定"
+msgstr "案件設定"
 
 #: oc-admin/themes/modern/items/settings.php:78
 msgid "Only logged in users can post listings"
-msgstr "広告を公開できるのは、ログインしたユーザーだけです"
+msgstr "案件を公開できるのは、ログインしたユーザーだけです"
 
 #: oc-admin/themes/modern/items/settings.php:82
 msgid "An user has to wait %s seconds between each listing added"
-msgstr "次の広告を追加登録する際、%s秒待たなくてはいけません。"
+msgstr "次の案件を追加登録する際、%s秒待たなくてはいけません。"
 
 #: oc-admin/themes/modern/items/settings.php:90
 msgid "Users have to validate their listings"
-msgstr "ユーザーは広告を確認する必要があります"
+msgstr "ユーザーは案件を確認する必要があります"
 
 #: oc-admin/themes/modern/items/settings.php:97
 msgid "If the value is zero, it means that each listing must be validated"
-msgstr "値が0にセットされていれば、全ての広告は確認を経る必要があるという意味です"
+msgstr "値が0にセットされていれば、全ての案件は確認を経る必要があるという意味です"
 
 #: oc-admin/themes/modern/items/settings.php:103
 msgid "Logged in users don't need to validate their listings"
-msgstr "ログインユーザーは広告の確認を必要としない"
+msgstr "ログインユーザーは案件の確認を必要としない"
 
 #: oc-admin/themes/modern/items/settings.php:110
 msgid "Show reCAPTCHA in add/edit listing form"
@@ -4961,7 +4961,7 @@ msgstr "投稿者へコンタクトする"
 
 #: oc-admin/themes/modern/items/settings.php:122
 msgid "Only allow registered users to contact publisher"
-msgstr "登録されたユーザーだけが、広告を出した人に連絡をとることができます"
+msgstr "登録されたユーザーだけが、案件を出した人に連絡をとることができます"
 
 #: oc-admin/themes/modern/items/settings.php:134
 #: oc-admin/themes/modern/settings/comments.php:139
@@ -4970,7 +4970,7 @@ msgstr "通知"
 
 #: oc-admin/themes/modern/items/settings.php:139
 msgid "Notify admin when a new listing is added"
-msgstr "新しく広告が追加されたら管理者に通知する"
+msgstr "新しく案件が追加されたら管理者に通知する"
 
 #: oc-admin/themes/modern/items/settings.php:181
 msgid "Optional fields"
@@ -5100,7 +5100,7 @@ msgstr "ユーザー"
 #: oc-admin/themes/modern/main/index.php:220
 #: oc-admin/themes/modern/main/index.php:223
 msgid "New listings"
-msgstr "新規広告"
+msgstr "新規案件"
 
 #: oc-admin/themes/modern/main/index.php:220
 #: oc-admin/themes/modern/main/index.php:229
@@ -5111,11 +5111,11 @@ msgstr "新規ユーザー"
 
 #: oc-admin/themes/modern/main/index.php:224
 msgid "Total number of listings: %s"
-msgstr "全ての広告数: %s"
+msgstr "全ての案件数: %s"
 
 #: oc-admin/themes/modern/main/index.php:226
 msgid "Listing statistics"
-msgstr "広告の統計情報"
+msgstr "案件の統計情報"
 
 #: oc-admin/themes/modern/main/index.php:230
 msgid "Total number of users: %s"
@@ -5230,7 +5230,7 @@ msgstr "デフォルトのコメント設定"
 
 #: oc-admin/themes/modern/settings/comments.php:112
 msgid "Allow people to post comments on listings"
-msgstr "広告にコメントを投稿する事を許可"
+msgstr "案件にコメントを投稿する事を許可"
 
 #: oc-admin/themes/modern/settings/comments.php:117
 msgid "Users must be registered and logged in to comment"
@@ -5429,7 +5429,7 @@ msgstr "RSSを表示"
 #: oc-admin/themes/modern/settings/index.php:262
 #: oc-admin/themes/modern/settings/index.php:276
 msgid "listings at most"
-msgstr "最大の広告掲載件数"
+msgstr "最大の案件掲載件数"
 
 #: oc-admin/themes/modern/settings/index.php:281
 msgid "Parent categories"
@@ -5742,7 +5742,7 @@ msgstr "再生成"
 #: oc-admin/themes/modern/settings/permalinks.php:175
 #: oc-admin/themes/modern/settings/permalinks.php:176
 msgid "Listings url: this field is required"
-msgstr "広告URL：必須"
+msgstr "案件URL：必須"
 
 #: oc-admin/themes/modern/settings/permalinks.php:179
 #: oc-admin/themes/modern/settings/permalinks.php:180
@@ -5812,42 +5812,42 @@ msgstr "言語URL：必須"
 #: oc-admin/themes/modern/settings/permalinks.php:231
 #: oc-admin/themes/modern/settings/permalinks.php:232
 msgid "Listing mark url: this field is required"
-msgstr "広告マークURL：必須"
+msgstr "案件マークURL：必須"
 
 #: oc-admin/themes/modern/settings/permalinks.php:235
 #: oc-admin/themes/modern/settings/permalinks.php:236
 msgid "Listing send friend url: this field is required"
-msgstr "広告シェアURL：必須"
+msgstr "案件シェアURL：必須"
 
 #: oc-admin/themes/modern/settings/permalinks.php:239
 #: oc-admin/themes/modern/settings/permalinks.php:240
 msgid "Listing contact url: this field is required"
-msgstr "広告問い合わせURL：必須"
+msgstr "案件問い合わせURL：必須"
 
 #: oc-admin/themes/modern/settings/permalinks.php:243
 #: oc-admin/themes/modern/settings/permalinks.php:244
 msgid "New listing url: this field is required"
-msgstr "新規広告URL：必須"
+msgstr "新規案件URL：必須"
 
 #: oc-admin/themes/modern/settings/permalinks.php:247
 #: oc-admin/themes/modern/settings/permalinks.php:248
 msgid "Activate listing url: this field is required"
-msgstr "広告アクティベートURL：必須"
+msgstr "案件アクティベートURL：必須"
 
 #: oc-admin/themes/modern/settings/permalinks.php:251
 #: oc-admin/themes/modern/settings/permalinks.php:252
 msgid "Edit listing url: this field is required"
-msgstr "広告編集URL：必須"
+msgstr "案件編集URL：必須"
 
 #: oc-admin/themes/modern/settings/permalinks.php:255
 #: oc-admin/themes/modern/settings/permalinks.php:256
 msgid "Delete listing url: this field is required"
-msgstr "広告削除URL：必須"
+msgstr "案件削除URL：必須"
 
 #: oc-admin/themes/modern/settings/permalinks.php:259
 #: oc-admin/themes/modern/settings/permalinks.php:260
 msgid "Delete listing resource url: this field is required"
-msgstr "広告リソース削除URL：必須"
+msgstr "案件リソース削除URL：必須"
 
 #: oc-admin/themes/modern/settings/permalinks.php:263
 #: oc-admin/themes/modern/settings/permalinks.php:264
@@ -5887,7 +5887,7 @@ msgstr "ユーザープロフィールURL：必須"
 #: oc-admin/themes/modern/settings/permalinks.php:291
 #: oc-admin/themes/modern/settings/permalinks.php:292
 msgid "User listings url: this field is required"
-msgstr "ユーザーの広告URL：必須"
+msgstr "ユーザーの案件URL：必須"
 
 #: oc-admin/themes/modern/settings/permalinks.php:295
 #: oc-admin/themes/modern/settings/permalinks.php:296
@@ -5944,7 +5944,7 @@ msgstr "フレンドリーURLを有効にする"
 
 #: oc-admin/themes/modern/settings/permalinks.php:400
 msgid "Listing URL:"
-msgstr "広告URL"
+msgstr "案件URL"
 
 #: oc-admin/themes/modern/settings/permalinks.php:404
 #: oc-admin/themes/modern/settings/permalinks.php:413
@@ -6012,35 +6012,35 @@ msgstr "言語"
 
 #: oc-admin/themes/modern/settings/permalinks.php:502
 msgid "Listing mark"
-msgstr "広告マーク"
+msgstr "案件マーク"
 
 #: oc-admin/themes/modern/settings/permalinks.php:508
 msgid "Listing send friend"
-msgstr "広告を送る友達"
+msgstr "案件を送る友達"
 
 #: oc-admin/themes/modern/settings/permalinks.php:514
 msgid "Listing contact"
-msgstr "広告の問い合わせ先"
+msgstr "案件の問い合わせ先"
 
 #: oc-admin/themes/modern/settings/permalinks.php:520
 msgid "Listing new"
-msgstr "新しい広告"
+msgstr "新しい案件"
 
 #: oc-admin/themes/modern/settings/permalinks.php:526
 msgid "Listing activate"
-msgstr "広告を有効にする"
+msgstr "案件を有効にする"
 
 #: oc-admin/themes/modern/settings/permalinks.php:532
 msgid "Listing edit"
-msgstr "広告を編修する"
+msgstr "案件を編修する"
 
 #: oc-admin/themes/modern/settings/permalinks.php:538
 msgid "Listing delete"
-msgstr "広告を削除数r"
+msgstr "案件を削除数r"
 
 #: oc-admin/themes/modern/settings/permalinks.php:544
 msgid "Listing resource delete"
-msgstr "広告のリソースファイルを削除"
+msgstr "案件のリソースファイルを削除"
 
 #: oc-admin/themes/modern/settings/permalinks.php:550
 msgid "User login"
@@ -6253,7 +6253,7 @@ msgstr "まだ統計がありません"
 
 #: oc-admin/themes/modern/stats/items.php:49
 msgid "Quickly find out how many new listings have been published on your site and how many visits each of the listings gets."
-msgstr "何件の広告が公開されたか、またそれぞれ何回訪問されたかを、容易に確認する事ができます。"
+msgstr "何件の案件が公開されたか、またそれぞれ何回訪問されたかを、容易に確認する事ができます。"
 
 #: oc-admin/themes/modern/stats/comments.php:166
 msgid "Latest comments on the web"
@@ -6261,7 +6261,7 @@ msgstr "最後のコメント"
 
 #: oc-admin/themes/modern/stats/items.php:62
 msgid "Listing Statistics &raquo; %s"
-msgstr "広告の統計情報 &raquo; %s"
+msgstr "案件の統計情報 &raquo; %s"
 
 #: oc-admin/themes/modern/stats/items.php:96
 msgid "Items"
@@ -6273,23 +6273,23 @@ msgstr "ビュー"
 
 #: oc-admin/themes/modern/stats/items.php:304
 msgid "Listing Statistics"
-msgstr "広告の統計情報"
+msgstr "案件の統計情報"
 
 #: oc-admin/themes/modern/stats/items.php:318
 msgid "New listing"
-msgstr "新規広告"
+msgstr "新規案件"
 
 #: oc-admin/themes/modern/stats/items.php:321
 msgid "Number of new listings"
-msgstr "新規広告数"
+msgstr "新規案件数"
 
 #: oc-admin/themes/modern/stats/items.php:335
 msgid "Listings' views"
-msgstr "広告の閲覧回数"
+msgstr "案件の閲覧回数"
 
 #: oc-admin/themes/modern/stats/items.php:338
 msgid "Total number of listings' views"
-msgstr "広告の全閲覧数"
+msgstr "案件の全閲覧数"
 
 #: oc-admin/themes/modern/comments/frm.php:90
 #: oc-includes/osclass/classes/datatables/CommentsDataTable.php:211
@@ -6335,11 +6335,11 @@ msgstr "メールアドレス"
 
 #: oc-admin/themes/modern/stats/users.php:265
 msgid "Avg. items per user"
-msgstr "ユーザーあたりの平均広告数"
+msgstr "ユーザーあたりの平均案件数"
 
 #: oc-admin/themes/modern/stats/users.php:268
 msgid "%s listings per user"
-msgstr "%s 件の広告/ユーザー"
+msgstr "%s 件の案件/ユーザー"
 
 #: oc-admin/themes/modern/tools/backup.php:43
 #: oc-admin/themes/modern/tools/category.php:25
