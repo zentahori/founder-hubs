@@ -32,7 +32,7 @@
     <div class="wraps">
       <div class="title">
         <h1>
-          <?php _e('Please Log In', 'osclasswizards'); ?>
+          <?php _e('Please Login', OSCLASSWIZARDS_THEME_FOLDER); ?>
         </h1>
       </div>
       <form action="<?php echo osc_base_url(true); ?>" method="post" >
@@ -40,7 +40,7 @@
         <input type="hidden" name="action" value="login_post" />
         <div class="form-group">
           <label class="control-label" for="email">
-            <?php _e('E-mail', 'osclasswizards'); ?> <sup>*</sup>
+            <?php _e('E-mail', OSCLASSWIZARDS_THEME_FOLDER); ?> <sup>*</sup>
           </label>
           <div class="controls">
             <?php UserForm::email_login_text(); ?>
@@ -48,7 +48,7 @@
         </div>
         <div class="form-group">
           <label class="control-label" for="password">
-            <?php _e('Password', 'osclasswizards'); ?> <sup>*</sup>
+            <?php _e('Password', OSCLASSWIZARDS_THEME_FOLDER); ?> <sup>*</sup>
           </label>
           <div class="controls">
             <?php UserForm::password_login_text(); ?>
@@ -58,22 +58,22 @@
           <div class="controls checkbox">
             <?php UserForm::rememberme_login_checkbox();?>
             <label for="remember">
-              <?php _e('Remember me', 'osclasswizards'); ?>
+              <?php _e('Remember me', OSCLASSWIZARDS_THEME_FOLDER); ?>
             </label>
           </div>
         </div>
         <div class="form-group">
           <div class="controls">
             <button type="submit" class="btn btn-success">
-            <?php _e("Log in", 'osclasswizards');?>
+            <?php _e("Log in", OSCLASSWIZARDS_THEME_FOLDER);?>
             </button>
           </div>
         </div>
         <div class="actions"> <a href="<?php echo osc_register_account_url(); ?>">
-          <?php _e("Register for a free account", 'osclasswizards'); ?>
+          <?php _e("Register for a free account", OSCLASSWIZARDS_THEME_FOLDER); ?>
           </a><br />
           <a href="<?php echo osc_recover_user_password_url(); ?>">
-          <?php _e("Forgot password?", 'osclasswizards'); ?>
+          <?php _e("Forgot password?", OSCLASSWIZARDS_THEME_FOLDER); ?>
           </a> </div>
       </form>
     </div>

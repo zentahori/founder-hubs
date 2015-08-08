@@ -19,101 +19,124 @@
      * License along with this program.  If not, see <http://www.gnu.org/licenses/>.
      */
 ?>
-
 <?php if ( (!defined('ABS_PATH')) ) exit('ABS_PATH is not loaded. Direct access is not allowed.'); ?>
 <?php if ( !OC_ADMIN ) exit('User access is not allowed.'); ?>
 <link rel="stylesheet" href="<?php echo osc_current_web_theme_url('admin/css/jquery.switchButton.css');?>">
 <link rel="stylesheet" href="<?php echo osc_current_web_theme_url('admin/css/admin.main.css');?>">
-<script src="<?php echo osc_current_web_theme_url('admin/js/jquery.switchButton.js');?>"></script>	
-<script>
-  $(function() {
-    $( "#tabs" ).tabs();
-	$("input[type=checkbox]").switchButton();	
-  });
-</script>
-<div class="credit-osclasswizards">
-<div class="follow">
 
-<ul>
-<li>Follow us:</li>
-<li><a href="https://www.facebook.com/osclasswizards" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
-<li><a href="https://twitter.com/osclasswizards" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
-<li><a href="https://plus.google.com/112391938966018193484" target="_blank" title="google plus"><i class="fa fa-google-plus"></i></a></li>
-</ul>
-</div>
-<div class="donate">
-<form name="_xclick" action="https://www.paypal.com/in/cgi-bin/webscr" method="post" class="nocsrf">
-    <input type="hidden" name="cmd" value="_donations">
-    <input type="hidden" name="business" value="webgig.sagar@gmail.com">
-    <input type="hidden" name="item_name" value="OsclassWizards Theme">
-    <input type="hidden" name="currency_code" value="USD">
-    <input type="hidden" name="lc" value="US" />
-    <div id="flashmessage" >
-        <p><select name="amount" class="select-box-medium">
+<div class="credit-osclasswizards"> <a href="http://www.osclasswizards.com/" target="_blank" class="wizard_logo"> <img src="<?php echo osc_current_web_theme_url('admin/img/logo.png');?>" alt="Premium osclass themes" title="Premium osclass themes" /> </a>
+  <div class="follow">
+    <ul>
+      <li>Follow us:</li>
+      <li><a href="https://www.facebook.com/osclasswizards" target="_blank" title="facebook"><i class="fa fa-facebook"></i></a></li>
+      <li><a href="https://twitter.com/osclasswizards" target="_blank" title="twitter"><i class="fa fa-twitter"></i></a></li>
+      <li><a href="https://plus.google.com/112391938966018193484" target="_blank" title="google plus"><i class="fa fa-google-plus"></i></a></li>
+    </ul>
+  </div>
+  <div class="donate">
+    <form name="_xclick" action="https://www.paypal.com/in/cgi-bin/webscr" method="post" class="nocsrf">
+      <input type="hidden" name="cmd" value="_donations">
+      <input type="hidden" name="business" value="webgig.sagar@gmail.com">
+      <input type="hidden" name="item_name" value="OsclassWizards Theme">
+      <input type="hidden" name="currency_code" value="USD">
+      <input type="hidden" name="lc" value="US" />
+      <div id="flashmessage" >
+        <p>
+          <select name="amount" class="select-box-medium">
             <option value="10" selected>10$</option>
             <option value="5">5$</option>
-            <option value=""><?php _e('Custom', 'osclasswizards'); ?></option>
-        </select><input type="submit" class="btn btn-mini" name="submit" value="<?php echo osc_esc_html(__('Donate', 'osclasswizards')); ?>"></p>
-    </div>
-</form>
+            <option value="">
+            <?php _e('Custom', OSCLASSWIZARDS_THEME_FOLDER); ?>
+            </option>
+          </select>
+          <input type="submit" class="btn btn-mini" name="submit" value="<?php echo osc_esc_html(__('Donate', OSCLASSWIZARDS_THEME_FOLDER)); ?>">
+        </p>
+      </div>
+    </form>
+  </div>
 </div>
-</div>
-<div id="tabs">
-<ul>
-    <li><a href="#general">General</a></li>
-    <li><a href="#ads">Ads Management</a></li>
-    <li><a href="#logo">Header Logo</a></li>
-    <li><a href="#favicon">Favicon</a></li>
-    <li><a href="#banner">Banner</a></li>
-</ul>
-<div id="general">
-<h2 class="render-title"><?php _e('Theme settings', 'osclasswizards'); ?></h2>
-<form action="<?php echo osc_admin_render_theme_url('oc-content/themes/osclasswizards/admin/settings.php'); ?>" method="post" class="nocsrf">
-    <input type="hidden" name="action_specific" value="settings" />
-    <fieldset>
+<div id="tabs" class="wizards_tab">
+  <ul>
+    <li><a href="#general"><?php _e('General',OSCLASSWIZARDS_THEME_FOLDER);?></a></li>
+    <li><a href="#theme-style"><?php _e('Theme Style',OSCLASSWIZARDS_THEME_FOLDER);?></a></li>
+    <li><a href="#templates"><?php _e('Templates',OSCLASSWIZARDS_THEME_FOLDER);?></a></li>
+    <li><a href="#logo"><?php _e('Header Logo',OSCLASSWIZARDS_THEME_FOLDER);?></a></li>
+    <li><a href="#favicon"><?php _e('Favicon',OSCLASSWIZARDS_THEME_FOLDER);?></a></li>
+    <li><a href="#banner"><?php _e('Banner',OSCLASSWIZARDS_THEME_FOLDER);?></a></li>
+    <li><a href="#category-icons"><?php _e('Category Icons',OSCLASSWIZARDS_THEME_FOLDER);?></a></li>
+    <li><a href="#ads"><?php _e('Ads Management',OSCLASSWIZARDS_THEME_FOLDER);?></a></li>
+    <li><a href="#facebook"><?php _e('Facebook Page',OSCLASSWIZARDS_THEME_FOLDER);?></a></li>
+    <li><a href="#documentation"><?php _e('Documentation',OSCLASSWIZARDS_THEME_FOLDER);?></a></li>
+  </ul>
+  <div id="general">
+    <h2 class="render-title">
+      <?php _e('Theme settings', OSCLASSWIZARDS_THEME_FOLDER); ?>
+    </h2>
+    <form action="<?php echo osc_admin_render_theme_url('oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php'); ?>" method="post" class="nocsrf">
+      <input type="hidden" name="action_specific" value="settings" />
+      <fieldset>
         <div class="form-horizontal">
-		    <div class="form-row">
-                <div class="form-label"><?php _e('Welcome message', 'osclasswizards'); ?></div>
-                   <div class="form-controls">
-				    <textarea style="height: 50px; width: 500px;" name="welcome_message"><?php echo osc_esc_html( osc_get_preference('welcome_message', 'osclasswizards_theme') ); ?></textarea>
-				   </div>
+          <div class="form-row">
+            <div class="form-label">
+              <?php _e('Welcome message', OSCLASSWIZARDS_THEME_FOLDER); ?>
             </div>
-            <div class="form-row">
-                <div class="form-label"><?php _e('Search placeholder', 'osclasswizards'); ?></div>
-                <div class="form-controls"><input type="text" class="xlarge" name="keyword_placeholder" value="<?php echo osc_esc_html( osc_get_preference('keyword_placeholder', 'osclasswizards_theme') ); ?>"></div>
+            <div class="form-controls">
+              <textarea style="height: 50px; width: 500px;" name="welcome_message"><?php echo osc_get_preference('welcome_message', 'osclasswizards_theme'); ?></textarea>
             </div>
-            <div class="form-row">
-                <div class="form-label"><?php _e('Show lists as:', 'osclasswizards'); ?></div>
-                <div class="form-controls">
-                    <select name="defaultShowAs@all">
-                        <option value="gallery" <?php if(osc_esc_html(osclasswizards_default_show_as()) == "gallery"){ echo "selected=selected"; } ?>><?php _e('Grid','osclasswizards'); ?></option>
-                        <option value="list" <?php if(osc_esc_html(osclasswizards_default_show_as()) == "list"){ echo "selected=selected"; } ?>><?php _e('List','osclasswizards'); ?></option>
-                    </select>
-                </div>
+          </div>
+          <div class="form-row">
+            <div class="form-label">
+              <?php _e('Show lists as', OSCLASSWIZARDS_THEME_FOLDER); ?>
             </div>
-            <div class="form-row">
-                <div class="form-label"><?php _e('RTL view', 'osclasswizards'); ?></div>
-                <div class="form-controls">
-					<div class="form-label-checkbox">
-						<input type="checkbox" name="rtl_view" value="1" <?php echo (osc_esc_html( osc_get_preference('rtl_view', 'osclasswizards_theme') ) == "1")? "checked": ""; ?>>
-					</div>
-				</div> 
-			</div>
-			</div>
-    </fieldset>
-
-	<div class="form-actions">
-		<input type="submit" value="<?php _e('Save changes', 'osclasswizards'); ?>" class="btn btn-submit">
-	</div>
-</form>
+            <div class="form-controls">
+              <select name="defaultShowAs@all">
+                <option value="gallery" <?php if((osclasswizards_default_show_as()) == 'gallery'){ echo 'selected="selected"'; } ?>>
+                <?php _e('Grid',OSCLASSWIZARDS_THEME_FOLDER); ?>
+                </option>
+                <option value="list" <?php if((osclasswizards_default_show_as()) == 'list'){ echo 'selected="selected"'; } ?>>
+                <?php _e('List',OSCLASSWIZARDS_THEME_FOLDER); ?>
+                </option>
+              </select>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-actions">
+        <input type="submit" value="<?php _e('Save changes', OSCLASSWIZARDS_THEME_FOLDER); ?>" class="btn btn-submit btn-success">
+      </div>
+    </form>
+  </div>
+  <div id="theme-style">
+    <?php include 'theme-style.php'; ?>
+  </div>
+  <div id="templates">
+    <?php include 'templates.php'; ?>
+  </div>
+  <div id="logo">
+    <?php include 'header.php'; ?>
+  </div>
+  <div id="favicon">
+    <?php include 'favicon.php'; ?>
+  </div>
+  <div id="banner">
+    <?php include 'homeimage.php'; ?>
+  </div>
+  <div id="category-icons">
+    <?php include 'category-icons.php'; ?>
+  </div>
+  <div id="ads">
+    <?php include 'ads.php'; ?>
+  </div>
+  <div id="facebook">
+    <?php include 'facebook.php'; ?>
+  </div> 
+  <div id="documentation">
+    <?php include 'documentation.php'; ?>
+  </div>
+  <address class="wizards_address">
+	<span>&copy; 2015 <a target="_blank" title="osclasswizards" href="http://www.osclasswizards.com/">OsclassWizards</a>. All rights reserved.</span>
+  </p>
+  </address>
 </div>
-
-<div id="ads"><?php include 'ads.php'; ?></div>
-
-<div id="logo"><?php include 'header.php'; ?></div>
-
-<div id="favicon"><?php include 'favicon.php'; ?></div>
-
-<div id="banner"><?php include 'homeimage.php'; ?></div>
-
-</div>
+<script src="<?php echo osc_current_web_theme_url('admin/js/jquery.switchButton.js');?>"></script>
+<script src="<?php echo osc_current_web_theme_url('admin/js/jquery.admin.js');?>"></script>

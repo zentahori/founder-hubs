@@ -67,26 +67,35 @@
 	?>
 
 <div class="row">
-  <div class="col-sm-8 col-md-8">
+  <div class="col-sm-7 col-md-8">
     <div id="item-content">
-      <h1 class="title"> <strong><?php echo osc_item_title(); ?></strong></h1>
+      <?php if(osc_is_web_user_logged_in() && osc_logged_user_id()==osc_item_user_id()) { ?>
+      <p id="edit_item_view"> <strong> <a href="<?php echo osc_item_edit_url(); ?>" rel="nofollow">
+        <?php _e('Edit item', OSCLASSWIZARDS_THEME_FOLDER); ?>
+        </a> </strong> </p>
+      <?php } ?>
+
+      <h1 class="title title_code"> <strong><?php echo osc_item_title(); ?></strong> </h1>
       <ul class="item-header">
         <!-- Added category -->
         <li>
-          <?php if ( osc_item_category() !== '' ) { ?> 
+          <?php if ( osc_item_category() !== '' ) { ?>
           <strong><?php _e('Category', 'osclasswizards');?>:</strong><?php osc_item_category(); ?>
           <?php } ?>
         </li>
         <li>
           <?php if( osc_price_enabled_at_items() ) { ?>
           <strong><?php _e('Price', 'osclasswizards');?>:</strong><?php echo osc_item_formated_price(); ?>
+<!--          <i class="fa fa-money"></i><?php echo osc_item_formated_price(); ?>  -->
           <?php } ?>
         </li>
         <li>
           <?php if ( osc_item_pub_date() !== '' ) { printf( __('<strong>Published date</strong>: %1$s', 'osclasswizards'), osc_format_date( osc_item_pub_date() ) ); } ?>
+<!--          <?php if ( osc_item_pub_date() !== '' ) { printf( __('<i class="fa fa-calendar-o"></i> Published date: %2$s', 'osclasswizards'), osc_format_date( osc_item_pub_date() ) ); } ?>  -->
         </li>
         <li>
           <?php if ( osc_item_mod_date() !== '' ) { printf( __('<strong class="update">Modified date:</strong> %1$s', 'osclasswizards'), osc_format_date( osc_item_mod_date() ) ); } ?>
+<!--          <?php if ( osc_item_mod_date() !== '' ) { printf( __('<span class="update"><i class="fa fa-calendar"></i> Modified date:</span> %2$s', OSCLASSWIZARDS_THEME_FOLDER), osc_format_date( osc_item_mod_date() ) ); } ?> -->
         </li>
         <?php if (count($location)>0) { ?>
         <li>
@@ -94,28 +103,41 @@
             <li><strong>
               <?php _e("Location", "osclasswizards"); ?>:
               </strong> <?php echo implode(', ', $location); ?></li>
+<!--            <li><i class="fa fa-map-marker"></i> <?php echo implode(', ', $location); ?></li>  -->
           </ul>
           <?php }; ?>
-        </li>
+            </li>
+        
       </ul>
-      <?php if(osc_is_web_user_logged_in() && osc_logged_user_id()==osc_item_user_id()) { ?>
-      <p id="edit_item_view"> <strong> <a href="<?php echo osc_item_edit_url(); ?>" rel="nofollow">
-        <?php _e('Edit item', 'osclasswizards'); ?>
-        </a> </strong> </p>
-      <?php } ?>
-      <?php if( osc_images_enabled_at_items() ) { ?>
-      <?php
+	    <?php if( osc_images_enabled_at_items() ) { ?>
+		<div class="item-photos">
+		<div class="row">
+        <?php
         if( osc_count_item_resources() > 0 ) {
             $i = 0;
         ?>
-      <div class="item-photos"> <a href="<?php echo osc_resource_url(); ?>" class="main-photo" title="<?php _e('Image', 'osclasswizards'); ?> <?php echo $i+1;?> / <?php echo osc_count_item_resources();?>"> <img src="<?php echo osc_resource_url(); ?>" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" /> </a>
-        <div class="thumbs">
-          <?php for ( $i = 0; osc_has_item_resources(); $i++ ) { ?>
-          <a href="<?php echo osc_resource_url(); ?>" class="fancybox" data-fancybox-group="group" title="<?php _e('Image', 'osclasswizards'); ?> <?php echo $i+1;?> / <?php echo osc_count_item_resources();?>"> <img src="<?php echo osc_resource_thumbnail_url(); ?>" width="75" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" class="img-responsive"/> </a>
-          <?php } ?>
-        </div>
+          <div class="col-md-10"> <a href="<?php echo osc_resource_url(); ?>" class="main-photo" title="<?php _e('Image', OSCLASSWIZARDS_THEME_FOLDER); ?> <?php echo $i+1;?> / <?php echo osc_count_item_resources();?>"> <img class="img-responsive" src="<?php echo osc_resource_url(); ?>" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" /> </a></div>
+<!-- //Thumb nails are off
+          <div class="col-md-2">
+            <div class="thumbs">
+              <?php for ( $i = 0; osc_has_item_resources(); $i++ ) { ?>
+              <a href="<?php echo osc_resource_url(); ?>" class="fancybox" data-fancybox-group="group" title="<?php _e('Image', OSCLASSWIZARDS_THEME_FOLDER); ?> <?php echo $i+1;?> / <?php echo osc_count_item_resources();?>"> <img src="<?php echo osc_resource_thumbnail_url(); ?>" width="75" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" class="img-responsive"/> </a>
+              <?php } ?>
+            </div>
+          </div>
+-->
+		<?php } else{?>
+          <div class="col-md-10"> <a href="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" class="main-photo" title="<?php _e('Image', OSCLASSWIZARDS_THEME_FOLDER); ?> 1 / 1"> <img class="img-responsive" src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" /> </a></div>
+<!-- //Thumb nails are off
+	  <div class="col-md-2">
+            <div class="thumbs">
+              <a href="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" class="fancybox" data-fancybox-group="group" title="<?php _e('Image', OSCLASSWIZARDS_THEME_FOLDER); ?> 1 / 1"> <img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" width="75" alt="<?php echo osc_item_title(); ?>" title="<?php echo osc_item_title(); ?>" class="img-responsive"/> </a>
+	    </div>
+          </div>
+-->
+		<?php } ?>
+	  </div>
       </div>
-      <?php } ?>
       <?php } ?>
       <ul>
         <li>
@@ -126,6 +148,7 @@
       </ul>
       <div id="description">
         <p style="background-color: #ffffff"><?php echo osc_item_description(); ?></p>
+<!--        <p><?php echo osc_item_description(); ?></p>  -->
         <div id="custom_fields">
           <?php if( osc_count_item_meta() >= 1 ) { ?>
           <br />
@@ -138,64 +161,38 @@
           </div>
           <?php } ?>
         </div>
+        
         <?php osc_run_hook('item_detail', osc_item() ); ?>
-        <p class="contact_button">
-          <?php if( !osc_item_is_expired () ) { ?>
-          <?php if( !( ( osc_logged_user_id() == osc_item_user_id() ) && osc_logged_user_id() != 0 ) ) { ?>
-          <?php     if(osc_reg_user_can_contact() && osc_is_web_user_logged_in() || !osc_reg_user_can_contact() ) { ?>
-          <a href="#contact" class="ui-button ui-button-middle ui-button-main resp-toogle">
-          <?php _e('Contact seller', 'osclasswizards'); ?>
-          </a>
-          <?php     } ?>
-          <?php     } ?>
+        <ul class="contact_button">
+          <li>
+            <?php if( !osc_item_is_expired () ) { ?>
+            <?php if( !( ( osc_logged_user_id() == osc_item_user_id() ) && osc_logged_user_id() != 0 ) ) { ?>
+            <?php     if(osc_reg_user_can_contact() && osc_is_web_user_logged_in() || !osc_reg_user_can_contact() ) { ?>
+            <a href="#contact">
+            <?php _e('Contact seller', OSCLASSWIZARDS_THEME_FOLDER); ?>
+            </a>
+            <?php     } ?>
+            <?php     } ?>
+            <?php } ?>
+          </li>
+          <li><a href="<?php echo osc_item_send_friend_url(); ?>" rel="nofollow">
+            <?php _e('Share', OSCLASSWIZARDS_THEME_FOLDER); ?>
+            </a></li>
+          <?php if(function_exists('watchlist')) {?>
+          <li>
+            <?php watchlist(); ?>
+          </li>
           <?php } ?>
-          <a href="<?php echo osc_item_send_friend_url(); ?>" rel="nofollow">
-          <?php _e('Share', 'osclasswizards'); ?>
-          </a>
-          <?php if(function_exists('watchlist')){ watchlist(); } ?>
-        </p>
+        </ul>
         <?php osc_run_hook('location'); ?>
       </div>
-      
-      <!-- plugins -->
-      <div id="useful_info">
-        <h2>
-          <?php _e('Useful information', 'osclasswizards'); ?>
-        </h2>
-        <ul>
-          <li>
-            <?php _e('Avoid scams by acting locally or paying with PayPal', 'osclasswizards'); ?>
-          </li>
-          <li>
-            <?php _e('Never pay with Western Union, Moneygram or other anonymous payment services', 'osclasswizards'); ?>
-          </li>
-          <li>
-            <?php _e('Don\'t buy or sell outside of your country. Don\'t accept cashier cheques from outside your country', 'osclasswizards'); ?>
-          </li>
-          <li>
-            <?php _e('This site is never involved in any transaction, and does not handle payments, shipping, guarantee transactions, provide escrow services, or offer "buyer protection" or "seller certification"', 'osclasswizards'); ?>
-          </li>
-        </ul>
-      </div>
     </div>
-    <?php related_listings(); ?>
-    <?php if( osc_count_items() > 0 ) { ?>
-    <div class="similar_ads">
-      <h2 class="title">
-        <?php _e('Related listings', 'osclasswizards'); ?>
-      </h2>
-      <?php
-            View::newInstance()->_exportVariableToView("listType", 'items');
-            osc_current_web_theme_path($loop_template);
-            ?>
-    </div>
-    <?php } ?>
     <?php if( osc_comments_enabled() ) { ?>
     <?php if( osc_reg_user_post_comments () && osc_is_web_user_logged_in() || !osc_reg_user_post_comments() ) { ?>
     <div id="comments">
       <?php if( osc_count_item_comments() >= 1 ) { ?>
       <h2 class="title">
-        <?php _e('Comments', 'osclasswizards'); ?>
+        <?php _e('Comments', OSCLASSWIZARDS_THEME_FOLDER); ?>
       </h2>
       <?php }
 	  
@@ -208,12 +205,12 @@
         <?php while ( osc_has_item_comments() ) { ?>
         <div class="comment">
           <h4><?php echo osc_comment_title(); ?> <em>
-            <?php _e("by", 'osclasswizards'); ?>
+            <?php _e("by", OSCLASSWIZARDS_THEME_FOLDER); ?>
             <?php echo osc_comment_author_name(); ?>:</em></h4>
           <p><?php echo nl2br( osc_comment_body() ); ?> </p>
           <?php if ( osc_comment_user_id() && (osc_comment_user_id() == osc_logged_user_id()) ) { ?>
-          <p> <a rel="nofollow" href="<?php echo osc_delete_comment_url(); ?>" title="<?php _e('Delete your comment', 'osclasswizards'); ?>">
-            <?php _e('Delete', 'osclasswizards'); ?>
+          <p> <a rel="nofollow" href="<?php echo osc_delete_comment_url(); ?>" title="<?php _e('Delete your comment', OSCLASSWIZARDS_THEME_FOLDER); ?>">
+            <?php _e('Delete', OSCLASSWIZARDS_THEME_FOLDER); ?>
             </a> </p>
           <?php } ?>
         </div>
@@ -224,7 +221,7 @@
       <div class="comment_form">
         <div class="title">
           <h1>
-            <?php _e('Leave your comment (spam and offensive messages will be removed)', 'osclasswizards'); ?>
+            <?php _e('Leave your comment (spam and offensive messages will be removed)', OSCLASSWIZARDS_THEME_FOLDER); ?>
           </h1>
         </div>
         <div class="resp-wrapper">
@@ -239,7 +236,7 @@
               <?php } else { ?>
               <div class="form-group">
                 <label class="control-label" for="authorName">
-                  <?php _e('Your name', 'osclasswizards'); ?>
+                  <?php _e('Your name', OSCLASSWIZARDS_THEME_FOLDER); ?>
                 </label>
                 <div class="controls">
                   <?php CommentForm::author_input_text(); ?>
@@ -247,7 +244,7 @@
               </div>
               <div class="form-group">
                 <label class="control-label" for="authorEmail">
-                  <?php _e('Your e-mail', 'osclasswizards'); ?>
+                  <?php _e('Your e-mail', OSCLASSWIZARDS_THEME_FOLDER); ?>
                 </label>
                 <div class="controls">
                   <?php CommentForm::email_input_text(); ?>
@@ -256,7 +253,7 @@
               <?php }; ?>
               <div class="form-group">
                 <label class="control-label" for="title">
-                  <?php _e('Title', 'osclasswizards'); ?>
+                  <?php _e('Title', OSCLASSWIZARDS_THEME_FOLDER); ?>
                 </label>
                 <div class="controls">
                   <?php CommentForm::title_input_text(); ?>
@@ -264,7 +261,7 @@
               </div>
               <div class="form-group">
                 <label class="control-label" for="body">
-                  <?php _e('Comment', 'osclasswizards'); ?>
+                  <?php _e('Comment', OSCLASSWIZARDS_THEME_FOLDER); ?>
                 </label>
                 <div class="controls textarea">
                   <?php CommentForm::body_input_textarea(); ?>
@@ -272,7 +269,7 @@
               </div>
               <div class="actions">
                 <button type="submit" class="btn btn-success">
-                <?php _e('Send', 'osclasswizards'); ?>
+                <?php _e('Send', OSCLASSWIZARDS_THEME_FOLDER); ?>
                 </button>
               </div>
             </fieldset>
@@ -283,9 +280,80 @@
     <?php } ?>
     <?php } ?>
   </div>
-  <div class="col-sm-4 col-md-4">
+  <div class="col-sm-5 col-md-4">
     <?php
-	osc_current_web_theme_path('item-sidebar.php'); ?>
+			if(function_exists('show_qrcode')){
+				echo '<div class="block_list block_listed">';
+				show_qrcode();
+				
+								echo ' </div>';
+ 
+			}
+		?>
+    <div class="alert_block">
+      <?php if(!osc_is_web_user_logged_in() || osc_logged_user_id()!=osc_item_user_id()) { ?>
+      <form action="<?php echo osc_base_url(true); ?>" method="post" name="mask_as_form" id="mask_as_form">
+        <input type="hidden" name="id" value="<?php echo osc_item_id(); ?>" />
+        <input type="hidden" name="as" value="spam" />
+        <input type="hidden" name="action" value="mark" />
+        <input type="hidden" name="page" value="item" />
+        <select name="as" id="as" class="mark_as">
+          <option>
+          <?php _e("Mark as...", OSCLASSWIZARDS_THEME_FOLDER); ?>
+          </option>
+          <option value="spam">
+          <?php _e("Mark as spam", OSCLASSWIZARDS_THEME_FOLDER); ?>
+          </option>
+          <option value="badcat">
+          <?php _e("Mark as misclassified", OSCLASSWIZARDS_THEME_FOLDER); ?>
+          </option>
+          <option value="repeated">
+          <?php _e("Mark as duplicated", OSCLASSWIZARDS_THEME_FOLDER); ?>
+          </option>
+          <option value="expired">
+          <?php _e("Mark as expired", OSCLASSWIZARDS_THEME_FOLDER); ?>
+          </option>
+          <option value="offensive">
+          <?php _e("Mark as offensive", OSCLASSWIZARDS_THEME_FOLDER); ?>
+          </option>
+        </select>
+      </form>
+      <?php } ?>
+    </div>
+    <?php osc_current_web_theme_path('item-sidebar.php'); ?>
+    <div class="block_list">
+      <div id="useful_info">
+        <h1 class="title">
+          <?php _e('Useful information', OSCLASSWIZARDS_THEME_FOLDER); ?>
+        </h1>
+        <ul>
+          <li>
+            <?php _e('Avoid scams by acting locally or paying with PayPal', OSCLASSWIZARDS_THEME_FOLDER); ?>
+          </li>
+          <li>
+            <?php _e('Never pay with Western Union, Moneygram or other anonymous payment services', OSCLASSWIZARDS_THEME_FOLDER); ?>
+          </li>
+          <li>
+            <?php _e('Don\'t buy or sell outside of your country. Don\'t accept cashier cheques from outside your country', OSCLASSWIZARDS_THEME_FOLDER); ?>
+          </li>
+          <li>
+            <?php _e('This site is never involved in any transaction, and does not handle payments, shipping, guarantee transactions, provide escrow services, or offer "buyer protection" or "seller certification"', OSCLASSWIZARDS_THEME_FOLDER); ?>
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>
+<?php related_listings(); ?>
+<?php if( osc_count_items() > 0 ) { ?>
+<div class="similar_ads">
+  <h2 class="title">
+    <?php _e('Related listings', OSCLASSWIZARDS_THEME_FOLDER); ?>
+  </h2>
+  <?php
+		View::newInstance()->_exportVariableToView("listType", 'items');
+		osc_current_web_theme_path($loop_template);
+    ?>
+</div>
+<?php } ?>
 <?php osc_current_web_theme_path('footer.php') ; ?>

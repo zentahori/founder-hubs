@@ -20,178 +20,193 @@
      */
 ?>
 <?php
-
 $type = 'items';
 if(View::newInstance()->_exists('listType')){
     $type = View::newInstance()->_get('listType');
 }
 
+$cols = 3;
 ?>
 
 <div class="listing-card-list listings_grid listings_grids" id="listing-card-list">
-  
-    <?php
+  <?php
 	$i = 0;
 	
 	//latest items
 	if($type == 'latestItems'){
-		$listcount = 0; 
-    while ( osc_has_latest_items() ) {
-		if($listcount%6 == 0)
+		$listcount = 1;
+		echo '<ul class="row">';
+  		while ( osc_has_latest_items() ) {
+			
+?>
+  <?php $size = explode('x', osc_thumbnail_dimensions()); ?>
+  <li class="listing-card col-sm-6 col-md-<?php echo $cols;?> <?php if(osc_item_is_premium()){ echo ' premium'; } ?>">
+    <div class="figure">
+      <figure>
+        <?php if( osc_images_enabled_at_items() ) { ?>
+        <?php if(osc_count_item_resources()) { ?>
+        <a class="listing-thumb" href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_esc_html(osc_item_title()) ; ?>"><img src="<?php echo osc_resource_thumbnail_url(); ?>" title="" alt="<?php echo osc_esc_html(osc_item_title()) ; ?>" width="<?php echo $size[0]; ?>" height="<?php echo $size[1]; ?>" class="img-responsive"></a>
+        <?php } else { ?>
+        <a class="listing-thumb" href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_esc_html(osc_item_title()) ; ?>"><img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="<?php echo osc_esc_html(osc_item_title()) ; ?>" width="<?php echo $size[0]; ?>" height="<?php echo $size[1]; ?>" class="img-responsive"></a>
+        <?php } ?>
+        <?php } ?>
+        <span class="ribbon"> <i class="fa fa-star"></i> </span> </figure>
+    </div>
+    <div class="listing-attr">
+      <h4><a href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_esc_html(osc_item_title()) ; ?>"><?php echo osc_highlight(strip_tags(osc_item_title()),40) ; ?></a></h4>
+      <article> <span class="category"><i class="fa fa-<?php echo osclasswizards_category_icon( osc_item_category_id() ); ?>"></i> <?php echo osc_item_category() ; ?></span> <span class="location"> <i class="fa fa-map-marker"></i> <?php echo osc_item_city(); ?>
+        <?php if( osc_item_region()!='' ) { ?>
+        (<?php echo osc_item_region(); ?>)
+        <?php } ?>
+        </span> <span class="date"> <i class="fa fa-clock-o"></i> <?php echo osc_format_date(osc_item_pub_date()); ?> </span> </article>
+      <?php if( osc_price_enabled_at_items() ) { ?>
+      <span class="currency-value"> <?php echo osc_format_price(osc_item_price()); ?></span>
+      <?php } ?>
+      <?php $admin = false; ?>
+      <?php if($admin){ ?>
+      <span class="admin-options"> <a href="<?php echo osc_item_edit_url(); ?>" rel="nofollow">
+      <?php _e('Edit item', OSCLASSWIZARDS_THEME_FOLDER); ?>
+      </a> <span>|</span> <a class="delete" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can not be undone. Are you sure you want to continue?', OSCLASSWIZARDS_THEME_FOLDER)); ?>')" href="<?php echo osc_item_delete_url();?>" >
+      <?php _e('Delete', OSCLASSWIZARDS_THEME_FOLDER); ?>
+      </a>
+      <?php if(osc_item_is_inactive()) {?>
+      <span>|</span> <a href="<?php echo osc_item_activate_url();?>" >
+      <?php _e('Activate', OSCLASSWIZARDS_THEME_FOLDER); ?>
+      </a>
+      <?php } ?>
+      </span>
+      <?php } ?>
+    </div>
+  </li>
+  <?php	
+		if($listcount%4 == 0)
 		{
 			echo '</ul><ul class="row">';
 		}
 		$listcount++;
-		
-?>
-    <?php $size = explode('x', osc_thumbnail_dimensions()); ?>
-    <li class="listing-card col-sm-6 col-md-2 <?php if(osc_item_is_premium()){ echo ' premium'; } ?>">
-      <?php if( osc_images_enabled_at_items() ) { ?>
-      <?php if(osc_count_item_resources()) { ?>
-      <a class="listing-thumb" href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_esc_html(osc_item_title()) ; ?>"><img src="<?php echo osc_resource_thumbnail_url(); ?>" title="" alt="<?php echo osc_esc_html(osc_item_title()) ; ?>" width="<?php echo $size[0]; ?>" height="<?php echo $size[1]; ?>" class="img-responsive"></a>
-      <?php } else { ?>
-      <a class="listing-thumb" href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_esc_html(osc_item_title()) ; ?>"><img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="<?php echo osc_esc_html(osc_item_title()) ; ?>" width="<?php echo $size[0]; ?>" height="<?php echo $size[1]; ?>" class="img-responsive"></a>
-      <?php } ?>
-      <?php } ?>
-      <div class="info">
-        <div class="detail_info">
-          <h4><a href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_esc_html(osc_item_title()) ; ?>"><?php echo osc_item_title() ; ?></a><span><?php _e('Premium','osclasswizards');?></span></h4>
-          <div class="listing-attributes"> <span class="category"><strong><?php _e('Category','osclasswizards');?>:</strong> <?php echo osc_item_category() ; ?></span> - <span class="location"><strong><?php _e('Location', 'osclasswizards');?>:</strong> <?php echo osc_item_city(); ?>
-            <?php if( osc_item_region()!='' ) { ?>
-            (<?php echo osc_item_region(); ?>)
-            <?php } ?>
-            </span> <span class="g-hide">-</span> <strong><?php _e('Date','osclasswizards');?>:</strong> <?php echo osc_format_date(osc_item_pub_date()); ?>
-            <?php if( osc_price_enabled_at_items() ) { ?>
-            <span class="currency-value"><strong><?php _e('Price','osclasswizards');?>:</strong> <?php echo osc_format_price(osc_item_price()); ?></span>
-            <?php } ?>
-          </div>
-        </div>
-		<?php $admin = false; ?>
-        <?php if($admin){ ?>
-        <span class="admin-options"> <a href="<?php echo osc_item_edit_url(); ?>" rel="nofollow">
-        <?php _e('Edit item', 'osclasswizards'); ?>
-        </a> <span>|</span> <a class="delete" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can not be undone. Are you sure you want to continue?', 'osclasswizards')); ?>')" href="<?php echo osc_item_delete_url();?>" >
-        <?php _e('Delete', 'osclasswizards'); ?>
-        </a>
-        <?php if(osc_item_is_inactive()) {?>
-        <span>|</span> <a href="<?php echo osc_item_activate_url();?>" >
-        <?php _e('Activate', 'osclasswizards'); ?>
-        </a>
-        <?php } ?>
-        </span>
-        <?php } ?>
-      </div>
-    </li>
-    <?php	
+
         }
+		
+		echo'</ul>';
+
 
     } 
+	
 		
 	// premium items
 	elseif($type == 'premiums'){
-		$listcount = 0;
+		$listcount = 1;
 		while ( osc_has_premiums() ) {
-		if($listcount%6 == 0)
+		echo '<ul class="row">';
+?>
+  <?php $size = explode('x', osc_thumbnail_dimensions()); ?>
+  <li class="listing-card col-sm-6 col-md-<?php echo $cols;?> premium">
+    <div class="figure">
+      <figure>
+        <?php if( osc_images_enabled_at_items() ) { ?>
+        <?php if(osc_count_premium_resources()) { ?>
+        <a class="listing-thumb" href="<?php echo osc_premium_url() ; ?>" title="<?php echo osc_esc_html(osc_premium_title()) ; ?>"><img class="img-responsive" src="<?php echo osc_resource_thumbnail_url(); ?>" title="" alt="<?php echo osc_esc_html(osc_premium_title()) ; ?>" width="<?php echo $size[0]; ?>" height="<?php echo $size[1]; ?>"></a>
+        <?php } else { ?>
+        <a class="listing-thumb" href="<?php echo osc_premium_url() ; ?>" title="<?php echo osc_esc_html(osc_premium_title()) ; ?>"><img class="img-responsive" src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="<?php echo osc_esc_html(osc_premium_title()) ; ?>" width="<?php echo $size[0]; ?>" height="<?php echo $size[1]; ?>"></a>
+        <?php } ?>
+        <?php } ?>
+        <span class="ribbon"> <i class="fa fa-star"></i> </span> </figure>
+    </div>
+    <div class="listing-attr">
+      <h4><a href="<?php echo osc_premium_url() ; ?>" title="<?php echo osc_esc_html(osc_premium_title()) ; ?>"><?php echo osc_highlight(strip_tags(osc_premium_title()),40) ; ?></a></h4>
+      <article> <span class="category"><i class="fa fa-<?php echo osclasswizards_category_icon( osc_premium_category_id() ); ?>"></i> <?php echo osc_premium_category() ; ?></span> <span class="location"><i class="fa fa-map-marker"></i><?php echo osc_premium_city(); ?>
+        <?php if(osc_premium_region()!='') { ?>
+        (<?php echo osc_premium_region(); ?>)
+        <?php } ?>
+        </span> <span class="date"> <i class="fa fa-clock-o"></i> <?php echo osc_format_date(osc_premium_pub_date()); ?> </span> </article>
+      <?php if( osc_price_enabled_at_items() ) { ?>
+      <span class="currency-value"><?php echo osc_format_price(osc_premium_price(), osc_premium_currency_symbol()); ?></span>
+      <?php } ?>
+      <?php $admin = false; ?>
+      <?php if($admin){ ?>
+      <span class="admin-options"> <a href="<?php echo osc_premium_edit_url(); ?>" rel="nofollow">
+      <?php _e('Edit item', OSCLASSWIZARDS_THEME_FOLDER); ?>
+      </a> <span>|</span> <a class="delete" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can not be undone. Are you sure you want to continue?', OSCLASSWIZARDS_THEME_FOLDER)); ?>')" href="<?php echo osc_premium_delete_url();?>" >
+      <?php _e('Delete', OSCLASSWIZARDS_THEME_FOLDER); ?>
+      </a>
+      <?php if(osc_premium_is_inactive()) {?>
+      <span>|</span> <a href="<?php echo osc_premium_activate_url();?>" >
+      <?php _e('Activate', OSCLASSWIZARDS_THEME_FOLDER); ?>
+      </a>
+      <?php } ?>
+      </span>
+      <?php } ?>
+    </div>
+  </li>
+  <?php
+  		if($listcount%4 == 0)
 		{
 			echo '</ul><ul class="row">';
 		}
 		$listcount++;
-?>
-    <?php $size = explode('x', osc_thumbnail_dimensions()); ?>
-    <li class="listing-card col-sm-6 col-md-2 premium">
-      <?php if( osc_images_enabled_at_items() ) { ?>
-      <?php if(osc_count_premium_resources()) { ?>
-      <a class="listing-thumb" href="<?php echo osc_premium_url() ; ?>" title="<?php echo osc_esc_html(osc_premium_title()) ; ?>"><img class="img-responsive" src="<?php echo osc_resource_thumbnail_url(); ?>" title="" alt="<?php echo osc_esc_html(osc_premium_title()) ; ?>" width="<?php echo $size[0]; ?>" height="<?php echo $size[1]; ?>"></a>
-      <?php } else { ?>
-      <a class="listing-thumb" href="<?php echo osc_premium_url() ; ?>" title="<?php echo osc_esc_html(osc_premium_title()) ; ?>"><img class="img-responsive" src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="<?php echo osc_esc_html(osc_premium_title()) ; ?>" width="<?php echo $size[0]; ?>" height="<?php echo $size[1]; ?>"></a>
-      <?php } ?>
-      <?php } ?>
-      <div class="info">
-        <div class="detail_info">
-          <h4><a href="<?php echo osc_premium_url() ; ?>" title="<?php echo osc_esc_html(osc_premium_title()) ; ?>"><?php echo osc_premium_title() ; ?></a><span><?php _e('Premium','osclasswizards');?></span></h4>
-          <div class="listing-attributes"> <span class="category"><strong><?php _e('Category','osclasswizards');?>:</strong><?php echo osc_premium_category() ; ?></span> - <span class="location"><strong><?php _e('Location', 'osclasswizards');?>:</strong> <?php echo osc_premium_city(); ?>
-            <?php if(osc_premium_region()!='') { ?>
-            (<?php echo osc_premium_region(); ?>)
-            <?php } ?>
-            </span> <span class="g-hide">-</span> <strong><?php _e('Date','osclasswizards');?>:</strong><?php echo osc_format_date(osc_premium_pub_date()); ?>
-            <?php if( osc_price_enabled_at_items() ) { ?>
-            <span class="currency-value"><strong><?php _e('Price','osclasswizards');?>:</strong><?php echo osc_format_price(osc_premium_price()); ?></span>
-            <?php } ?>
-          </div>
-        </div>
-		<?php $admin = false; ?>
-        <?php if($admin){ ?>
-        <span class="admin-options"> <a href="<?php echo osc_premium_edit_url(); ?>" rel="nofollow">
-        <?php _e('Edit item', 'osclasswizards'); ?>
-        </a> <span>|</span> <a class="delete" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can not be undone. Are you sure you want to continue?', 'osclasswizards')); ?>')" href="<?php echo osc_premium_delete_url();?>" >
-        <?php _e('Delete', 'osclasswizards'); ?>
-        </a>
-        <?php if(osc_premium_is_inactive()) {?>
-        <span>|</span> <a href="<?php echo osc_premium_activate_url();?>" >
-        <?php _e('Activate', 'osclasswizards'); ?>
-        </a>
-        <?php } ?>
-        </span>
-        <?php } ?>
-      </div>
-    </li>
-    <?php
             }
+			echo'</ul>';
+
         }
 		else {
-			$listcount = 0;
-            while(osc_has_items()) {
-			if($listcount%6 == 0)
-			{
-			echo '</ul><ul class="row">';
-			}
-			$listcount++;
+			echo '<ul class="row">';
+			$listcount = 1;
 
-                $admin = false;
+            while(osc_has_items()) {
+	
+
+		$admin = false;
                 if(View::newInstance()->_exists("listAdmin")){
                     $admin = true;
                 }
 ?>
-    <?php $size = explode('x', osc_thumbnail_dimensions()); ?>
-    <li class="listing-card col-sm-6 col-md-2 <?php if(osc_item_is_premium()){ echo ' premium'; } ?>">
-      <?php if( osc_images_enabled_at_items() ) { ?>
-      <?php if(osc_count_item_resources()) { ?>
-      <a class="listing-thumb" href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_esc_html(osc_item_title()) ; ?>"><img src="<?php echo osc_resource_thumbnail_url(); ?>" title="" alt="<?php echo osc_esc_html(osc_item_title()) ; ?>" width="<?php echo $size[0]; ?>" height="<?php echo $size[1]; ?>" class="img-responsive"></a>
-      <?php } else { ?>
-      <a class="listing-thumb" href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_esc_html(osc_item_title()) ; ?>"><img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="<?php echo osc_esc_html(osc_item_title()) ; ?>" width="<?php echo $size[0]; ?>" height="<?php echo $size[1]; ?>" class="img-responsive"></a>
-      <?php } ?>
-      <?php } ?>
-      <div class="info">
-        <div class="detail_info">
-          <h4><a href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_esc_html(osc_item_title()) ; ?>"><?php echo osc_item_title() ; ?></a><span><?php _e('Premium','osclasswizards');?></span></h4>
-          <div class="listing-attributes"> <span class="category"><strong><?php _e('Category','osclasswizards');?>:</strong> <?php echo osc_item_category() ; ?></span> - <span class="location"><strong><?php _e('Location', 'osclasswizards');?>:</strong> <?php echo osc_item_city(); ?>
-            <?php if( osc_item_region()!='' ) { ?>
-            (<?php echo osc_item_region(); ?>)
-            <?php } ?>
-            </span> <span class="g-hide">-</span> <strong><?php _e('Date','osclasswizards');?>:</strong> <?php echo osc_format_date(osc_item_pub_date()); ?>
-            <?php if( osc_price_enabled_at_items() ) { ?>
-            <span class="currency-value"><strong><?php _e('Price','osclasswizards');?>:</strong> <?php echo osc_format_price(osc_item_price()); ?></span>
-            <?php } ?>
-          </div>
-        </div>
-        <?php if($admin){ ?>
-        <span class="admin-options"> <a href="<?php echo osc_item_edit_url(); ?>" rel="nofollow">
-        <?php _e('Edit item', 'osclasswizards'); ?>
-        </a> <span>|</span> <a class="delete" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can not be undone. Are you sure you want to continue?', 'osclasswizards')); ?>')" href="<?php echo osc_item_delete_url();?>" >
-        <?php _e('Delete', 'osclasswizards'); ?>
-        </a>
-        <?php if(osc_item_is_inactive()) {?>
-        <span>|</span> <a href="<?php echo osc_item_activate_url();?>" >
-        <?php _e('Activate', 'osclasswizards'); ?>
-        </a>
+  <?php $size = explode('x', osc_thumbnail_dimensions()); ?>
+  <li class="listing-card col-sm-6 col-md-<?php echo $cols;?> <?php if(osc_item_is_premium()){ echo ' premium'; } ?>">
+    <div class="figure">
+      <figure>
+        <?php if( osc_images_enabled_at_items() ) { ?>
+        <?php if(osc_count_item_resources()) { ?>
+        <a class="listing-thumb" href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_esc_html(osc_item_title()) ; ?>"><img src="<?php echo osc_resource_thumbnail_url(); ?>" title="" alt="<?php echo osc_esc_html(osc_item_title()) ; ?>" width="<?php echo $size[0]; ?>" height="<?php echo $size[1]; ?>" class="img-responsive"></a>
+        <?php } else { ?>
+        <a class="listing-thumb" href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_esc_html(osc_item_title()) ; ?>"><img src="<?php echo osc_current_web_theme_url('images/no_photo.gif'); ?>" title="" alt="<?php echo osc_esc_html(osc_item_title()) ; ?>" width="<?php echo $size[0]; ?>" height="<?php echo $size[1]; ?>" class="img-responsive"></a>
         <?php } ?>
-        </span>
         <?php } ?>
-      </div>
-      </li>
-    <?php
+        <span class="ribbon"> <i class="fa fa-star"></i> </span> </figure>
+    </div>
+    <div class="listing-attr">
+      <h4><a href="<?php echo osc_item_url() ; ?>" title="<?php echo osc_esc_html(osc_item_title()) ; ?>"><?php echo osc_highlight(strip_tags(osc_item_title()),40) ; ?></a></h4>
+      <article> <span class="category"><i class="fa fa-<?php echo osclasswizards_category_icon( osc_item_category_id() ); ?>"></i> <?php echo osc_item_category() ; ?></span> <span class="location"><i class="fa fa-map-marker"></i><?php echo osc_item_city(); ?>
+        <?php if( osc_item_region()!='' ) { ?>
+        (<?php echo osc_item_region(); ?>)
+        <?php } ?>
+        </span> <span class="date"> <i class="fa fa-clock-o"></i> <?php echo osc_format_date(osc_item_pub_date()); ?> </span> </article>
+      <?php if( osc_price_enabled_at_items() ) { ?>
+      <span class="currency-value"><?php echo osc_format_price(osc_item_price()); ?></span>
+      <?php } ?>
+      <?php if($admin){ ?>
+      <span class="admin-options"> <a href="<?php echo osc_item_edit_url(); ?>" rel="nofollow">
+      <?php _e('Edit item', OSCLASSWIZARDS_THEME_FOLDER); ?>
+      </a> <span>|</span> <a class="delete" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can not be undone. Are you sure you want to continue?', OSCLASSWIZARDS_THEME_FOLDER)); ?>')" href="<?php echo osc_item_delete_url();?>" >
+      <?php _e('Delete', OSCLASSWIZARDS_THEME_FOLDER); ?>
+      </a>
+      <?php if(osc_item_is_inactive()) {?>
+      <span>|</span> <a href="<?php echo osc_item_activate_url();?>" >
+      <?php _e('Activate', OSCLASSWIZARDS_THEME_FOLDER); ?>
+      </a>
+      <?php } ?>
+      </span>
+      <?php } ?>
+    </div>
+  </li>
+  <?php
+  		if($listcount%4 == 0)
+		{
+			echo '</ul><ul class="row">';
+		}
+		$listcount++;
         }
+					echo'</ul>';
+
   }
 ?>
-  </ul>
 </div>

@@ -21,8 +21,8 @@
 ?>
 <?php
     $js_lang = array(
-        'delete' => __('Delete', 'osclasswizards'),
-        'cancel' => __('Cancel', 'osclasswizards')
+        'delete' => __('Delete', OSCLASSWIZARDS_THEME_FOLDER),
+        'cancel' => __('Cancel', OSCLASSWIZARDS_THEME_FOLDER)
     );
 
     osc_enqueue_script('jquery');
@@ -32,15 +32,13 @@
     osc_enqueue_script('global-theme-js');
 	osc_enqueue_script('bootstrap-theme-js');
 	osc_register_script('bootstrap-theme-js', osc_current_web_theme_js_url('bootstrap.min.js'), 'jquery');
-	osc_enqueue_script('select-theme-js');
-	osc_register_script('select-theme-js', osc_current_web_theme_js_url('select.js'), 'jquery');
 	osc_enqueue_script('checkbox-theme-js');
 	osc_register_script('checkbox-theme-js', osc_current_web_theme_js_url('checkbox.js'), 'jquery');
+	
+
 ?>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-
 <?php osc_run_hook('osclasswizards_head'); ?>
-
 <?php if( osc_get_canonical() != '' ) { ?>
 <!-- canonical -->
 <link rel="canonical" href="<?php echo osc_get_canonical(); ?>"/>
@@ -51,22 +49,29 @@
 <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
-<?php echo osclasswizards_favicon(); ?>
 <link href="<?php echo osc_current_web_theme_url('js/jquery-ui/jquery-ui-1.10.2.custom.min.css') ; ?>" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
     var osclasswizards = window.osclasswizards || {};
     osclasswizards.base_url = '<?php echo osc_base_url(true); ?>';
     osclasswizards.langs = <?php echo json_encode($js_lang); ?>;
-    osclasswizards.fancybox_prev = '<?php echo osc_esc_js( __('Previous image','osclasswizards')) ?>';
-    osclasswizards.fancybox_next = '<?php echo osc_esc_js( __('Next image','osclasswizards')) ?>';
-    osclasswizards.fancybox_closeBtn = '<?php echo osc_esc_js( __('Close','osclasswizards')) ?>';
+    osclasswizards.fancybox_prev = '<?php echo osc_esc_js( __('Previous image',OSCLASSWIZARDS_THEME_FOLDER)) ?>';
+    osclasswizards.fancybox_next = '<?php echo osc_esc_js( __('Next image',OSCLASSWIZARDS_THEME_FOLDER)) ?>';
+    osclasswizards.fancybox_closeBtn = '<?php echo osc_esc_js( __('Close',OSCLASSWIZARDS_THEME_FOLDER)) ?>';
+    osclasswizards.locations_input_as = '<?php echo osc_esc_js( osclasswizards_locations_input_as()); ?>';
 </script>
+<!--Ie Js-->
+<!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->
+<!--[if IE 7]>    <html class="no-js ie7 oldie" lang="en"> <![endif]-->
+<!--[if IE 8]>    <html class="no-js ie8 oldie" lang="en"> <![endif]-->
+<!--[if lt IE 9]>
+	<script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
 <link href="<?php echo osc_current_web_theme_url('css/bootstrap.min.css') ; ?>" rel="stylesheet" type="text/css" />
 <link href="<?php echo osc_current_web_theme_url('css/main.css') ; ?>" rel="stylesheet" type="text/css" />
 <?php if(osc_get_preference('rtl_view', 'osclasswizards_theme') == "1") { ?>
 <link href="<?php echo osc_current_web_theme_url('css/rtl.css') ; ?>" rel="stylesheet" type="text/css" />
 <?php } ?>
-<link href="<?php echo osc_current_web_theme_url('css/apps.css') ; ?>" rel="stylesheet" type="text/css" />
-
-<link href="<?php echo osc_current_web_theme_url('css/mobile.css') ; ?>" rel="stylesheet" type="text/css" />
+<?php $color_mode = osclasswizards_theme_color_mode(); ?>
+<link href="<?php echo osc_current_web_theme_url('css/apps-'.$color_mode.'.css') ; ?>" rel="stylesheet" type="text/css" />
 <?php osc_run_hook('header') ; ?>

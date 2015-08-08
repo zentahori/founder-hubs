@@ -29,13 +29,13 @@
     }
     osc_add_filter('meta_title_filter','custom_meta_title');
     function custom_meta_title($data){
-        return __('Alerts', 'osclasswizards');;
+        return __('Alerts', OSCLASSWIZARDS_THEME_FOLDER);;
     }
 	
 	if(osclasswizards_show_as() == 'gallery'){
-        $loop_template	=	'loop-user-grid.php';
+        $loop_template	=	'loop-user-alerts-grid.php';
     }else{
-		$loop_template	=	'loop-user-list.php';
+		$loop_template	=	'loop-user-alerts-list.php';
 	}
 	
     osc_current_web_theme_path('header.php') ;
@@ -49,11 +49,11 @@
    ?>
   <div class="col-sm-8 col-md-9">
     <h1 class="title">
-      <?php _e('Alerts', 'osclasswizards'); ?>
+      <?php _e('Alerts', OSCLASSWIZARDS_THEME_FOLDER); ?>
     </h1>
     <?php if(osc_count_alerts() == 0) { ?>
     <h3>
-      <?php _e('You do not have any alerts yet', 'osclasswizards'); ?>
+      <?php _e('You do not have any alerts yet', OSCLASSWIZARDS_THEME_FOLDER); ?>
       .</h3>
     <?php } else { ?>
     <?php
@@ -62,25 +62,15 @@
     <div class="userItem" >
       <div class="alert_delete">
         <h3>
-          <?php _e('Alert', 'osclasswizards'); ?>
-          <?php echo $i; ?>
-          <a class="alert_delete" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can\'t be undone. Are you sure you want to continue?', 'osclasswizardsw')); ?>');" href="<?php echo osc_user_unsubscribe_alert_url(); ?>">
-        <?php _e('Delete this alert', 'osclasswizards'); ?>
-        </a>
-          
-          </h3>
-          
-          
-          
-        
-        
+          <?php _e('Alert', OSCLASSWIZARDS_THEME_FOLDER); ?>
+          <?php echo $i; ?> <a class="alert_delete" onclick="javascript:return confirm('<?php echo osc_esc_js(__('This action can\'t be undone. Are you sure you want to continue?', 'osclasswizardsw')); ?>');" href="<?php echo osc_user_unsubscribe_alert_url(); ?>">
+          <?php _e('Delete this alert', OSCLASSWIZARDS_THEME_FOLDER); ?>
+          </a> </h3>
       </div>
       <div>
         <?php osc_current_web_theme_path($loop_template) ; ?>
         <?php if(osc_count_items() == 0) { ?>
-        <br />
-        0
-        <?php _e('Listings', 'osclasswizards'); ?>
+        <?php _e('Listings', OSCLASSWIZARDS_THEME_FOLDER); ?>
         <?php } ?>
       </div>
     </div>

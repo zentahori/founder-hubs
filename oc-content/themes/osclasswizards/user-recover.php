@@ -31,7 +31,7 @@
     <div class="wraps">
     <div class="title">
       <h1>
-        <?php _e('Recover your password', 'osclasswizards'); ?>
+        <?php _e('Recover your password', OSCLASSWIZARDS_THEME_FOLDER); ?>
       </h1>
     </div>
     <div class="resp-wrapper">
@@ -40,7 +40,7 @@
         <input type="hidden" name="action" value="recover_post" />
         <div class="form-group">
           <label class="control-label" for="email">
-            <?php _e('E-mail', 'osclasswizards'); ?> <sup>*</sup>
+            <?php _e('E-mail', OSCLASSWIZARDS_THEME_FOLDER); ?> <sup>*</sup>
           </label>
           <div class="controls">
             <?php UserForm::email_text(); ?>
@@ -50,7 +50,7 @@
         <div class="form-group">
           <div class="controls">
             <button type="submit" class="btn btn-success">
-            <?php _e("Send me a new password", 'osclasswizards');?>
+            <?php _e("Send me a new password", OSCLASSWIZARDS_THEME_FOLDER);?>
             </button>
           </div>
         </div>

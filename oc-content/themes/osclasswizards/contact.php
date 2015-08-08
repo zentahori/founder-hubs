@@ -34,7 +34,7 @@
     <div class="wraps">
       <div class="title">
         <h1>
-          <?php _e('Contact us', 'osclasswizards'); ?>
+          <?php _e('Contact us', OSCLASSWIZARDS_THEME_FOLDER); ?>
         </h1>
       </div>
       <div class="resp-wrapper">
@@ -45,9 +45,9 @@
           <input type="hidden" name="action" value="contact_post" />
           <div class="form-group">
             <label class="control-label" for="yourName">
-              <?php _e('Your name', 'osclasswizards'); ?>
+              <?php _e('Your name', OSCLASSWIZARDS_THEME_FOLDER); ?>
               (
-              <?php _e('optional', 'osclasswizards'); ?>
+              <?php _e('optional', OSCLASSWIZARDS_THEME_FOLDER); ?>
               )</label>
             <div class="controls">
               <?php ContactForm::your_name(); ?>
@@ -55,7 +55,7 @@
           </div>
           <div class="form-group">
             <label class="control-label" for="yourEmail">
-              <?php _e('Your email address', 'osclasswizards'); ?>
+              <?php _e('Your email address', OSCLASSWIZARDS_THEME_FOLDER); ?>
             </label>
             <div class="controls">
               <?php ContactForm::your_email(); ?>
@@ -63,9 +63,9 @@
           </div>
           <div class="form-group">
             <label class="control-label" for="subject">
-              <?php _e('Subject', 'osclasswizards'); ?>
+              <?php _e('Subject', OSCLASSWIZARDS_THEME_FOLDER); ?>
               (
-              <?php _e('optional', 'osclasswizards'); ?>
+              <?php _e('optional', OSCLASSWIZARDS_THEME_FOLDER); ?>
               )</label>
             <div class="controls">
               <?php ContactForm::the_subject(); ?>
@@ -73,7 +73,7 @@
           </div>
           <div class="form-group">
             <label class="control-label" for="message">
-              <?php _e('Message', 'osclasswizards'); ?>
+              <?php _e('Message', OSCLASSWIZARDS_THEME_FOLDER); ?>
             </label>
             <div class="controls textarea">
               <?php ContactForm::your_message(); ?>
@@ -84,7 +84,7 @@
               <?php osc_run_hook('contact_form'); ?>
               <?php osc_show_recaptcha(); ?>
               <button type="submit" class="btn btn-success">
-              <?php _e("Send", 'osclasswizards');?>
+              <?php _e("Send", OSCLASSWIZARDS_THEME_FOLDER);?>
               </button>
               <?php osc_run_hook('admin_contact_form'); ?>
             </div>
