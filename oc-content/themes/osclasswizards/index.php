@@ -18,27 +18,25 @@
      *      You should have received a copy of the GNU Affero General Public
      * License along with this program.  If not, see <http://www.gnu.org/licenses/>.
      */
-
+	 
 /*
 Theme Name: OsclassWizards
-Theme URI: http://osclasswizards.com
+Theme URI: http://www.osclasswizards.com
 Description: A simple and clean responsive theme for your classified site.
-Version: 1.0.7
+Version: 2.0.1
 Author: OsclassWizards
-Author URI: http://osclasswizards.com
+Author URI: http://www.osclasswizards.com
 Widgets:  header, footer
 Theme update URI: osclasswizards-free-responsive-theme
 */
-
     function osclasswizards_theme_info() {
         return array(
-             'name'        => 'osclasswizards'
-            ,'version'     => '1.0.7'
+             'name'        => 'OsclassWizards'
+            ,'version'     => '2.0.1'
             ,'description' => 'A simple and clean responsive theme for your classified site.'
             ,'author_name' => 'OsclassWizards'
-            ,'author_url'  => 'http://osclasswizards.com'
+            ,'author_url'  => 'http://www.osclasswizards.com'
             ,'locations'   => array('header', 'footer')
         );
     }
-
 ?>

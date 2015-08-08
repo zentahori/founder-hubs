@@ -30,7 +30,7 @@
     }
     osc_add_filter('meta_title_filter','custom_meta_title');
     function custom_meta_title($data){
-        return __('Change e-mail', 'osclasswizards');;
+        return __('Change e-mail', OSCLASSWIZARDS_THEME_FOLDER);;
     }
     osc_current_web_theme_path('header.php') ;
     $osc_user = osc_user();
@@ -44,7 +44,7 @@
   <div class="col-sm-8 col-md-9">
     <div class="title">
       <h1>
-        <?php _e('Change e-mail', 'osclasswizards'); ?>
+        <?php _e('Change e-mail', OSCLASSWIZARDS_THEME_FOLDER); ?>
       </h1>
     </div>
     <div class="dashboard_form">
@@ -55,13 +55,13 @@
         <input type="hidden" name="action" value="change_email_post" />
         <div class="form-group">
           <h3>
-            <?php _e('Current e-mail', 'osclasswizards'); ?>
+            <?php _e('Current e-mail', OSCLASSWIZARDS_THEME_FOLDER); ?>
           </h3>
           <div class="controls"> <?php echo osc_logged_user_email(); ?> </div>
         </div>
         <div class="form-group">
           <label class="control-label" for="new_email">
-            <?php _e('New e-mail', 'osclasswizards'); ?>
+            <?php _e('New e-mail', OSCLASSWIZARDS_THEME_FOLDER); ?>
             *</label>
           <div class="controls">
             <input type="text" name="new_email" id="new_email" value="" />
@@ -70,7 +70,7 @@
         <div class="form-group">
           <div class="controls">
             <button type="submit" class="btn btn-success">
-            <?php _e("Update", 'osclasswizards');?>
+            <?php _e("Update", OSCLASSWIZARDS_THEME_FOLDER);?>
             </button>
           </div>
         </div>
@@ -89,8 +89,8 @@
             },
             messages: {
                 new_email: {
-                    required: '<?php echo osc_esc_js(__("Email: this field is required", "osclasswizards")); ?>.',
-                    email: '<?php echo osc_esc_js(__("Invalid email address", "osclasswizards")); ?>.'
+                    required: '<?php echo osc_esc_js(__("Email: this field is required", OSCLASSWIZARDS_THEME_FOLDER)); ?>.',
+                    email: '<?php echo osc_esc_js(__("Invalid email address", OSCLASSWIZARDS_THEME_FOLDER)); ?>.'
                 }
             },
             errorLabelContainer: "#error_list",

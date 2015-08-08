@@ -47,7 +47,6 @@
 	?>
 
 <div class="row">
-
   <?php
 	        osc_current_web_theme_path('user-sidebar.php');
 
@@ -56,14 +55,13 @@
     <div class="list-header">
       <?php osc_run_hook('search_ads_listing_top'); ?>
       <h1 class="title">
-        <?php _e('My listings', 'osclasswizards'); ?>
+        <?php _e('My listings', OSCLASSWIZARDS_THEME_FOLDER); ?>
       </h1>
       <?php if(osc_count_items() == 0) { ?>
       <p class="empty" >
-        <?php _e('No listings have been added yet', 'osclasswizards'); ?>
+        <?php _e('No listings have been added yet', OSCLASSWIZARDS_THEME_FOLDER); ?>
       </p>
       <?php } else { ?>
-      
     </div>
     <?php
         View::newInstance()->_exportVariableToView("listClass",$listClass);

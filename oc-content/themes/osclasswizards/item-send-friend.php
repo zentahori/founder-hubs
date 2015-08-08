@@ -32,7 +32,7 @@
     <div class="wraps">
       <div class="title">
         <h1>
-          <?php _e('Send to a friend', 'osclasswizards'); ?>
+          <?php _e('Send to a friend', OSCLASSWIZARDS_THEME_FOLDER); ?>
         </h1>
       </div>
       <div class="resp-wrapper">
@@ -48,7 +48,7 @@
           <?php } else { ?>
           <div class="form-group">
             <label class="control-label" for="yourName">
-              <?php _e("Your name",'osclasswizards'); ?>
+              <?php _e("Your name",OSCLASSWIZARDS_THEME_FOLDER); ?>
             </label>
             <div class="controls ">
               <?php SendFriendForm::your_name(); ?>
@@ -56,7 +56,7 @@
           </div>
           <div class="form-group">
             <label class="control-label" for="yourEmail">
-              <?php _e("Your e-mail",'osclasswizards'); ?>
+              <?php _e("Your e-mail",OSCLASSWIZARDS_THEME_FOLDER); ?>
             </label>
             <div class="controls ">
               <?php SendFriendForm::your_email(); ?>
@@ -65,7 +65,7 @@
           <?php } ?>
           <div class="form-group">
             <label class="control-label" for="friendName">
-              <?php _e("Your friend's name",'osclasswizards'); ?>
+              <?php _e("Your friend's name",OSCLASSWIZARDS_THEME_FOLDER); ?>
             </label>
             <div class="controls">
               <?php SendFriendForm::friend_name(); ?>
@@ -73,7 +73,7 @@
           </div>
           <div class="form-group">
             <label for="friendEmail">
-              <?php _e("Your friend's e-mail address", 'osclasswizards'); ?>
+              <?php _e("Your friend's e-mail address", OSCLASSWIZARDS_THEME_FOLDER); ?>
             </label>
             </label>
             <div class="controls">
@@ -82,7 +82,7 @@
           </div>
           <div class="form-group">
             <label class="control-label" for="subject">
-              <?php _e('Subject (optional)', 'osclasswizards'); ?>
+              <?php _e('Subject (optional)', OSCLASSWIZARDS_THEME_FOLDER); ?>
             </label>
             <div class="controls">
               <?php ContactForm::the_subject(); ?>
@@ -90,7 +90,7 @@
           </div>
           <div class="form-group">
             <label class="control-label" for="message">
-              <?php _e('Message', 'osclasswizards'); ?>
+              <?php _e('Message', OSCLASSWIZARDS_THEME_FOLDER); ?>
             </label>
             <div class="controls textarea">
               <?php SendFriendForm::your_message(); ?>
@@ -101,7 +101,7 @@
               <?php osc_run_hook('contact_form'); ?>
               <?php osc_show_recaptcha(); ?>
               <button type="submit" class="btn btn-success">
-              <?php _e("Send", 'osclasswizards');?>
+              <?php _e("Send", OSCLASSWIZARDS_THEME_FOLDER);?>
               </button>
               <?php osc_run_hook('admin_contact_form'); ?>
             </div>

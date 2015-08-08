@@ -29,7 +29,7 @@
     }
     osc_add_filter('meta_title_filter','custom_meta_title');
     function custom_meta_title($data){
-        return __('Change password', 'osclasswizards');;
+        return __('Change password', OSCLASSWIZARDS_THEME_FOLDER);;
     }
     osc_current_web_theme_path('header.php') ;
     $osc_user = osc_user();
@@ -43,7 +43,7 @@
   <div class="col-sm-8 col-md-9">
     <div class="title">
       <h1>
-        <?php _e('Change password', 'osclasswizards'); ?>
+        <?php _e('Change password', OSCLASSWIZARDS_THEME_FOLDER); ?>
       </h1>
     </div>
     <div class="resp-wrapper">
@@ -55,7 +55,7 @@
           <input type="hidden" name="action" value="change_password_post" />
           <div class="form-group">
             <label class="control-label" for="password">
-              <?php _e('Current password', 'osclasswizards'); ?>
+              <?php _e('Current password', OSCLASSWIZARDS_THEME_FOLDER); ?>
               *</label>
             <div class="controls">
               <input type="password" name="password" id="password" value="" />
@@ -63,7 +63,7 @@
           </div>
           <div class="form-group">
             <label class="control-label" for="new_password">
-              <?php _e('New password', 'osclasswizards'); ?>
+              <?php _e('New password', OSCLASSWIZARDS_THEME_FOLDER); ?>
               *</label>
             <div class="controls">
               <input type="password" name="new_password" id="new_password" value="" />
@@ -71,7 +71,7 @@
           </div>
           <div class="form-group">
             <label class="control-label" for="new_password2">
-              <?php _e('Repeat new password', 'osclasswizards'); ?>
+              <?php _e('Repeat new password', OSCLASSWIZARDS_THEME_FOLDER); ?>
               *</label>
             <div class="controls">
               <input type="password" name="new_password2" id="new_password2" value="" />
@@ -80,7 +80,7 @@
           <div class="form-group">
             <div class="controls">
               <button type="submit" class="btn btn-success">
-              <?php _e("Update", 'osclasswizards');?>
+              <?php _e("Update", OSCLASSWIZARDS_THEME_FOLDER);?>
               </button>
             </div>
           </div>

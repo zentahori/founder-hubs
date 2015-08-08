@@ -32,7 +32,7 @@
     <div class="wraps">
     <div class="title">
       <h1>
-        <?php _e('Register an account for free', 'osclasswizards'); ?>
+        <?php _e('Register an account for free', OSCLASSWIZARDS_THEME_FOLDER); ?>
       </h1>
     </div>
       <form name="register" action="<?php echo osc_base_url(true); ?>" method="post" >
@@ -42,7 +42,7 @@
         </ul>
         <div class="form-group">
           <label class="control-label" for="name">
-            <?php _e('Name', 'osclasswizards'); ?> <sup>*</sup>
+            <?php _e('Name', OSCLASSWIZARDS_THEME_FOLDER); ?> <sup>*</sup>
           </label>
           <div class="controls">
             <?php UserForm::name_text(); ?>
@@ -50,7 +50,7 @@
         </div>
         <div class="form-group">
           <label class="control-label" for="email">
-            <?php _e('E-mail', 'osclasswizards'); ?> <sup>*</sup>
+            <?php _e('E-mail', OSCLASSWIZARDS_THEME_FOLDER); ?> <sup>*</sup>
           </label>
           <div class="controls">
             <?php UserForm::email_text(); ?>
@@ -58,7 +58,7 @@
         </div>
         <div class="form-group">
           <label class="control-label" for="password">
-            <?php _e('Password', 'osclasswizards'); ?> <sup>*</sup>
+            <?php _e('Password', OSCLASSWIZARDS_THEME_FOLDER); ?> <sup>*</sup>
           </label>
           <div class="controls">
             <?php UserForm::password_text(); ?>
@@ -66,12 +66,12 @@
         </div>
         <div class="form-group">
           <label class="control-label" for="password-2">
-            <?php _e('Repeat password', 'osclasswizards'); ?> <sup>*</sup>
+            <?php _e('Repeat password', OSCLASSWIZARDS_THEME_FOLDER); ?> <sup>*</sup>
           </label>
           <div class="controls">
             <?php UserForm::check_password_text(); ?>
             <p id="password-error" style="display:none;">
-              <?php _e("Passwords don't match", 'osclasswizards'); ?>
+              <?php _e("Passwords don't match", OSCLASSWIZARDS_THEME_FOLDER); ?>
             </p>
           </div>
         </div>
@@ -84,7 +84,7 @@
         <div class="form-group">
           <div class="controls">
             <button type="submit" class="btn btn-success">
-            <?php _e("Create An Account", 'osclasswizards'); ?>
+            <?php _e("Create An Account", OSCLASSWIZARDS_THEME_FOLDER); ?>
             </button>
           </div>
         </div>

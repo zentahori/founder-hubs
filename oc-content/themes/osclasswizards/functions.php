@@ -24,9 +24,10 @@
 DEFINES
 
 */
-    define('OSCLASSWIZARDS_THEME_VERSION', '1.0.7');
+    define('OSCLASSWIZARDS_THEME_VERSION', '2.0.1');
+    define('OSCLASSWIZARDS_THEME_FOLDER', 'osclasswizards');
     if( !osc_get_preference('keyword_placeholder', 'osclasswizards_theme') ) {
-        osc_set_preference('keyword_placeholder', __('ie. PHP Programmer', 'osclasswizards'), 'osclasswizards_theme');
+        osc_set_preference('keyword_placeholder', __('ie. PHP Programmer', OSCLASSWIZARDS_THEME_FOLDER), 'osclasswizards_theme');
     }
     osc_register_script('fancybox', osc_current_web_theme_url('js/fancybox/jquery.fancybox.pack.js'), array('jquery'));
     osc_enqueue_style('fancybox', osc_current_web_theme_url('js/fancybox/jquery.fancybox.css'));
@@ -41,15 +42,97 @@ DEFINES
     }
     osc_enqueue_script('jquery-fineuploader');
 	
+/**
+** DEFAULT VALUES
+**/
+
+//general
 	if( !osc_get_preference('welcome_message', 'osclasswizards_theme') ) {
-		// osc_set_preference('welcome_message', _('Hello Guest, Welcome to OsclassWizards'), 'osclasswizards_theme');
-		// No message
-		osc_set_preference('welcome_message', _(''), 'osclasswizards_theme');
+		osc_set_preference('welcome_message', 'Hello Guest, Welcome to OsclassWizards', 'osclasswizards_theme');
+    }
+
+//templates
+
+	if( !osc_get_preference('search_select', 'osclasswizards_theme') ) {
+		osc_set_preference('search_select', 'region', 'osclasswizards_theme');
+	}
+	
+	if( !osc_get_preference('sub_cat_limit', 'osclasswizards_theme') ) {
+		osc_set_preference('sub_cat_limit', 5, 'osclasswizards_theme');
     }
 	
+	if( !osc_get_preference('popular_regions_limit', 'osclasswizards_theme') ) {
+		osc_set_preference('popular_regions_limit', 10, 'osclasswizards_theme');
+    }	
+	if( !osc_get_preference('popular_cities_limit', 'osclasswizards_theme') ) {
+		osc_set_preference('popular_cities_limit', 10, 'osclasswizards_theme');
+    }	
+	if( !osc_get_preference('popular_searches_limit', 'osclasswizards_theme') ) {
+		osc_set_preference('popular_searches_limit', 10, 'osclasswizards_theme');
+    }
+	
+	if( !osc_get_preference('locations_input_as', 'osclasswizards_theme') ) {
+		osc_set_preference('locations_input_as', 'text', 'osclasswizards_theme');
+    }	
+	if( !osc_get_preference('premium_listings_shown_home', 'osclasswizards_theme') ) {
+		osc_set_preference('premium_listings_shown_home', 6, 'osclasswizards_theme');
+	}
+	if( !osc_get_preference('premium_listings_shown', 'osclasswizards_theme') ) {
+		osc_set_preference('premium_listings_shown', 6, 'osclasswizards_theme');
+	}
+
+	if( !osc_get_preference('title_minimum_length', 'osclasswizards_theme') ) {
+		osc_set_preference('title_minimum_length', 1, 'osclasswizards_theme');
+	}	
+	
+	if( !osc_get_preference('description_minimum_length', 'osclasswizards_theme') ) {
+		osc_set_preference('description_minimum_length', 3, 'osclasswizards_theme');
+	}
+	
+	
+//Cateogires Icons Settings
+	if( osc_get_preference('first_load_cat_icons', 'osclasswizards_theme_cat_icons') == "" ){
+		osc_set_preference('cat-icons-1', 'SHOPPING-CART', 'osclasswizards_theme_cat_icons');
+		osc_set_preference('cat-icons-2', 'CAR', 'osclasswizards_theme_cat_icons');
+		osc_set_preference('cat-icons-3', 'BULLHORN', 'osclasswizards_theme_cat_icons');
+		osc_set_preference('cat-icons-4', 'HOME', 'osclasswizards_theme_cat_icons');
+		osc_set_preference('cat-icons-5', 'WRENCH', 'osclasswizards_theme_cat_icons');
+		osc_set_preference('cat-icons-6', 'USERS', 'osclasswizards_theme_cat_icons');
+		osc_set_preference('cat-icons-7', 'HEART', 'osclasswizards_theme_cat_icons');
+		osc_set_preference('cat-icons-8', 'SUITCASE', 'osclasswizards_theme_cat_icons');
+		
+		osc_set_preference('first_load_cat_icons', 'loaded', 'osclasswizards_theme_cat_icons');
+	}
 
 
+	
+// Theme style
+	if( !osc_get_preference('theme_color_mode', 'osclasswizards_theme') ) {
+		osc_set_preference('theme_color_mode', 'green', 'osclasswizards_theme');
+	}
+	if( !osc_get_preference('theme_color', 'osclasswizards_theme') ) {
+		osc_set_preference('theme_color', '#77c04b', 'osclasswizards_theme');
+	}
+	if( !osc_get_preference('google_fonts', 'osclasswizards_theme') ) {
+		osc_set_preference('google_fonts', 'Open Sans', 'osclasswizards_theme');
+	}
+	
+// Facebook Page Like Box Settings
+	if( !osc_get_preference('facebook-url', 'osclasswizards_theme') ) {
+		osc_set_preference('facebook-url', 'https://www.facebook.com/osclasswizards', 'osclasswizards_theme');
+	}
+	
+	if( !osc_get_preference('facebook-width', 'osclasswizards_theme') ) {
+		osc_set_preference('facebook-width', 340, 'osclasswizards_theme');
+	}
+	
+	if( !osc_get_preference('facebook-height', 'osclasswizards_theme') ) {
+		osc_set_preference('facebook-height', 400, 'osclasswizards_theme');
+	}
+	
+	osc_reset_preferences();
 /**
+
 
 FUNCTIONS
 
@@ -60,18 +143,24 @@ FUNCTIONS
         function osclasswizards_theme_install() {
             osc_set_preference('keyword_placeholder', Params::getParam('keyword_placeholder'), 'osclasswizards_theme');
             osc_set_preference('version', OSCLASSWIZARDS_THEME_VERSION, 'osclasswizards_theme');
-            osc_set_preference('footer_link', '1', 'osclasswizards_theme');
-            osc_set_preference('donation', '0', 'osclasswizards_theme');
+			osc_set_preference('show_banner', '1', 'osclasswizards_theme');
+			osc_set_preference('show_popular', '1', 'osclasswizards_theme');
+			osc_set_preference('show_popular_regions', '1', 'osclasswizards_theme');
+			osc_set_preference('show_popular_cities', '1', 'osclasswizards_theme');
+			osc_set_preference('show_popular_searches', '1', 'osclasswizards_theme');
             osc_set_preference('defaultShowAs@all', 'list', 'osclasswizards_theme');
             osc_set_preference('defaultShowAs@search', 'list');
             osc_set_preference('welcome_message', 'Hello Guest, Welcome to OsclassWizards', 'osclasswizards_theme');
+			osc_set_preference('sub_cat_limit', 5, 'osclasswizards_theme');
+			osc_set_preference('google_fonts', 'Open Sans', 'osclasswizards_theme');
+
             osc_reset_preferences();
         }
     }
     // update options
     if( !function_exists('osclasswizards_theme_update') ) {
         function osclasswizards_theme_update() {
-            osc_set_preference('version', OSCLASSWIZARDS_THEME_VERSION, 'osclasswizards_theme');
+            //osc_set_preference('version', OSCLASSWIZARDS_THEME_VERSION, 'osclasswizards_theme');
             osc_delete_preference('default_logo', 'osclasswizards_theme');
 
             $logo_prefence = osc_get_preference('logo', 'osclasswizards_theme');
@@ -160,6 +249,7 @@ FUNCTIONS
     if( !function_exists('osclasswizards_favicon') ) {
         function osclasswizards_favicon() {
 			echo '<link rel="shortcut icon" href="'.osclasswizards_favicon_url().'" type="image/x-icon" />';
+			echo "\n";
         }
     }  
 	
@@ -249,31 +339,24 @@ FUNCTIONS
         function osclasswizards_draw_categories_list(){ ?>
 <?php if(!osc_is_home_page()){ echo '<div class="resp-wrapper">'; } ?>
 
-<h1 class="title">
-  <?php _e("Categories", 'osclasswizards');?>
-</h1>
+<h1 class="title"><?php _e('Categories', OSCLASSWIZARDS_THEME_FOLDER);?></h1>
+<div class="row">
 <?php
-         //cell_3
-        $total_categories   = osc_count_categories();
-        $col1_max_cat       = ceil($total_categories/1);
+	//cell_3
+	$total_categories   = osc_count_categories();
+	$col1_max_cat       = ceil($total_categories/1);
 
-         osc_goto_first_category();
-         $i      = 0;
-		$catcount	=	0;
-         while ( osc_has_categories() ) {
-			$catcount++;
-			if($catcount== 1)
-			{
-				echo '<div class="row">';
-			}
-         ?>
+	osc_goto_first_category();
+	$catcount	=	0;
+	while ( osc_has_categories() ) {
+?>
 
 <ul class="col-sm-6 col-md-3 grid_list">
   <li>
   
   <section class="listings">
   
-    <h2>
+    <h2><i class="fa fa-<?php echo osclasswizards_category_icon( osc_category_id() ); ?>"></i>
       <?php
                     $_slug      = osc_category_slug();
                     $_url       = osc_search_category_url();
@@ -290,7 +373,7 @@ FUNCTIONS
     </h2>
     <?php if ( osc_count_subcategories() > 0 ) { $m=1; ?>
     <ul>
-      <?php while ( osc_has_subcategories() ) { if( $m<=5){?>
+      <?php while ( osc_has_subcategories() ) { if( $m<=(osc_get_preference('sub_cat_limit', 'osclasswizards_theme'))){?>
       <li>
         <?php if( osc_category_total_items() > 0 ) { ?>
         <a class="category sub-category <?php echo osc_category_slug() ; ?>" href="<?php echo osc_search_category_url() ; ?>"><?php echo osc_category_name() ; ?></a> <span>(<?php echo osc_category_total_items() ; ?>)</span>
@@ -298,29 +381,23 @@ FUNCTIONS
         <a class="category sub-category <?php echo osc_category_slug() ; ?>" href="#"><?php echo osc_category_name() ; ?></a> <span>(<?php echo osc_category_total_items() ; ?>)</span>
         <?php } ?>
       </li>
-      <?php } $m++; } if($m>6) {?>
-      <li class="last"><a href="<?php echo $_url; ?>"><strong><?php _e('See more listings...', 'osclasswizards'); ?></strong></a></li>
+      <?php } $m++; } if($m>(osc_get_preference('sub_cat_limit', 'osclasswizards_theme'))+1) {?>
+      <li class="last"><a href="<?php echo $_url; ?>"><strong><?php _e('See more listings...', OSCLASSWIZARDS_THEME_FOLDER);?></strong></a></li>
       <?php } ?>
     </ul>
     <?php } ?>
-    
-    
     </section>
-    
   </li>
 </ul>
 <?php
-                $i++;
-				if($catcount == 4)
-				{
-					echo '</div>';
-					$catcount	=	0;
-				}
-            }
-
-            echo '</div>';
-        ?>
-<?php if(!osc_is_home_page()){ echo '</div>'; } ?>
+		$catcount++;
+		if($catcount%4==0)
+		{
+			echo '</div><div class="row">';
+		}
+    }
+ ?>
+ </div>
 <?php
         }
     }
@@ -374,18 +451,6 @@ FUNCTIONS
             return $description;
         }
     }
-    // added this function for description template in founder hubs
-    if( !function_exists('get_desc_template') ) {
-        function get_desc_template($id) {
-            if ($id == 96) {
-                $template = "[起業内容]\n\n[投資内訳・起業必要物]\n\n[予想収益]\n\n[投資家への還元方法]\n\n[起業家自己PR]\n\n";
-            } else if ($id == 97) {
-                $template = "[資格・条件]\n\n[投資の目的]\n\n[重点ポイント]\n\n[投資迄の流れ]\n\n[サポート体制]\n\n";
-            } else
-                $template = "";
-            return $template;
-        }
-    } 
     if( !function_exists('related_listings') ) {
         function related_listings() {
             View::newInstance()->_exportVariableToView('items', array());
@@ -434,26 +499,26 @@ FUNCTIONS
     if( !function_exists('get_breadcrumb_lang') ) {
         function get_breadcrumb_lang() {
             $lang = array();
-            $lang['item_add']               = __('Publish a listing', 'osclasswizards');
-            $lang['item_edit']              = __('Edit your listing', 'osclasswizards');
-            $lang['item_send_friend']       = __('Send to a friend', 'osclasswizards');
-            $lang['item_contact']           = __('Contact publisher', 'osclasswizards');
-            $lang['search']                 = __('Search results', 'osclasswizards');
-            $lang['search_pattern']         = __('Search results: %s', 'osclasswizards');
-            $lang['user_dashboard']         = __('Dashboard', 'osclasswizards');
-            $lang['user_dashboard_profile'] = __("%s's profile", 'osclasswizards');
-            $lang['user_account']           = __('Account', 'osclasswizards');
-            $lang['user_items']             = __('Listings', 'osclasswizards');
-            $lang['user_alerts']            = __('Alerts', 'osclasswizards');
-            $lang['user_profile']           = __('Update account', 'osclasswizards');
-            $lang['user_change_email']      = __('Change email', 'osclasswizards');
-            $lang['user_change_username']   = __('Change username', 'osclasswizards');
-            $lang['user_change_password']   = __('Change password', 'osclasswizards');
-            $lang['login']                  = __('Log in', 'osclasswizards');
-            $lang['login_recover']          = __('Recover password', 'osclasswizards');
-            $lang['login_forgot']           = __('Change password', 'osclasswizards');
-            $lang['register']               = __('Create a new account', 'osclasswizards');
-            $lang['contact']                = __('Contact', 'osclasswizards');
+            $lang['item_add']               = __('Publish a listing', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['item_edit']              = __('Edit your listing', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['item_send_friend']       = __('Send to a friend', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['item_contact']           = __('Contact publisher', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['search']                 = __('Search results', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['search_pattern']         = __('Search results: %s', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['user_dashboard']         = __('Dashboard', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['user_dashboard_profile'] = __("%s's profile", OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['user_account']           = __('Account', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['user_items']             = __('Listings', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['user_alerts']            = __('Alerts', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['user_profile']           = __('Update account', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['user_change_email']      = __('Change email', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['user_change_username']   = __('Change username', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['user_change_password']   = __('Change password', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['login']                  = __('Login', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['login_recover']          = __('Recover password', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['login_forgot']           = __('Change password', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['register']               = __('Create a new account', OSCLASSWIZARDS_THEME_FOLDER);
+            $lang['contact']                = __('Contact', OSCLASSWIZARDS_THEME_FOLDER);
             return $lang;
         }
     }
@@ -481,37 +546,37 @@ FUNCTIONS
                'class' => 'opt_publicprofile'
             );
             $options[] = array(
-                'name'  => __('Listings', 'osclasswizards'),
+                'name'  => __('Listings', OSCLASSWIZARDS_THEME_FOLDER),
                 'url'   => osc_user_list_items_url(),
                 'class' => 'opt_items'
             );
             $options[] = array(
-                'name' => __('Alerts', 'osclasswizards'),
+                'name' => __('Alerts', OSCLASSWIZARDS_THEME_FOLDER),
                 'url' => osc_user_alerts_url(),
                 'class' => 'opt_alerts'
             );
             $options[] = array(
-                'name'  => __('Account', 'osclasswizards'),
+                'name'  => __('Account', OSCLASSWIZARDS_THEME_FOLDER),
                 'url'   => osc_user_profile_url(),
                 'class' => 'opt_account'
             );
             $options[] = array(
-                'name'  => __('Change email', 'osclasswizards'),
+                'name'  => __('Change email', OSCLASSWIZARDS_THEME_FOLDER),
                 'url'   => osc_change_user_email_url(),
                 'class' => 'opt_change_email'
             );
             $options[] = array(
-                'name'  => __('Change username', 'osclasswizards'),
+                'name'  => __('Change username', OSCLASSWIZARDS_THEME_FOLDER),
                 'url'   => osc_change_user_username_url(),
                 'class' => 'opt_change_username'
             );
             $options[] = array(
-                'name'  => __('Change password', 'osclasswizards'),
+                'name'  => __('Change password', OSCLASSWIZARDS_THEME_FOLDER),
                 'url'   => osc_change_user_password_url(),
                 'class' => 'opt_change_password'
             );
             $options[] = array(
-                'name'  => __('Delete account', 'osclasswizards'),
+                'name'  => __('Delete account', OSCLASSWIZARDS_THEME_FOLDER),
                 'url'   => '#',
                 'class' => 'opt_delete_account'
             );
@@ -549,10 +614,18 @@ FUNCTIONS
         }
         osc_add_hook('header', 'user_info_js');
     }
+	
+	function osclasswizards_add_google_fonts(){
+	echo "<link href='http://fonts.googleapis.com/css?family=".osclasswizards_google_fonts()."' rel='stylesheet' type='text/css'>";
+	echo "<style>body, .gm-style,h1, h2, h3, h4, h5, h6, .listings h2 a, .listing-attr .currency-value, input[type=text], input[type=password], textarea, select, div.fancy-select div.trigger, .main-search label {
+	font-family: '".str_replace('+',' ',osclasswizards_google_fonts())."', sans-serif;
+}
+</style>";
+	}	
 
     function theme_osclasswizards_actions_admin() {
         //if(OC_ADMIN)
-        if( Params::getParam('file') == 'oc-content/themes/osclasswizards/admin/settings.php' ) {
+        if( Params::getParam('file') == 'oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php' ) {
             if( Params::getParam('donation') == 'successful' ) {
                 osc_set_preference('donation', '1', 'osclasswizards_theme');
                 osc_reset_preferences();
@@ -560,19 +633,55 @@ FUNCTIONS
         }
 
         switch( Params::getParam('action_specific') ) {
+			//general
             case('settings'):
-				$rtl_view	=	Params::getParam('rtl_view', 'osclasswizards_theme');
-
                 osc_set_preference('welcome_message', Params::getParam('welcome_message'), 'osclasswizards_theme');
-                osc_set_preference('keyword_placeholder', Params::getParam('keyword_placeholder'), 'osclasswizards_theme');
-                osc_set_preference('footer_link', ($footerLink ? '1' : '0'), 'osclasswizards_theme');
                 osc_set_preference('defaultShowAs@all', Params::getParam('defaultShowAs@all'), 'osclasswizards_theme');
                 osc_set_preference('defaultShowAs@search', Params::getParam('defaultShowAs@all'));
-                osc_set_preference('rtl_view', ($rtl_view ? '1' : '0'), 'osclasswizards_theme');
-
-                osc_add_flash_ok_message(__('Theme settings updated correctly', 'osclasswizards'), 'admin');
-                osc_redirect_to(osc_admin_render_theme_url('oc-content/themes/osclasswizards/admin/settings.php'));
+				
+                osc_add_flash_ok_message(__('Theme settings updated correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
+                osc_redirect_to(osc_admin_render_theme_url('oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php'));
             break;
+			
+			//templates home
+			case('templates_home'):
+                osc_set_preference('show_banner', ((Params::getParam('show_banner'))? '1' : '0'), 'osclasswizards_theme');
+                osc_set_preference('keyword_placeholder', Params::getParam('keyword_placeholder'), 'osclasswizards_theme');
+                osc_set_preference('search_select', Params::getParam('search_select'), 'osclasswizards_theme');
+				osc_set_preference('premium_listings_shown_home', Params::getParam('premium_listings_shown_home'), 'osclasswizards_theme');
+				osc_set_preference('sub_cat_limit', Params::getParam('sub_cat_limit'), 'osclasswizards_theme');
+                osc_set_preference('show_popular', Params::getParam('show_popular'), 'osclasswizards_theme');
+                osc_set_preference('show_popular_regions', Params::getParam('show_popular_regions'), 'osclasswizards_theme');
+                osc_set_preference('show_popular_cities', Params::getParam('show_popular_cities'), 'osclasswizards_theme');
+                osc_set_preference('show_popular_searches', Params::getParam('show_popular_searches'), 'osclasswizards_theme');
+				osc_set_preference('popular_regions_limit', Params::getParam('popular_regions_limit'), 'osclasswizards_theme');
+                osc_set_preference('popular_cities_limit', Params::getParam('popular_cities_limit'), 'osclasswizards_theme');
+                osc_set_preference('popular_searches_limit', Params::getParam('popular_searches_limit'), 'osclasswizards_theme');
+
+				osc_add_flash_ok_message(__('Templates settings updated correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
+				osc_redirect_to(osc_admin_render_theme_url( 'oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#templates' ));			break;
+			
+			//templates search
+			case('templates_search'):
+				osc_set_preference('premium_listings_shown', Params::getParam('premium_listings_shown'), 'osclasswizards_theme');
+				
+				osc_add_flash_ok_message(__('Templates settings updated correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
+				osc_redirect_to(osc_admin_render_theme_url( 'oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#templates' ));			break;
+			
+			//templates item post
+			case('templates_item_post'):
+				$locations_input_as	=	Params::getParam('locations_input_as', 'osclasswizards_theme');
+				$locations_required	=	Params::getParam('locations_required', 'osclasswizards_theme');
+				$category_multiple_selects	=	Params::getParam('category_multiple_selects', 'osclasswizards_theme');
+				osc_set_preference('title_minimum_length', Params::getParam('title_minimum_length', 'osclasswizards_theme'), 'osclasswizards_theme');
+				osc_set_preference('description_minimum_length', Params::getParam('description_minimum_length', 'osclasswizards_theme'), 'osclasswizards_theme');
+				osc_set_preference('locations_input_as', $locations_input_as, 'osclasswizards_theme');
+				osc_set_preference('locations_required', ($locations_required ? '1' : '0'), 'osclasswizards_theme');
+				osc_set_preference('category_multiple_selects', ($category_multiple_selects ? '1' : '0'), 'osclasswizards_theme');
+				
+				osc_add_flash_ok_message(__('Templates settings updated correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
+				osc_redirect_to(osc_admin_render_theme_url( 'oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#templates' ));
+			break;
 			
 			//ads
 			case('ads_mgmt'):
@@ -582,11 +691,54 @@ FUNCTIONS
                 osc_set_preference('search-results-top-728x90',     trim(Params::getParam('search-results-top-728x90', false, false, false)),          'osclasswizards_theme');
                 osc_set_preference('search-results-middle-728x90',  trim(Params::getParam('search-results-middle-728x90', false, false, false)),       'osclasswizards_theme');
 
-				osc_add_flash_ok_message(__('Ads management updated correctly', 'osclasswizards'), 'admin');
-				osc_redirect_to(osc_admin_render_theme_url( 'oc-content/themes/osclasswizards/admin/settings.php#ads' ));
+				osc_add_flash_ok_message(__('Ads management updated correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
+				osc_redirect_to(osc_admin_render_theme_url( 'oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#ads' ));
+			break;
+
+			//category icons
+			case('categories_icons'):
+				$catsIcons  = Params::getParam('cat-icons');
+				foreach($catsIcons as $catId => $iconName)
+				{
+					osc_set_preference('cat-icons-'.$catId, $iconName, 'osclasswizards_theme_cat_icons');
+				}
+				osc_add_flash_ok_message(__('Category icons settings updated correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
+				osc_redirect_to(osc_admin_render_theme_url( 'oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#category-icons' ));
 			break;
 			
-            case('upload_favicon'):
+			//theme style
+			case('theme_style'):	
+				$color_mode  = Params::getParam('theme_color_mode');
+				osc_set_preference('theme_color_mode', $color_mode, 'osclasswizards_theme');
+				osc_set_preference('google_fonts', Params::getParam('google_fonts'), 'osclasswizards_theme');
+				
+				$rtl_view	=	Params::getParam('rtl_view', 'osclasswizards_theme');
+				osc_set_preference('rtl_view', ($rtl_view ? '1' : '0'), 'osclasswizards_theme');
+				osc_set_preference('custom_css', trim(Params::getParam('custom_css', false, false, false)), 'osclasswizards_theme');
+				
+				osc_add_flash_ok_message(__('Theme color settings updated correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
+				osc_redirect_to(osc_admin_render_theme_url( 'oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#theme-style' ));
+				
+			break;
+
+			//facebook page
+			case('facebook'):	
+
+                osc_set_preference('facebook-url',         trim(Params::getParam('facebook-url', false, false, false)),                  'osclasswizards_theme');
+                osc_set_preference('facebook-width',       trim(Params::getParam('facebook-width', false, false, false)),                'osclasswizards_theme');
+                osc_set_preference('facebook-height',         trim(Params::getParam('facebook-height', false, false, false)),                  'osclasswizards_theme');
+                osc_set_preference('facebook-hidecover',       trim(Params::getParam('facebook-hidecover', false, false, false)),                'osclasswizards_theme');
+                osc_set_preference('facebook-showface',       trim(Params::getParam('facebook-showface', false, false, false)),                'osclasswizards_theme');
+                osc_set_preference('facebook-showpost',       trim(Params::getParam('facebook-showpost', false, false, false)),                'osclasswizards_theme');
+                osc_set_preference('facebook-showitem',       trim(Params::getParam('facebook-showitem', false, false, false)),                'osclasswizards_theme');
+                osc_set_preference('facebook-showsearch',       trim(Params::getParam('facebook-showsearch', false, false, false)),                'osclasswizards_theme');
+
+				osc_add_flash_ok_message(__('Facebook Page settings updated correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
+				osc_redirect_to(osc_admin_render_theme_url( 'oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#facebook' ));
+				
+			break;
+			
+			case('upload_favicon'):
                 $package = Params::getFiles('favicon');
                 if( $package['error'] == UPLOAD_ERR_OK ) {
                     $img = ImageResizer::fromFile($package['tmp_name']);
@@ -598,11 +750,11 @@ FUNCTIONS
 
                     osc_set_preference('favicon', $logo_name, 'osclasswizards_theme');
 
-                    osc_add_flash_ok_message(__('The favicon image has been uploaded correctly', 'osclasswizards'), 'admin');
+                    osc_add_flash_ok_message(__('The favicon image has been uploaded correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
                 } else {
-                    osc_add_flash_error_message(__("An error has occurred, please try again", 'osclasswizards'), 'admin');
+                    osc_add_flash_error_message(__("An error has occurred, please try again", OSCLASSWIZARDS_THEME_FOLDER), 'admin');
                 }
-                osc_redirect_to(osc_admin_render_theme_url('oc-content/themes/osclasswizards/admin/settings.php#favicon'));
+                osc_redirect_to(osc_admin_render_theme_url('oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#favicon'));
             break;
             case('upload_logo'):
                 $package = Params::getFiles('logo');
@@ -616,13 +768,42 @@ FUNCTIONS
 
                     osc_set_preference('logo', $logo_name, 'osclasswizards_theme');
 
-                    osc_add_flash_ok_message(__('The logo image has been uploaded correctly', 'osclasswizards'), 'admin');
+                    osc_add_flash_ok_message(__('The logo image has been uploaded correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
                 } else {
-                    osc_add_flash_error_message(__("An error has occurred, please try again", 'osclasswizards'), 'admin');
+                    osc_add_flash_error_message(__("An error has occurred, please try again", OSCLASSWIZARDS_THEME_FOLDER), 'admin');
                 }
-                osc_redirect_to(osc_admin_render_theme_url('oc-content/themes/osclasswizards/admin/settings.php#logo'));
+                osc_redirect_to(osc_admin_render_theme_url('oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#logo'));
             break;
-            case('upload_homeimage'):
+		
+			case('remove_favicon'):
+                $logo = osc_get_preference('favicon','osclasswizards_theme');
+                $path = osc_uploads_path() . $logo ;
+                if(file_exists( $path ) ) {
+                    @unlink( $path );
+                    osc_delete_preference('favicon','osclasswizards_theme');
+                    osc_reset_preferences();
+                    osc_add_flash_ok_message(__('The favicon image has been removed', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
+                } else {
+                    osc_add_flash_error_message(__("Image not found", OSCLASSWIZARDS_THEME_FOLDER), 'admin');
+                }
+                osc_redirect_to(osc_admin_render_theme_url('oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#favicon'));
+            break;
+
+			case('remove'):
+                $logo = osc_get_preference('logo','osclasswizards_theme');
+                $path = osc_uploads_path() . $logo ;
+                if(file_exists( $path ) ) {
+                    @unlink( $path );
+                    osc_delete_preference('logo','osclasswizards_theme');
+                    osc_reset_preferences();
+                    osc_add_flash_ok_message(__('The logo image has been removed', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
+                } else {
+                    osc_add_flash_error_message(__("Image not found", OSCLASSWIZARDS_THEME_FOLDER), 'admin');
+                }
+                osc_redirect_to(osc_admin_render_theme_url('oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#logo'));
+            break;
+			
+			case('upload_homeimage'):
                 $package = Params::getFiles('homeimage');
                 if( $package['error'] == UPLOAD_ERR_OK ) {
                     $img = ImageResizer::fromFile($package['tmp_name']);
@@ -634,53 +815,26 @@ FUNCTIONS
 
                     osc_set_preference('homeimage', $logo_name, 'osclasswizards_theme');
 
-                    osc_add_flash_ok_message(__('The banner image has been uploaded correctly', 'osclasswizards'), 'admin');
+                    osc_add_flash_ok_message(__('The banner image has been uploaded correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
                 } else {
-                    osc_add_flash_error_message(__("An error has occurred, please try again", 'osclasswizards'), 'admin');
+                    osc_add_flash_error_message(__("An error has occurred, please try again", OSCLASSWIZARDS_THEME_FOLDER), 'admin');
                 }
-                osc_redirect_to(osc_admin_render_theme_url('oc-content/themes/osclasswizards/admin/settings.php#banner'));
+                osc_redirect_to(osc_admin_render_theme_url('oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#banner'));
             break;  
-			
-			case('remove_favicon'):
-                $logo = osc_get_preference('favicon','osclasswizards_theme');
-                $path = osc_uploads_path() . $logo ;
-                if(file_exists( $path ) ) {
-                    @unlink( $path );
-                    osc_delete_preference('favicon','osclasswizards_theme');
-                    osc_reset_preferences();
-                    osc_add_flash_ok_message(__('The favicon image has been removed', 'osclasswizards'), 'admin');
-                } else {
-                    osc_add_flash_error_message(__("Image not found", 'osclasswizards'), 'admin');
-                }
-                osc_redirect_to(osc_admin_render_theme_url('oc-content/themes/osclasswizards/admin/settings.php#favicon'));
-            break;
-
-			case('remove'):
-                $logo = osc_get_preference('logo','osclasswizards_theme');
-                $path = osc_uploads_path() . $logo ;
-                if(file_exists( $path ) ) {
-                    @unlink( $path );
-                    osc_delete_preference('logo','osclasswizards_theme');
-                    osc_reset_preferences();
-                    osc_add_flash_ok_message(__('The logo image has been removed', 'osclasswizards'), 'admin');
-                } else {
-                    osc_add_flash_error_message(__("Image not found", 'osclasswizards'), 'admin');
-                }
-                osc_redirect_to(osc_admin_render_theme_url('oc-content/themes/osclasswizards/admin/settings.php#logo'));
-            break;
-            case('remove_homeimage'):
+			case('remove_homeimage'):
                 $logo = osc_get_preference('homeimage','osclasswizards_theme');
                 $path = osc_uploads_path() . $logo ;
                 if(file_exists( $path ) ) {
                     @unlink( $path );
                     osc_delete_preference('homeimage','osclasswizards_theme');
                     osc_reset_preferences();
-                    osc_add_flash_ok_message(__('The banner image has been removed', 'osclasswizards'), 'admin');
+                    osc_add_flash_ok_message(__('The banner image has been removed', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
                 } else {
-                    osc_add_flash_error_message(__("Image not found", 'osclasswizards'), 'admin');
+                    osc_add_flash_error_message(__("Image not found", OSCLASSWIZARDS_THEME_FOLDER), 'admin');
                 }
-                osc_redirect_to(osc_admin_render_theme_url('oc-content/themes/osclasswizards/admin/settings.php#banner'));
+                osc_redirect_to(osc_admin_render_theme_url('oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#banner'));
             break;
+		
         }
     }
 
@@ -693,13 +847,13 @@ FUNCTIONS
     }
 
     function osclasswizards_delete() {
-        Preference::newInstance()->delete(array('s_section' => 'osclasswizards'));
+        Preference::newInstance()->delete(array('s_section' => OSCLASSWIZARDS_THEME_FOLDER));
     }
 
     osc_add_hook('init', 'osclasswizards_redirect_user_dashboard', 2);
     osc_add_hook('init_admin', 'theme_osclasswizards_actions_admin');
     osc_add_hook('theme_delete_osclasswizards', 'osclasswizards_delete');
-    osc_admin_menu_appearance(__('Theme settings', 'osclasswizards'), osc_admin_render_theme_url('oc-content/themes/osclasswizards/admin/settings.php'), 'settings_osclasswizards');
+    osc_admin_menu_appearance(__('OsclassWizards', OSCLASSWIZARDS_THEME_FOLDER), osc_admin_render_theme_url('oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php'), 'settings_osclasswizards');
 /**
 
 TRIGGER FUNCTIONS
@@ -755,7 +909,7 @@ function osclasswizards_print_sidebar_category_search($aCategories, $current_cat
     if(!isset($c['pk_i_id'])) {
         echo '<ul '.$class.'>';
         if($i==1) {
-            echo '<li><a href="'.osc_esc_html(osc_update_search_url(array('sCategory'=>null, 'iPage'=>null))).'">'.__('All categories', 'osclasswizards')."</a></li>";
+            echo '<li><a href="'.osc_esc_html(osc_update_search_url(array('sCategory'=>null, 'iPage'=>null))).'">'.__('All categories', OSCLASSWIZARDS_THEME_FOLDER)."</a></li>";
         }
         foreach($c as $key => $value) {
     ?>
@@ -775,7 +929,7 @@ function osclasswizards_print_sidebar_category_search($aCategories, $current_cat
 <ul <?php echo $class;?>>
   <?php if($i==1) { ?>
   <li><a href="<?php echo osc_esc_html(osc_update_search_url(array('sCategory'=>null, 'iPage'=>null))); ?>">
-    <?php _e('All categories', 'osclasswizards'); ?>
+    <?php _e('All categories', OSCLASSWIZARDS_THEME_FOLDER); ?>
     </a></li>
   <?php } ?>
   <li> <a id="cat_<?php echo osc_esc_html($c['pk_i_id']);?>" href="<?php echo osc_esc_html(osc_update_search_url(array('sCategory'=> $c['pk_i_id'], 'iPage'=>null))); ?>">
@@ -789,6 +943,137 @@ function osclasswizards_print_sidebar_category_search($aCategories, $current_cat
 </ul>
 <?php
     }
+}
+
+//item post form validate
+function osclasswizards_item_post_form_validate(){
+?>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$('#regionId, #cityId').removeAttr('disabled');
+	});
+
+	//form validate
+	$('form[name=item]').validate({
+		rules: {
+			catId: {
+				required: true,
+				digits: true
+			},
+			'title[<?php echo osc_current_user_locale();?>]': {
+				required:true,
+				minlength:<?php echo osclasswizards_title_minimum_length();?>
+			},
+			'description[<?php echo osc_current_user_locale();?>]': {
+				minlength:<?php echo osclasswizards_description_minimum_length();?>
+			},
+			price: {
+				maxlength: 50
+			},
+			currency: "required",
+			"photos[]": {
+				accept: "png,gif,jpg,jpeg"
+			},
+			contactName: {
+				required: true,
+				minlength: 3,
+				maxlength: 35
+			},
+			contactEmail: {
+				required: true,
+				email: true
+			},
+			countryId:{
+				required: <?php echo osclasswizards_locations_required(); ?>
+			},
+			region: {
+				required: <?php echo osclasswizards_locations_required(); ?>,
+				minlength: 3,
+				maxlength: 100
+			},
+			city: {
+				required: <?php echo osclasswizards_locations_required(); ?>,
+				minlength: 3,
+				maxlength: 100
+			}
+			<?php if(osclasswizards_locations_input_as()=='select'){ ?>
+			,
+			regionId: {
+				required: <?php echo osclasswizards_locations_required(); ?>
+			},
+			cityId: {
+				required: <?php echo osclasswizards_locations_required(); ?>
+			}
+			<?php } ?>
+			
+		},
+		messages: {
+			catId: {
+			required: "<?php echo osc_esc_js(__("Choose one category", OSCLASSWIZARDS_THEME_FOLDER)); ?>."
+			},
+			'title[<?php echo osc_current_user_locale();?>]': {
+				required: "<?php echo osc_esc_js(__("Title: this field is required", OSCLASSWIZARDS_THEME_FOLDER)); ?>.",
+				minlength: "<?php echo osc_esc_js(__("Title too short", OSCLASSWIZARDS_THEME_FOLDER)); ?>."
+			},
+			'description[<?php echo osc_current_user_locale();?>]': {
+				minlength: "<?php echo osc_esc_js(__("Description too short", OSCLASSWIZARDS_THEME_FOLDER)); ?>."
+			},
+			price: {
+				maxlength: "<?php echo osc_esc_js(__("Price: no more than 50 characters", OSCLASSWIZARDS_THEME_FOLDER)); ?>."
+			},
+			currency: "<?php echo osc_esc_js(__("Currency: make your selection", OSCLASSWIZARDS_THEME_FOLDER)); ?>.",
+			"photos[]": {
+				accept: "<?php echo osc_esc_js(__("Photo: must be png,gif,jpg,jpeg", OSCLASSWIZARDS_THEME_FOLDER)); ?>."
+			},
+			contactName: {
+				required: "<?php echo osc_esc_js(__("Name: this field is required", OSCLASSWIZARDS_THEME_FOLDER)); ?>.",
+				minlength: "<?php echo osc_esc_js(__("Name: enter at least 3 characters", OSCLASSWIZARDS_THEME_FOLDER)); ?>.",
+				maxlength: "<?php echo osc_esc_js(__("Name: no more than 35 characters", OSCLASSWIZARDS_THEME_FOLDER)); ?>."
+			},
+			contactEmail: {
+				required: "<?php echo osc_esc_js(__("Email: this field is required", OSCLASSWIZARDS_THEME_FOLDER)); ?>.",
+				email: "<?php echo osc_esc_js(__("Invalid email address", OSCLASSWIZARDS_THEME_FOLDER)); ?>."
+			},
+			countryId: {
+				required: "<?php echo osc_esc_js(__("Please select a country", OSCLASSWIZARDS_THEME_FOLDER)); ?>."
+			},
+			region: {
+				required: "<?php echo osc_esc_js(__("Region: this field is required", OSCLASSWIZARDS_THEME_FOLDER)); ?>.",
+				minlength: "<?php echo osc_esc_js(__("Region: enter at least 3 characters", OSCLASSWIZARDS_THEME_FOLDER)); ?>.",
+				maxlength: "<?php echo osc_esc_js(__("Region: no more than 100 characters", OSCLASSWIZARDS_THEME_FOLDER)); ?>."
+			},
+			city: {
+				required: "<?php echo osc_esc_js(__("City: this field is required", OSCLASSWIZARDS_THEME_FOLDER)); ?>.",
+				minlength: "<?php echo osc_esc_js(__("City: enter at least 3 characters", OSCLASSWIZARDS_THEME_FOLDER)); ?>.",
+				maxlength: "<?php echo osc_esc_js(__("City: no more than 100 characters", OSCLASSWIZARDS_THEME_FOLDER)); ?>."
+			}
+			<?php if(osclasswizards_locations_input_as()=='select'){ ?>
+			,
+			regionId: {
+				required: "<?php echo osc_esc_js(__("Region: this field is required", OSCLASSWIZARDS_THEME_FOLDER)); ?>."
+			},
+			cityId: {
+				required: "<?php echo osc_esc_js(__("City: this field is required", OSCLASSWIZARDS_THEME_FOLDER)); ?>."
+			}
+			<?php } ?>
+		},
+		errorLabelContainer: "#error_list",
+		wrapper: "li",
+		invalidHandler: function(form, validator) {
+			$('html,body').animate({ scrollTop: $('h1').offset().top }, { duration: 250, easing: 'swing'});
+		},
+		submitHandler: function(form){
+			$('button[type=submit], input[type=submit]').attr('disabled', 'disabled');
+			setTimeout("$('button[type=submit], input[type=submit]').removeAttr('disabled')", 5000);
+			form.submit();
+		}
+	});
+</script>
+<?php
+}
+
+if(osc_is_publish_page()){
+	osc_add_hook('footer', 'osclasswizards_item_post_form_validate');
 }
 
 /**
@@ -842,34 +1127,6 @@ if( !function_exists('osc_uploads_url') ){
     }
 }
 
-/*
-
-    ads  SEARCH
-
- */
-if (!function_exists('search_ads_listing_top_fn')) {
-    function search_ads_listing_top_fn() {
-        if(osc_get_preference('search-results-top-728x90', 'osclasswizards')!='') {
-            echo '<div class="clear"></div>' . PHP_EOL;
-            echo '<div class="ads_728">' . PHP_EOL;
-            echo osc_get_preference('search-results-top-728x90', 'osclasswizards');
-            echo '</div>' . PHP_EOL;
-        }
-    }
-}
-//osc_add_hook('search_ads_listing_top', 'search_ads_listing_top_fn');
-
-if (!function_exists('search_ads_listing_medium_fn')) {
-    function search_ads_listing_medium_fn() {
-        if(osc_get_preference('search-results-middle-728x90', 'osclasswizards')!='') {
-            echo '<div class="clear"></div>' . PHP_EOL;
-            echo '<div class="ads_728">' . PHP_EOL;
-            echo osc_get_preference('search-results-middle-728x90', 'osclasswizards');
-            echo '</div>' . PHP_EOL;
-        }
-    }
-}
-osc_add_hook('search_ads_listing_medium', 'search_ads_listing_medium_fn');
 
 /**
 * welcome message 
@@ -881,6 +1138,69 @@ function osclasswizards_welcome_message(){
     }else{
 		return false;
 	}
+}
+
+
+function osclasswizards_premium_listings_shown_home(){
+	return osc_get_preference('premium_listings_shown_home', 'osclasswizards_theme');
+}
+
+//search select
+function osclasswizards_search_select(){
+	return osc_get_preference('search_select', 'osclasswizards_theme');
+}
+
+//title minimum length
+function osclasswizards_title_minimum_length(){
+	return osc_get_preference('title_minimum_length', 'osclasswizards_theme');
+}
+//search page premiums
+function osclasswizards_description_minimum_length(){
+	return osc_get_preference('description_minimum_length', 'osclasswizards_theme');
+}
+//search page premiums
+function osclasswizards_premium_listings_shown(){
+	return osc_get_preference('premium_listings_shown', 'osclasswizards_theme');
+}
+
+//item post locations input
+function osclasswizards_locations_input_as(){
+	return osc_get_preference('locations_input_as', 'osclasswizards_theme');
+}
+
+//item post locations required
+function osclasswizards_locations_required(){
+	return (osc_get_preference('locations_required', 'osclasswizards_theme') == '1')? 'true': 'false';
+}
+
+
+/**
+* select categories 
+*
+*/
+
+function osclasswizards_categories_select($name, $id, $label)
+{
+    $categories = Category::newInstance()->toTreeAll();
+
+	if(count($categories) > 0 ) {
+			
+		$html  = '<select name="'.$name.'" id="'.$id.'">';
+		$html .= '<option value="">'.$label.'</option>';
+		foreach($categories as $topcat) { 
+			$html .= '<option class="top" value="'. $topcat['s_name'].'">'. $topcat['s_name'].'</option>';
+			if(!empty($topcat['categories'])) {
+				
+				foreach($topcat['categories'] as $subcat) {
+					$html .= '<option value="'. $subcat['s_name'].'">&nbsp;&nbsp;'. $subcat['s_name'].'</option>';
+				}
+			
+			}
+		} 
+		$html .= '</select>';
+	} 
+
+	echo $html;
 }
 
 /**
@@ -903,20 +1223,195 @@ function osclasswizards_regions_select($name, $id, $label)
 	echo $html;
 }
 
+/**
+* select cities 
+*
+*/
+
+function osclasswizards_cities_select($name, $id, $label)
+{
+	$html  = '<select name="'.$name.'" id="'.$id.'">';
+	$html .= '<option value="">'.$label.'</option>';
+	if(osc_count_list_cities() > 0 ) {
+		while(osc_has_list_cities() ) { 
+			$html .= '<option value="'. osc_list_city_name().'">'. osc_list_city_name().'</option>';
+		}
+	}
+	$html .= '</select>';
+
+	echo $html;
+}
+
+// popular regions
+function osclasswizards_popular_regions($limit = 20){
+	View::newInstance()->_exportVariableToView('list_regions', Search::newInstance()->listRegions('%%%%', '>=') ) ;
+	if(osc_count_list_regions() > 0 ) { 
+		$array	=	array();
+		while(osc_has_list_regions() ) {
+			if( osc_list_region_items() > 0){
+				$region_name			=	osc_list_region_name();
+				$array[ $region_name ]	=	osc_list_region_items();
+			}
+		}
+		arsort($array);
+		return	array_slice($array, 0, $limit);
+	}else{
+		return false;
+	}
+}
+
+// popular cities
+function osclasswizards_popular_citites($limit = 20){
+	View::newInstance()->_exportVariableToView('list_cities', Search::newInstance()->listCities('%%%%', '>=') ) ;
+	if(osc_count_list_cities() > 0 ) { 
+		$array	=	array();
+		while(osc_has_list_cities() ) {
+			if( osc_list_city_items() > 0){	
+				$city_name	=	osc_list_city_name();
+				$array[ $city_name ]	=	osc_list_city_items();
+			}
+		}
+		arsort($array);
+		return	array_slice($array, 0, $limit);
+	}else{
+		return false;
+	}
+}
+
+// popular search
+function osclasswizards_popular_searches($limit = 20){
+
+	if(osc_count_latest_searches() > 0){
+		$conn = getConnection() ;
+		$conn->autocommit(false);
+		try {
+			$results	=	$conn->osc_dbFetchResults("SELECT s_search, COUNT(s_search) AS total FROM %st_latest_searches WHERE s_search != '' GROUP BY s_search ORDER BY total DESC LIMIT %d", DB_TABLE_PREFIX, $limit);
+			$conn->commit();
+			return $results;
+		} catch (Exception $e) {
+			$conn->rollback();
+			echo $e->getMessage();
+		}
+		$conn->autocommit(true);
+	}else{
+		return false;
+	}
+}
+
+//insert search in db
+function osclasswizards_insert_search(){
+
+	$search_word	=	Params::getParam('sPattern');
+	if(isset($search_word) && $search_word!="" ){
+		$conn = getConnection() ;
+		$conn->autocommit(false);
+		try {
+			$conn->osc_dbExec("INSERT INTO %st_latest_searches (d_date, s_search) VALUES (now(), '%s')", DB_TABLE_PREFIX, $search_word);
+			$conn->commit();
+		} catch (Exception $e) {
+			$conn->rollback();
+			echo $e->getMessage();
+		}
+		$conn->autocommit(true);
+	}
+}
+
+osc_add_hook('search', 'osclasswizards_insert_search');
+
+
+/**
+* function to get category icon name
+*
+*/
+function osclasswizards_category_icon($catId){
+	$icon = osc_esc_html( strtolower(osc_get_preference('cat-icons-'.$catId, 'osclasswizards_theme_cat_icons') ) );
+	if($icon!="")
+	return strtolower($icon);
+	else
+	return "shopping-cart";
+}
+
+
+/**
+* function to get theme color mode
+*
+*/
+function osclasswizards_theme_color_mode()
+{
+	return osc_get_preference('theme_color_mode', 'osclasswizards_theme');
+
+}
+
+function osclasswizards_google_fonts()
+{
+	return trim(osc_get_preference('google_fonts', 'osclasswizards_theme'));
+
+}
+
+//show populars
+
+//regions
+function osclasswizards_show_popular_regions(){
+	if(osc_get_preference('show_popular_regions', 'osclasswizards_theme') == 1){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+//limit
+function osclasswizards_popular_regions_limit(){
+	return osc_get_preference('popular_regions_limit', 'osclasswizards_theme');
+}
+
+//ciities
+function osclasswizards_show_popular_cities(){
+	if(osc_get_preference('show_popular_cities', 'osclasswizards_theme') == 1){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+//limit
+function osclasswizards_popular_cities_limit(){
+	return osc_get_preference('popular_cities_limit', 'osclasswizards_theme');
+}
+
+//regions
+function osclasswizards_show_popular_searches(){
+	if(osc_get_preference('show_popular_searches', 'osclasswizards_theme') == 1){
+		return true;
+	}
+	else{
+		return false;
+	}
+}
+//limit
+function osclasswizards_popular_searches_limit(){
+	return osc_get_preference('popular_searches_limit', 'osclasswizards_theme');
+}
+
+
+/**
+* facebook like box
+**/
+function osclasswizards_facebook_like_box(){
+?>
+<div class="fb-page" data-href="<?php echo osc_esc_html( osc_get_preference('facebook-url', 'osclasswizards_theme') ); ?>" data-width="<?php echo osc_esc_html( osc_get_preference('facebook-width', 'osclasswizards_theme') ); ?>" data-height="<?php echo osc_esc_html( osc_get_preference('facebook-height', 'osclasswizards_theme') ); ?>" data-hide-cover="<?php echo (osc_esc_html( osc_get_preference('facebook-hidecover', 'osclasswizards_theme')) == "1" ) ? "true":"false"; ?>" data-show-facepile="<?php echo (osc_esc_html( osc_get_preference('facebook-showface', 'osclasswizards_theme')) == "1" ) ? "true":"false"; ?>" data-show-posts="<?php echo (osc_esc_html( osc_get_preference('facebook-showpost', 'osclasswizards_theme')) == "1" ) ? "true":"false"; ?>"></div>
+<?php
+}
+
+
 /** 
 * function to add head title and meta tags
 *
 */
 function osclasswizards_meta(){
 ?>
-<title><?php echo meta_title() ; ?></title>
-<meta name="title" content="<?php echo osc_esc_html(meta_title()); ?>" />
-<?php if( meta_description() != '' ) { ?>
-<meta name="description" content="<?php echo osc_esc_html(meta_description()); ?>" />
-<?php } ?>
-<?php if( meta_keywords() != '' ) { ?>
-<meta name="keywords" content="<?php echo osc_esc_html(meta_keywords()); ?>" />
-<?php } ?>
+<title><?php echo osc_esc_html(meta_title()) ; ?></title>
+<?php if( meta_description() != '' ) { ?><meta name="description" content="<?php echo osc_esc_html(meta_description()); ?>" /><?php } ?>
+<?php if( meta_keywords() != '' ) { ?><meta name="keywords" content="<?php echo osc_esc_html(meta_keywords()); ?>" /><?php } ?>
 <?php
 }
 osc_add_hook('osclasswizards_head', 'osclasswizards_meta');
@@ -925,5 +1420,35 @@ osc_add_hook('osclasswizards_head', 'osclasswizards_meta');
 if( function_exists('ocw_seo_item_meta') && osc_is_ad_page()){
 	osc_remove_hook('osclasswizards_head', 'osclasswizards_meta');
 }
+
+//add favicon
+osc_add_hook('osclasswizards_head', 'osclasswizards_favicon');
+
+//footer css
+function osclasswizards_footer_css(){
+	
+	echo '<link href="'.osc_current_web_theme_url('css/apps.css').'" rel="stylesheet" type="text/css" />';
+
+	osclasswizards_add_google_fonts();
+	
+	$custom_css = trim(osc_get_preference('custom_css', 'osclasswizards_theme'));
+	if( $custom_css != "" ){
+		echo "<style>";
+		echo $custom_css;
+		echo "</style>";
+	}
+
+}
+osc_add_hook('footer', 'osclasswizards_footer_css');
+
+//footer js
+function osclasswizards_footer_js(){
+	
+	echo '<script type="text/javascript" src="'.osc_current_web_theme_js_url('main.js').'"></script>';
+
+}
+osc_add_hook('footer', 'osclasswizards_footer_js');
+
+
 
 ?>

@@ -21,18 +21,21 @@
 ?>
 <script type="text/javascript">
 $(document).ready(function(){
+	
+	$('input[name=alert_email]').val('<?php _e('Enter your email address.', OSCLASSWIZARDS_THEME_FOLDER); ?>');
+	
     $(".sub_button").click(function(){
         $.post('<?php echo osc_base_url(true); ?>', {email:$("#alert_email").val(), userid:$("#alert_userId").val(), alert:$("#alert").val(), page:"ajax", action:"alerts"},
             function(data){
-                if(data==1) { alert('<?php echo osc_esc_js(__('You have sucessfully subscribed to the alert', 'osclasswizards')); ?>'); }
-                else if(data==-1) { alert('<?php echo osc_esc_js(__('Invalid email address', 'osclasswizards')); ?>'); }
-                else { alert('<?php echo osc_esc_js(__('There was a problem with the alert', 'osclasswizards')); ?>');
+                if(data==1) { alert('<?php echo osc_esc_js(__('You have sucessfully subscribed to the alert', OSCLASSWIZARDS_THEME_FOLDER)); ?>'); }
+                else if(data==-1) { alert('<?php echo osc_esc_js(__('Invalid email address', OSCLASSWIZARDS_THEME_FOLDER)); ?>'); }
+                else { alert('<?php echo osc_esc_js(__('Invalid email address', OSCLASSWIZARDS_THEME_FOLDER)); ?>');
                 };
         });
         return false;
     });
-
-    var sQuery = '<?php echo osc_esc_js(AlertForm::default_email_text()); ?>';
+	
+    var sQuery = '<?php _e('Enter your email address.', OSCLASSWIZARDS_THEME_FOLDER); ?>';
 
     if($('input[name=alert_email]').val() == sQuery) {
         $('input[name=alert_email]').css('color', 'gray');
@@ -57,7 +60,7 @@ $(document).ready(function(){
 
 <div class="alert_form">
     <h3>
-        <strong><?php _e('Subscribe to this search', 'osclasswizards'); ?></strong>
+        <strong><?php _e('Subscribe to this search', OSCLASSWIZARDS_THEME_FOLDER); ?></strong>
     </h3>
     <form action="<?php echo osc_base_url(true); ?>" method="post" name="sub_alert" id="sub_alert" class="nocsrf">
     
@@ -73,10 +76,9 @@ $(document).ready(function(){
                 <?php AlertForm::user_id_hidden(); ?>
                 <?php AlertForm::email_text(); ?>
 
-            <?php }; ?></p>
+            <?php } ?></p>
             
-            
-            
-            <button type="submit" class="btn btn-success sub_button"><?php _e('Subscribe now', 'osclasswizards'); ?>!</button>
+            <button type="submit" class="btn btn-success sub_button">
+			<?php _e('Subscribe now', OSCLASSWIZARDS_THEME_FOLDER); ?>!</button>
     </form>
 </div>

@@ -31,7 +31,7 @@
     }
     osc_add_filter('meta_title_filter','custom_meta_title');
     function custom_meta_title($data){
-        return __('Change username', 'osclasswizards');;
+        return __('Change username', OSCLASSWIZARDS_THEME_FOLDER);;
     }
     osc_current_web_theme_path('header.php') ;
     $osc_user = osc_user();
@@ -46,7 +46,7 @@ $(document).ready(function() {
         },
         messages: {
             s_username: {
-                required: '<?php echo osc_esc_js(__("Username: this field is required", "osclasswizards")); ?>.'
+                required: '<?php echo osc_esc_js(__("Username: this field is required", OSCLASSWIZARDS_THEME_FOLDER)); ?>.'
             }
         },
         errorLabelContainer: "#error_list",
@@ -71,9 +71,9 @@ $(document).ready(function() {
                     function(data){
                         clearInterval(cInterval);
                         if(data.exists==0) {
-                            $("#available").text('<?php echo osc_esc_js(__("The username is available", "osclasswizards")); ?>');
+                            $("#available").text('<?php echo osc_esc_js(__("The username is available", OSCLASSWIZARDS_THEME_FOLDER)); ?>');
                         } else {
-                            $("#available").text('<?php echo osc_esc_js(__("The username is NOT available", "osclasswizards")); ?>');
+                            $("#available").text('<?php echo osc_esc_js(__("The username is NOT available", OSCLASSWIZARDS_THEME_FOLDER)); ?>');
                         }
                     }
                 );
@@ -93,7 +93,7 @@ $(document).ready(function() {
   
   <div class="title">
     <h1>
-      <?php _e('Change Username', 'osclasswizards'); ?>
+      <?php _e('Change Username', OSCLASSWIZARDS_THEME_FOLDER); ?>
     </h1>
     
     </div>
@@ -106,7 +106,7 @@ $(document).ready(function() {
       <input type="hidden" name="action" value="change_username_post" />
       <div class="form-group">
         <label class="control-label" for="s_username">
-          <?php _e('Username', 'osclasswizards'); ?>
+          <?php _e('Username', OSCLASSWIZARDS_THEME_FOLDER); ?>
         </label>
         <div class="controls">
           <input type="text" name="s_username" id="s_username" value="" />
@@ -116,7 +116,7 @@ $(document).ready(function() {
       <div class="form-group">
         <div class="controls">
           <button type="submit" class="btn btn-success">
-          <?php _e("Update", 'osclasswizards');?>
+          <?php _e("Update", OSCLASSWIZARDS_THEME_FOLDER);?>
           </button>
         </div>
       </div>

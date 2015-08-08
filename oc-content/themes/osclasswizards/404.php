@@ -30,11 +30,11 @@
   <div class="flashmessage-404 page_error">
     <div class="title">
       <h1>
-        <?php _e("Sorry but I can't find the page you're looking for", 'osclasswizards') ; ?>
+        <?php _e("Sorry but I can't find the page you're looking for", OSCLASSWIZARDS_THEME_FOLDER) ; ?>
       </h1>
     </div>
     <h3>
-      <?php _e("Let us help you, we have got a few tips for you to find it. ", 'osclasswizards') ; ?>
+      <?php _e("Let us help you, we have got a few tips for you to find it. ", OSCLASSWIZARDS_THEME_FOLDER) ; ?>
     </h3>
     <ul>
       <li>
@@ -43,14 +43,14 @@
           <fieldset class="main">
             <input type="text" name="sPattern"  id="query" value="" />
             <button type="submit" class="btn btn-success">
-            <?php _e('Search', 'osclasswizards') ; ?>
+            <?php _e('Search', OSCLASSWIZARDS_THEME_FOLDER) ; ?>
             </button>
           </fieldset>
         </form>
       </li>
       <li class="message_errors">
         <h2>
-          <?php _e("<strong>Look</strong> for it in the most popular categories.", 'osclasswizards') ; ?>
+          <?php _e("<strong>Look</strong> for it in the most popular categories.", OSCLASSWIZARDS_THEME_FOLDER) ; ?>
         </h2>
         <div class="categories">
           <?php osc_goto_first_category() ; ?>

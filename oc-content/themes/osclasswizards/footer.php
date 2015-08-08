@@ -21,11 +21,8 @@
 ?>
 </div>
 </div>
-
-<!-- content -->
 <?php osc_run_hook('after-main'); ?>
 </div>
-<!-- footer -->
 <?php osc_show_widgets('footer');?>
 
 <footer id="footer">
@@ -35,9 +32,9 @@
       <?php if ( osc_count_web_enabled_locales() > 1) { ?>
       <?php osc_goto_first_locale(); ?>
       <strong>
-      <?php _e('Language:', 'osclasswizards'); ?>
+      <?php _e('Language:', OSCLASSWIZARDS_THEME_FOLDER); ?>
       </strong>
-      <ul class="language_links">
+      <ul>
         <?php $i = 0;  ?>
         <?php while ( osc_has_web_enabled_locales() ) { ?>
         <li><a id="<?php echo osc_locale_code(); ?>" href="<?php echo osc_change_language_url ( osc_locale_code() ); ?>"><?php echo osc_locale_name(); ?></a></li>
@@ -49,26 +46,21 @@
       <ul>
         <?php if( osc_users_enabled() ) { ?>
         <?php if( osc_is_web_user_logged_in() ) { ?>
-        <li> <?php echo sprintf(__('Hi %s', 'osclasswizards'), osc_logged_user_name()); ?> <strong><a href="<?php echo osc_user_dashboard_url(); ?>"> |
-          <?php _e('My account', 'osclasswizards'); ?>
-          </a></strong> <a href="<?php echo osc_user_logout_url(); ?>"> |
-          <?php _e('Log out', 'osclasswizards'); ?>
+        <li> <?php echo sprintf(__('Hi %s', OSCLASSWIZARDS_THEME_FOLDER), osc_logged_user_name()); ?> &#10072; <strong><a href="<?php echo osc_user_dashboard_url(); ?>">
+          <?php _e('My account', OSCLASSWIZARDS_THEME_FOLDER); ?>
+          </a></strong> <a href="<?php echo osc_user_logout_url(); ?>">
+          <?php _e('Logout', OSCLASSWIZARDS_THEME_FOLDER); ?>
           </a> </li>
         <?php } else { ?>
-        <li><a href="<?php echo osc_user_login_url(); ?>">
-          <?php _e('Log in', 'osclasswizards'); ?>
+        <li> <a href="<?php echo osc_user_login_url(); ?>">
+          <?php _e('Login', OSCLASSWIZARDS_THEME_FOLDER); ?>
           </a></li>
         <?php if(osc_user_registration_enabled()) { ?>
         <li> <a href="<?php echo osc_register_account_url(); ?>">
-          <?php _e('Register for a free account', 'osclasswizards'); ?>
+          <?php _e('Register for a free account', OSCLASSWIZARDS_THEME_FOLDER); ?>
           </a> </li>
         <?php } ?>
         <?php } ?>
-        <?php } ?>
-        <?php if( osc_users_enabled() || ( !osc_users_enabled() && !osc_reg_user_post() )) { ?>
-        <li> <a href="<?php echo osc_item_post_url_in_category(); ?>">
-          <?php _e("Publish your ad for free", 'osclasswizards');?>
-          </a> </li>
         <?php } ?>
         <?php
         osc_reset_static_pages();
@@ -78,108 +70,29 @@
         }
         ?>
         <li> <a href="<?php echo osc_contact_url(); ?>">
-          <?php _e('Contact', 'osclasswizards'); ?>
+          <?php _e('Contact', OSCLASSWIZARDS_THEME_FOLDER); ?>
           </a> </li>
+        <?php if( osc_users_enabled() || ( !osc_users_enabled() && !osc_reg_user_post() )) { ?>
+        <li class="publish"> <a href="<?php echo osc_item_post_url_in_category(); ?>">
+          <?php _e("Publish your ad for free", OSCLASSWIZARDS_THEME_FOLDER);?>
+          </a> </li>
+        <?php } ?>
       </ul>
       <?php
-            // echo '<div>' . sprintf(__('Free responsive Osclass theme by <a target="_blank" title="osclasswizards" href="%s">OsclassWizards</a>','osclasswizards'), 'http://osclasswizards.com/') . '</div>';
-            echo '<div>' . sprintf(__('Copyright (C) Menatoz, Inc. All Rights Reserved.<br> This website is proudly using the <a target="_blank" title="osclasswizards" href="%s"> classifieds scripts </a> software Osclass','osclasswizards'), 'http://osclasswizards.com/') . '</div>';
+            echo '<div class="copyright">' . sprintf(__('Free responsive Osclass theme by <a target="_blank" title="osclasswizards" href="%s">OsclassWizards</a>',OSCLASSWIZARDS_THEME_FOLDER), 'http://www.osclasswizards.com/') . '</div>';
         ?>
     </div>
   </div>
 </footer>
 <?php osc_run_hook('footer'); ?>
-<script type="text/javascript">
-
-
-
-$(document).ready(function(){$(".toggle").click(function(){$(".links").slideToggle(500);return false;});});
-
-
-
-$(document).ready(function(){$(".language span").click(function(){$(".language ul").slideToggle(500);return false;});});
-
-
-	$(document).ready(function(){
-	var callbacks_list = $('');
-	$('.checkbox input').on('ifCreated ifClicked ifChanged ifChecked ifUnchecked ifDisabled ifEnabled ifDestroyed', function(event){
-	  callbacks_list.prepend('');
-	}).iCheck({
-	  checkboxClass: 'square',
-	  radioClass: 'circle',
-	  increaseArea: '20%'
-	});
-  });
-
-
-$(document).ready(function() {
-	//user profile page
-	$("#cityId").attr('disabled',false);
-	
-	//fancyselect
-	$('#sCategory, #sRegion, #catId, #currency, #countryId, #as, #b_company, #regionId, #cityId').fancySelect();
-	
-	//item publish page
-	$('#catId').fancySelect().on('change.fs', function() {
-		var cat_id = $("#catId").val();
-		var url = '<?php echo osc_base_url(true);?>';
-		var result = '';
-
-		if(cat_id != '') {
-			if(catPriceEnabled[cat_id] == 1) {
-				$("#price").closest("div").show();
-			} else {
-				$("#price").closest("div").hide();
-				$('#price').val('') ;
-			}
-
-			$.ajax({
-				type: "POST",
-				url: url,
-				data: 'page=ajax&action=runhook&hook=item_form&catId=' + cat_id,
-				dataType: 'html',
-				success: function(data){
-					$("#plugin-hook").html(data);
-				}
-			});
-
-		}
-	});
-	
-	//user profile page
-	$('#regionId').fancySelect().on('change.fs', function() {
-		var pk_c_code = $(this).val();
-        var url = '<?php echo osc_base_url(true);?>?page=ajax&action=cities&regionId=' + pk_c_code;
-        var result = '';
-        if(pk_c_code != '') {
-			$("#cityId").attr('disabled',false);
-			$.ajax({
-				type: "POST",
-				url: url,
-				dataType: 'json',
-				success: function(data){
-					var length = data.length;
-					if(length > 0) {
-						result += '<option selected value="">Select a city...</option>';
-						for(key in data) {
-							result += '<option value="' + data[key].pk_i_id + '">' + data[key].s_name + '</option>';
-						}
-						$("#city").before('<select name="cityId" id="cityId" ></select>');
-						$("#city").remove();
-					} else {
-						result += '<option value="">No results</option>';
-						$("#cityId").before('<input type="text" name="city" id="city" />');
-						$("#cityId").remove();
-					}
-					$("#cityId").html(result);
-					$('#cityId').trigger('update.fs');
-				}
-			});
-		} else {
-                $("#cityId").attr('disabled',true);
-            }
-    });
-
-});	
-	</script>
+<?php if(osc_is_ad_page() || osc_is_search_page()){ ?>
+<div id="fb-root"></div>
+<script>(function(d, s, id) {
+  var js, fjs = d.getElementsByTagName(s)[0];
+  if (d.getElementById(id)) return;
+  js = d.createElement(s); js.id = id;
+  js.src = "//connect.facebook.net/en_GB/sdk.js#xfbml=1&appId=498033263566934&version=v2.3";
+  fjs.parentNode.insertBefore(js, fjs);
+}(document, 'script', 'facebook-jssdk'));</script> 
+<?php } ?>
 </body></html>
