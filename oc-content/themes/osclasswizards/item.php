@@ -78,11 +78,15 @@
       <h1 class="title title_code"> <strong><?php echo osc_item_title(); ?></strong> </h1>
       <ul class="item-header">
         <!-- Added category -->
+        <table border=1>
+        <tr>
         <li>
           <?php if ( osc_item_category() !== '' ) { ?>
-          <strong><?php _e('Category', 'osclasswizards');?>:</strong><?php osc_item_category(); ?>
+          <td><strong><?php _e('Category', 'osclasswizards');?>:</strong></td>
+          <td><?php osc_item_category(); ?></td>
           <?php } ?>
         </li>
+        </tr>
         <li>
           <?php if( osc_price_enabled_at_items() ) { ?>
           <strong><?php _e('Price', 'osclasswizards');?>:</strong><?php echo osc_item_formated_price(); ?>
@@ -120,6 +124,8 @@
               <font color=red><?php _e('Waiting', 'osclasswizards');?></font>
           <?php } ?>
         </li>
+        </table>
+        <!-- Items End -->
       </ul>
 	    <?php if( osc_images_enabled_at_items() ) { ?>
 		<div class="item-photos">
