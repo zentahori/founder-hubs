@@ -82,40 +82,66 @@
         <tr>
         <li>
           <?php if ( osc_item_category() !== '' ) { ?>
-          <td><strong><?php _e('Category', 'osclasswizards');?>:</strong></td>
-          <td><?php osc_item_category(); ?></td>
+          <td>
+            <strong><?php _e('Category', 'osclasswizards');?>:</strong>
+            <?php osc_item_category(); ?>
+          </td>
           <?php } ?>
         </li>
         </tr>
+        <tr>
         <li>
           <?php if( osc_price_enabled_at_items() ) { ?>
-          <strong><?php _e('Price', 'osclasswizards');?>:</strong><?php echo osc_item_formated_price(); ?>
+          <td>
+            <strong><?php _e('Price', 'osclasswizards');?>:</strong>
+            <?php echo osc_item_formated_price(); ?>
+          </td>
 <!--          <i class="fa fa-money"></i><?php echo osc_item_formated_price(); ?>  -->
           <?php } ?>
         </li>
+        </tr>
+        <tr>
         <li>
-          <?php if ( osc_item_pub_date() !== '' ) { printf( __('<strong>Published date</strong>: %1$s', 'osclasswizards'), osc_format_date( osc_item_pub_date() ) ); } ?>
+          <td>
+            <?php if ( osc_item_pub_date() !== '' ) { printf( __('<strong>Published date</strong>: %1$s', 'osclasswizards'), osc_format_date( osc_item_pub_date() ) ); } ?>
+          </td>
 <!--          <?php if ( osc_item_pub_date() !== '' ) { printf( __('<i class="fa fa-calendar-o"></i> Published date: %2$s', 'osclasswizards'), osc_format_date( osc_item_pub_date() ) ); } ?>  -->
         </li>
+        </tr>
+        <tr>
         <li>
-          <?php if ( osc_item_mod_date() !== '' ) { printf( __('<strong class="update">Modified date:</strong> %1$s', 'osclasswizards'), osc_format_date( osc_item_mod_date() ) ); } ?>
+          <td>
+            <?php if ( osc_item_mod_date() !== '' ) { printf( __('<strong class="update">Modified date:</strong> %1$s', 'osclasswizards'), osc_format_date( osc_item_mod_date() ) ); } ?>
 <!--          <?php if ( osc_item_mod_date() !== '' ) { printf( __('<span class="update"><i class="fa fa-calendar"></i> Modified date:</span> %2$s', OSCLASSWIZARDS_THEME_FOLDER), osc_format_date( osc_item_mod_date() ) ); } ?> -->
+          </td>
         </li>
+        </tr>
         <?php if (count($location)>0) { ?>
+        <tr>
         <li>
+          <td>
           <ul id="item_location">
-            <li><strong>
-              <?php _e("Location", "osclasswizards"); ?>:
-              </strong> <?php echo implode(', ', $location); ?></li>
+            <li>
+              <strong><?php _e("Location", "osclasswizards"); ?>:
+              </strong> <?php echo implode(', ', $location); ?>
+            </li>
 <!--            <li><i class="fa fa-map-marker"></i> <?php echo implode(', ', $location); ?></li>  -->
           <?php }; ?>
-            </li>
-        </ul>
-        <li>
-          <strong><?php _e("Contacts", OSCLASSWIZARDS_THEME_FOLDER);?>:</strong>
-            <?php echo cc_contacts_by_listing( osc_item_id() ); ?>
+          </ul>
+          </td>
         </li>
+        </tr>
+        <tr>
         <li>
+          <td>
+            <strong><?php _e("Contacts", OSCLASSWIZARDS_THEME_FOLDER);?>:</strong>
+              <?php echo cc_contacts_by_listing( osc_item_id() ); ?>
+          </td>
+        </li>
+        </tr>
+        <tr>
+        <li>
+          <td>
           <?php if (cc_contacts_by_listing(osc_item_id()) > 0) { ?>
             <strong><?php _e('Status', 'osclasswizards');?>:</strong> 
               <?php _e('In progress', 'osclasswizards');?>
@@ -123,7 +149,9 @@
             <strong><?php _e('Status', 'osclasswizards');?>:</strong> 
               <font color=red><?php _e('Waiting', 'osclasswizards');?></font>
           <?php } ?>
+          </td>
         </li>
+        </tr>
         </table>
         <!-- Items End -->
       </ul>
