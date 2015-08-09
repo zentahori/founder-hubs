@@ -387,9 +387,13 @@ msgstr "カテゴリ"
 msgid "Title"
 msgstr "タイトル"
 
-#: item-post.php:65 user-profile.php:106
+#: item-post.php:65 
 msgid "Description"
 msgstr "案件詳細"
+
+#: user-profile.php:136
+msgid "User description"
+msgstr "ユーザー詳細"
 
 #: item-post.php:72 search-sidebar.php:61
 msgid "Price"
@@ -539,6 +543,26 @@ msgstr "<strong class=\"update\">更新日:</strong> %1$s"
 #: item.php:61 main.php:67
 msgid "Location"
 msgstr "エリア"
+
+#: item.php:82
+msgid "Test"
+msgstr "表示テスト"
+
+#: item.php:111
+msgid "Contacts"
+msgstr "本案件へのコンタクト数"
+
+#: item.php:115 item.php:117
+msgid "Status"
+msgstr "案件ステータス"
+
+#: item.php:115
+msgid "In progress"
+msgstr "交渉中"
+
+#: item.php:117
+msgid "Waiting"
+msgstr "受付中"
 
 #: item.php:67 loop-single-premium.php:24 loop-single.php:24
 msgid "Edit item"

@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Flash Messages package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-07-12 01:04+0900\n"
+"PO-Revision-Date: 2015-08-09 03:00+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.2\n"
+"X-Generator: Poedit 1.8.1\n"
 "Project-Id-Version: Flash Messages\n"
 "POT-Creation-Date: \n"
 "Last-Translator: \n"
@@ -166,7 +166,7 @@ msgstr "申し訳ありませんが、コメントを保存できませんでし
 
 #: oc-includes/osclass/controller/item.php:488
 msgid "Your comment is awaiting moderation"
-msgstr "あなたのコメントは査閲待ちです。"
+msgstr "コメントは正常に送信されました。現在審査中ですので、掲載されるまでしばらくお待ちください。"
 
 #: oc-includes/osclass/controller/item.php:491
 msgid "Your comment has been approved"
@@ -1588,7 +1588,9 @@ msgstr "メッセージ送信の際にエラーが発生しました。"
 
 #: oc-includes/osclass/controller/contact.php:124
 msgid "Your email has been sent properly. Thank you for contacting us!"
-msgstr "メールは正常に送信されました。問い合わせありがとうございます。"
+msgstr ""
+"メールは正常に送信されました。問い合わせありがとうございます。\n"
+"Founder Hubs事務局から後ほど連絡を差し上げますので、しばらくお待ちください。"
 
 #: oc-includes/osclass/controller/item.php:136
 msgid "A user with that email address already exists, if it is you, please log in"
