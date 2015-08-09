@@ -133,7 +133,7 @@
         </div>
         <div class="form-group">
           <label class="control-label" for="s_info">
-            <?php _e('Description', OSCLASSWIZARDS_THEME_FOLDER); ?>
+            <?php _e('User description', OSCLASSWIZARDS_THEME_FOLDER); ?>
           </label>
           <div class="controls">
             <?php UserForm::info_textarea('s_info', osc_locale_code(), @$osc_user['locale'][osc_locale_code()]['s_info']); ?>
