@@ -104,10 +104,22 @@
               <?php _e("Location", "osclasswizards"); ?>:
               </strong> <?php echo implode(', ', $location); ?></li>
 <!--            <li><i class="fa fa-map-marker"></i> <?php echo implode(', ', $location); ?></li>  -->
-          </ul>
           <?php }; ?>
             </li>
-        
+        </ul>
+        <li>
+          <strong><?php _e("Contacts", OSCLASSWIZARDS_THEME_FOLDER);?>:</strong>
+            <?php echo cc_contacts_by_listing( osc_item_id() ); ?>
+        </li>
+        <li>
+          <?php if (cc_contacts_by_listing(osc_item_id()) > 0) { ?>
+            <strong><?php _e('Status', 'osclasswizards');?>:</strong> 
+              <?php _e('In progress', 'osclasswizards');?>
+          <?php } else { ?>
+            <strong><?php _e('Status', 'osclasswizards');?>:</strong> 
+              <font color=red><?php _e('Waiting', 'osclasswizards');?></font>
+          <?php } ?>
+        </li>
       </ul>
 	    <?php if( osc_images_enabled_at_items() ) { ?>
 		<div class="item-photos">
