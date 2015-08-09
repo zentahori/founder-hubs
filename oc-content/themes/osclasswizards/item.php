@@ -78,7 +78,7 @@
       <h1 class="title title_code"> <strong><?php echo osc_item_title(); ?></strong> </h1>
       <ul class="item-header">
         <!-- Added category -->
-        <table border=1>
+        <table>
         <tr>
         <li>
           <?php if ( osc_item_category() !== '' ) { ?>
