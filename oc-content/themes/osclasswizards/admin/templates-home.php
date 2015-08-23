@@ -49,20 +49,14 @@
       </div>
       <div class="form-row">
         <div class="form-label">
-          <?php _e('Search select option', OSCLASSWIZARDS_THEME_FOLDER); ?>
+          <?php _e('Search country option', OSCLASSWIZARDS_THEME_FOLDER); ?>
         </div>
         <div class="form-controls">
-          <select name="search_select">
-            <option value="region" <?php if(osc_esc_html(osclasswizards_search_select()) == "region"){ echo "selected=selected"; } ?>>
-            <?php _e('Region',OSCLASSWIZARDS_THEME_FOLDER); ?>
-            </option>
-            <option value="city" <?php if(osc_esc_html(osclasswizards_search_select()) == "city"){ echo "selected=selected"; } ?>>
-            <?php _e('City',OSCLASSWIZARDS_THEME_FOLDER); ?>
-            </option>
-          </select>
+          <div class="form-label-checkbox">
+            <input type="checkbox" class="switch" name="show_search_country" value="1" <?php echo (osc_esc_html( osc_get_preference('show_search_country', 'osclasswizards_theme') ) == "1")? "checked": ""; ?>>
+          </div>
         </div>
-      </div>
-
+      </div> 
       <div class="form-row">
         <div class="form-label">
           <?php _e('Premium listings shown', OSCLASSWIZARDS_THEME_FOLDER); ?>

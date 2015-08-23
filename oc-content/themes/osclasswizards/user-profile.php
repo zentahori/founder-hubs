@@ -136,7 +136,7 @@
             <?php _e('User description', OSCLASSWIZARDS_THEME_FOLDER); ?>
           </label>
           <div class="controls">
-            <?php UserForm::info_textarea('s_info', osc_locale_code(), @$osc_user['locale'][osc_locale_code()]['s_info']); ?>
+            <?php UserForm::info_textarea('s_info', osc_current_user_locale(), @$osc_user['locale'][osc_current_user_locale()]['s_info']); ?>
           </div>
         </div>
         <?php osc_run_hook('user_profile_form', osc_user()); ?>

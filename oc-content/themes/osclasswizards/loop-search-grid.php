@@ -94,12 +94,12 @@ echo'</ul>';
 	elseif($type == 'premiums'){
 		$listcount = 1;
 ?>
-<ul class="row">
+<ul class="row premium_slider_grid">
 <?php
 		while ( osc_has_premiums() ) {
 	?>
 <?php $size = explode('x', osc_thumbnail_dimensions()); ?>
-<li class="listing-card premium col-sm-6 col-md-<?php echo $cols;?>">
+<li class="col-md-4 listing-card premium">
   <article class="loop_premium">
     <div class="figure">
       <figure>
@@ -139,11 +139,7 @@ echo'</ul>';
     </div>
   </article>
 </li>
-<?php  	if($listcount%3 == 0)
-		{
-			echo '</ul><ul class="row">';
-		}
-		$listcount++;  
+<?php  	
             }
 			echo '</ul>';
         }

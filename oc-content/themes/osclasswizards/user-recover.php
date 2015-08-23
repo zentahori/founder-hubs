@@ -44,8 +44,10 @@
           </label>
           <div class="controls">
             <?php UserForm::email_text(); ?>
-            <?php osc_show_recaptcha('recover_password'); ?>
           </div>
+		   <div class="recap">
+		   <?php osc_show_recaptcha('recover_password'); ?>
+		   </div>
         </div>
         <div class="form-group">
           <div class="controls">

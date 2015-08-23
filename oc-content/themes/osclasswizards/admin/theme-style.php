@@ -20,9 +20,14 @@
                 <div class="form-controls">
                     <select name="theme_color_mode">
                         <option value="green" <?php if($colorMode == 'green'){ echo 'selected="selected"' ; } ?>><?php _e('Green',OSCLASSWIZARDS_THEME_FOLDER);?></option>
+                        <option value="dark-green" <?php if($colorMode == 'dark-green'){ echo 'selected="selected"' ; } ?>><?php _e('Dark Green',OSCLASSWIZARDS_THEME_FOLDER);?></option>
                         <option value="red" <?php if($colorMode == 'red'){ echo 'selected="selected"' ; } ?>><?php _e('Red',OSCLASSWIZARDS_THEME_FOLDER);?></option>
+                        <option value="vivid-red" <?php if($colorMode == 'vivid-red'){ echo 'selected="selected"' ; } ?>><?php _e('Vivid Red',OSCLASSWIZARDS_THEME_FOLDER);?></option>
                         <option value="blue" <?php if($colorMode == 'blue'){ echo 'selected="selected"' ; } ?>><?php _e('Blue',OSCLASSWIZARDS_THEME_FOLDER);?></option>
-                        <option value="purple" <?php if($colorMode == 'purple'){ echo 'selected="selected"' ; } ?>><?php _e('Purple',OSCLASSWIZARDS_THEME_FOLDER);?></option>
+                        <option value="light-blue" <?php if($colorMode == 'light-blue'){ echo 'selected="selected"' ; } ?>><?php _e('Light Blue',OSCLASSWIZARDS_THEME_FOLDER);?></option>
+                        <option value="orange" <?php if($colorMode == 'orange'){ echo 'selected="selected"' ; } ?>><?php _e('Orange',OSCLASSWIZARDS_THEME_FOLDER);?></option>
+                        <option value="gray" <?php if($colorMode == 'gray'){ echo 'selected="selected"' ; } ?>><?php _e('Gray',OSCLASSWIZARDS_THEME_FOLDER);?></option>
+					    <option value="purple" <?php if($colorMode == 'purple'){ echo 'selected="selected"' ; } ?>><?php _e('Purple',OSCLASSWIZARDS_THEME_FOLDER);?></option>
                         <option value="yellow" <?php if($colorMode == 'yellow'){ echo 'selected="selected"' ; } ?>><?php _e('Yellow',OSCLASSWIZARDS_THEME_FOLDER);?></option>
                     </select>
                 </div>

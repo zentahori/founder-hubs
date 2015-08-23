@@ -24,7 +24,7 @@
 <link rel="stylesheet" href="<?php echo osc_current_web_theme_url('admin/css/jquery.switchButton.css');?>">
 <link rel="stylesheet" href="<?php echo osc_current_web_theme_url('admin/css/admin.main.css');?>">
 
-<div class="credit-osclasswizards"> <a href="http://www.osclasswizards.com/" target="_blank" class="wizard_logo"> <img src="<?php echo osc_current_web_theme_url('admin/img/logo.png');?>" alt="Premium osclass themes" title="Premium osclass themes" /> </a>
+<div class="credit-osclasswizards log_main_head"> <a href="http://www.osclasswizards.com/" target="_blank" class="wizard_logo"> <img src="<?php echo osc_current_web_theme_url('admin/img/logo.png');?>" alt="Premium osclass themes" title="Premium osclass themes" /> </a>
   <div class="follow">
     <ul>
       <li>Follow us:</li>
@@ -55,7 +55,7 @@
     </form>
   </div>
 </div>
-<div id="tabs" class="wizards_tab">
+<div id="tabs" class="wizards_tab wiz_main_tabs">
   <ul>
     <li><a href="#general"><?php _e('General',OSCLASSWIZARDS_THEME_FOLDER);?></a></li>
     <li><a href="#theme-style"><?php _e('Theme Style',OSCLASSWIZARDS_THEME_FOLDER);?></a></li>

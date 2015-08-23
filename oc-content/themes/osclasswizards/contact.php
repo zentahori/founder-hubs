@@ -24,7 +24,6 @@
 
     osclasswizards_add_body_class('contact');
 	
-	
     osc_enqueue_script('jquery-validate');
     osc_current_web_theme_path('header.php');
 ?>
@@ -79,10 +78,17 @@
               <?php ContactForm::your_message(); ?>
             </div>
           </div>
+		   <?php if( osc_recaptcha_items_enabled() ) { ?>
+		  <div class="form-group">
+            <div class="recap">
+			<?php osc_show_recaptcha(); ?>
+			</div>
+		 </div>
+		   <?php } ?>
           <div class="form-group">
             <div class="controls">
               <?php osc_run_hook('contact_form'); ?>
-              <?php osc_show_recaptcha(); ?>
+              
               <button type="submit" class="btn btn-success">
               <?php _e("Send", OSCLASSWIZARDS_THEME_FOLDER);?>
               </button>

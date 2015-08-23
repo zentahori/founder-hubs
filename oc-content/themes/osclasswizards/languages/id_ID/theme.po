@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: OsclassWizards Theme\n"
-"POT-Creation-Date: 2015-06-23 16:50+0545\n"
-"PO-Revision-Date: 2015-06-23 16:50+0545\n"
+"POT-Creation-Date: 2015-08-09 22:50+0545\n"
+"PO-Revision-Date: 2015-08-09 22:50+0545\n"
 "Last-Translator: \n"
 "Language-Team: OsclassWizards <hello@osclasswizards.com>\n"
 "Language: id_ID\n"
@@ -26,7 +26,7 @@ msgstr ""
 "Biarkan kami membantu Anda, kami telah mendapat beberapa tips bagi Anda "
 "untuk menemukannya."
 
-#: 404.php:46 admin/templates.php:35 header.php:152
+#: 404.php:46 admin/templates.php:35 header.php:160
 msgid "Search"
 msgstr "PENCARIAN"
 
@@ -102,10 +102,10 @@ msgstr ""
 "Iklan ini akan ditampilkan di sidebar kanan website Anda, pada halaman "
 "detail produk."
 
-#: admin/ads.php:79 admin/category-icons.php:47 admin/facebook.php:93
-#: admin/settings.php:105 admin/templates-home.php:151
+#: admin/ads.php:79 admin/category-icons.php:56 admin/facebook.php:93
+#: admin/settings.php:105 admin/templates-home.php:145
 #: admin/templates-item-post.php:68 admin/templates-search.php:39
-#: admin/theme-style.php:376
+#: admin/theme-style.php:381
 msgid "Save changes"
 msgstr "Simpan Perubahan"
 
@@ -113,13 +113,13 @@ msgstr "Simpan Perubahan"
 msgid "Categories Icons"
 msgstr ""
 
-#: admin/category-icons.php:19
+#: admin/category-icons.php:21
 msgid ""
 "Choose custom icons for categories. The items from the category will take "
 "the related icons in google map."
 msgstr ""
 
-#: admin/category-icons.php:19
+#: admin/category-icons.php:23
 msgid ""
 "We use <a style=\"color: #018be3; text-decoration: none;\" title=\"Visit "
 "Font Awesome site for help\" target=\"_blank\" href=\"http://fortawesome."
@@ -346,52 +346,42 @@ msgid "Search placeholder"
 msgstr "Cari placeholder"
 
 #: admin/templates-home.php:52
-msgid "Search select option"
-msgstr "Cari pilih opsi"
+msgid "Search country option"
+msgstr ""
 
-#: admin/templates-home.php:57 item-post.php:137 search-sidebar.php:65
-#: user-profile.php:96
-msgid "Region"
-msgstr "Provinsi"
-
-#: admin/templates-home.php:60 item-post.php:151 search-sidebar.php:57
-#: user-profile.php:104
-msgid "City"
-msgstr "Kota"
-
-#: admin/templates-home.php:68 admin/templates-search.php:32
+#: admin/templates-home.php:62 admin/templates-search.php:32
 msgid "Premium listings shown"
 msgstr "Daftar Premium ditampilkan"
 
-#: admin/templates-home.php:76
+#: admin/templates-home.php:70
 msgid "Subcategories limit "
 msgstr "batas subkategori"
 
-#: admin/templates-home.php:84
+#: admin/templates-home.php:78
 msgid "Show popular"
 msgstr ""
 
-#: admin/templates-home.php:94
+#: admin/templates-home.php:88
 msgid "Popular searches"
 msgstr ""
 
-#: admin/templates-home.php:104
+#: admin/templates-home.php:98
 msgid "Popular regions"
 msgstr ""
 
-#: admin/templates-home.php:114
+#: admin/templates-home.php:108
 msgid "Popular cities"
 msgstr ""
 
-#: admin/templates-home.php:124
+#: admin/templates-home.php:118
 msgid "Popular searches limit"
 msgstr ""
 
-#: admin/templates-home.php:133
+#: admin/templates-home.php:127
 msgid "Popular regions limit"
 msgstr ""
 
-#: admin/templates-home.php:142
+#: admin/templates-home.php:136
 msgid "Popular cities limit"
 msgstr ""
 
@@ -452,38 +442,58 @@ msgid "Green"
 msgstr ""
 
 #: admin/theme-style.php:23
-msgid "Red"
+msgid "Dark Green"
 msgstr ""
 
 #: admin/theme-style.php:24
-msgid "Blue"
+msgid "Red"
 msgstr ""
 
 #: admin/theme-style.php:25
-msgid "Purple"
+msgid "Vivid Red"
 msgstr ""
 
 #: admin/theme-style.php:26
-msgid "Yellow"
+msgid "Blue"
+msgstr ""
+
+#: admin/theme-style.php:27
+msgid "Light Blue"
+msgstr ""
+
+#: admin/theme-style.php:28
+msgid "Orange"
+msgstr ""
+
+#: admin/theme-style.php:29
+msgid "Gray"
+msgstr ""
+
+#: admin/theme-style.php:30
+msgid "Purple"
 msgstr ""
 
 #: admin/theme-style.php:31
+msgid "Yellow"
+msgstr ""
+
+#: admin/theme-style.php:36
 msgid "Google fonts"
 msgstr ""
 
-#: admin/theme-style.php:358
+#: admin/theme-style.php:363
 msgid "RTL view"
 msgstr "RTL tampilan"
 
-#: admin/theme-style.php:363
+#: admin/theme-style.php:368
 msgid "Right to left view."
 msgstr "Hak untuk tampilan kiri."
 
-#: admin/theme-style.php:368
+#: admin/theme-style.php:373
 msgid "Custom CSS"
 msgstr "kustom CSS"
 
-#: admin/theme-style.php:372
+#: admin/theme-style.php:377
 msgid "You can write your custom CSS and override the default CSS."
 msgstr "Anda dapat menulis CSS kustom Anda dan menimpa CSS default."
 
@@ -495,12 +505,12 @@ msgstr "Masukkan alamat email Anda."
 msgid "You have sucessfully subscribed to the alert"
 msgstr "Anda telah berhasil berlangganan waspada"
 
-#: alert-form.php:31 alert-form.php:32 functions.php:1035
+#: alert-form.php:31 alert-form.php:32 functions.php:993
 #: user-change_email.php:93
 msgid "Invalid email address"
 msgstr "Alamat Email tidak valid."
 
-#: alert-form.php:63 search-sidebar.php:141
+#: alert-form.php:63 search-sidebar.php:152
 msgid "Subscribe to this search"
 msgstr "Berlangganan ke pencarian ini"
 
@@ -508,9 +518,8 @@ msgstr "Berlangganan ke pencarian ini"
 msgid "Subscribe now"
 msgstr "Berlangganan sekarang"
 
-#: common/head.php:24 item.php:189 loop-grid.php:70 loop-grid.php:130
-#: loop-grid.php:190 loop-list.php:75 loop-list.php:134 loop-list.php:194
-#: loop-search-grid.php:72 loop-search-grid.php:130 loop-search-grid.php:187
+#: common/head.php:24 item.php:200 loop-grid.php:67 loop-list.php:73
+#: loop-search-grid.php:72 loop-search-grid.php:130 loop-search-grid.php:183
 #: loop-search-list.php:74 loop-search-list.php:133 loop-search-list.php:193
 #: loop-user-alerts-grid.php:73 loop-user-alerts-grid.php:131
 #: loop-user-alerts-grid.php:190 loop-user-alerts-list.php:80
@@ -527,46 +536,46 @@ msgstr "Hapus"
 msgid "Cancel"
 msgstr "Batalkan"
 
-#: common/head.php:57
+#: common/head.php:73
 msgid "Previous image"
 msgstr "Gambar sebelumnya"
 
-#: common/head.php:58
+#: common/head.php:74
 msgid "Next image"
 msgstr "Gambar berikutnya"
 
-#: common/head.php:59
+#: common/head.php:75
 msgid "Close"
 msgstr "Tutup"
 
-#: contact.php:37
+#: contact.php:36
 msgid "Contact us"
 msgstr "Hubungi kami"
 
-#: contact.php:48 item-send-friend.php:51 item-sidebar.php:74 item.php:215
+#: contact.php:47 item-send-friend.php:51 item-sidebar.php:74 item.php:226
 #: user-public-sidebar.php:38
 msgid "Your name"
 msgstr "Nama Anda"
 
-#: contact.php:50 contact.php:68 item-sidebar.php:92
+#: contact.php:49 contact.php:67 item-sidebar.php:92
 #: user-public-sidebar.php:56
 msgid "optional"
 msgstr "manasuka"
 
-#: contact.php:58 user-public-sidebar.php:46
+#: contact.php:57 user-public-sidebar.php:46
 msgid "Your email address"
 msgstr "Email Anda:"
 
-#: contact.php:66
+#: contact.php:65
 msgid "Subject"
 msgstr "Subjek"
 
-#: contact.php:76 item-send-friend.php:93 item-sidebar.php:100
+#: contact.php:75 item-send-friend.php:93 item-sidebar.php:100
 #: user-public-sidebar.php:64
 msgid "Message"
 msgstr "Pesan"
 
-#: contact.php:87 item-send-friend.php:104 item-sidebar.php:142 item.php:248
+#: contact.php:93 item-send-friend.php:110 item-sidebar.php:142 item.php:259
 #: user-public-sidebar.php:96
 msgid "Send"
 msgstr "Kirim"
@@ -588,7 +597,7 @@ msgstr "Akun Saya"
 msgid "Logout"
 msgstr "Keluar"
 
-#: footer.php:56 functions.php:517 header.php:69 item-sidebar.php:44
+#: footer.php:56 functions.php:475 header.php:69 item-sidebar.php:44
 msgid "Login"
 msgstr "Masuk"
 
@@ -596,7 +605,7 @@ msgstr "Masuk"
 msgid "Register for a free account"
 msgstr "Mendaftar untuk mendapatkan akun gratis"
 
-#: footer.php:73 functions.php:521 header.php:95 user-public-sidebar.php:28
+#: footer.php:73 functions.php:479 header.php:95 user-public-sidebar.php:28
 msgid "Contact"
 msgstr "Kontak:"
 
@@ -617,239 +626,243 @@ msgstr ""
 msgid "ie. PHP Programmer"
 msgstr "yaitu. PHP Programmer"
 
-#: functions.php:342
+#: functions.php:300
 msgid "Categories"
 msgstr "Kategori"
 
-#: functions.php:385
+#: functions.php:343
 msgid "See more listings..."
 msgstr "Lihat daftar ..."
 
-#: functions.php:502 item-post.php:56
+#: functions.php:460 item-post.php:56
 msgid "Publish a listing"
 msgstr "Publikasikan listing"
 
-#: functions.php:503
+#: functions.php:461
 msgid "Edit your listing"
 msgstr "Mengedit daftar Anda"
 
-#: functions.php:504 item-send-friend.php:35
+#: functions.php:462 item-send-friend.php:35
 msgid "Send to a friend"
 msgstr "Kirim ke teman"
 
-#: functions.php:505 item-sidebar.php:28
+#: functions.php:463 item-sidebar.php:28
 msgid "Contact publisher"
 msgstr "Hubungi penerbit"
 
-#: functions.php:506
+#: functions.php:464
 msgid "Search results"
 msgstr "Hasil Pencarian untuk"
 
-#: functions.php:507
+#: functions.php:465
 #, php-format
 msgid "Search results: %s"
 msgstr "Hasil pencarian:%s"
 
-#: functions.php:508
+#: functions.php:466
 msgid "Dashboard"
 msgstr "Dasbor"
 
-#: functions.php:509
+#: functions.php:467
 #, php-format
 msgid "%s's profile"
 msgstr "Ubah Profile %s"
 
-#: functions.php:510 functions.php:559
+#: functions.php:468 functions.php:517
 msgid "Account"
 msgstr "Akun"
 
-#: functions.php:511 functions.php:549 search.php:136 user-alerts.php:73
+#: functions.php:469 functions.php:507 search.php:136 user-alerts.php:73
 msgid "Listings"
 msgstr "Katalog"
 
-#: functions.php:512 functions.php:554 user-alerts.php:32 user-alerts.php:52
+#: functions.php:470 functions.php:512 user-alerts.php:32 user-alerts.php:52
 msgid "Alerts"
 msgstr "Mengelola notifikasi"
 
-#: functions.php:513 user-profile.php:32 user-profile.php:45
+#: functions.php:471 user-profile.php:32 user-profile.php:45
 msgid "Update account"
 msgstr "Akun pembaruan"
 
-#: functions.php:514 functions.php:564
+#: functions.php:472 functions.php:522
 msgid "Change email"
 msgstr "Ganti Email"
 
-#: functions.php:515 functions.php:569 user-change_username.php:34
+#: functions.php:473 functions.php:527 user-change_username.php:34
 msgid "Change username"
 msgstr "Ubah Nama Pengguna Saya"
 
-#: functions.php:516 functions.php:519 functions.php:574
+#: functions.php:474 functions.php:477 functions.php:532
 #: user-change_password.php:32 user-change_password.php:46
 #: user-forgot_password.php:52
 msgid "Change password"
 msgstr "Ubah Kata Sandi"
 
-#: functions.php:518
+#: functions.php:476
 msgid "Recover password"
 msgstr "Memulihkan password"
 
-#: functions.php:520
+#: functions.php:478
 msgid "Create a new account"
 msgstr "Buat akun baru"
 
-#: functions.php:544
+#: functions.php:502
 msgid "Public Profile"
 msgstr "Profil publik"
 
-#: functions.php:579 user-sidebar.php:25
+#: functions.php:537 user-sidebar.php:25
 msgid "Delete account"
 msgstr "Hapus akun"
 
-#: functions.php:642
+#: functions.php:600
 msgid "Theme settings updated correctly"
 msgstr "Pengaturan tema diperbarui dengan benar"
 
-#: functions.php:661 functions.php:668 functions.php:682
+#: functions.php:619 functions.php:626 functions.php:640
 msgid "Templates settings updated correctly"
 msgstr "Pengaturan template diperbarui dengan benar"
 
-#: functions.php:694
+#: functions.php:652
 msgid "Ads management updated correctly"
 msgstr "Iklan manajemen diperbarui dengan benar"
 
-#: functions.php:705
+#: functions.php:663
 msgid "Category icons settings updated correctly"
 msgstr ""
 
-#: functions.php:719
+#: functions.php:677
 msgid "Theme color settings updated correctly"
 msgstr ""
 
-#: functions.php:736
+#: functions.php:694
 msgid "Facebook Page settings updated correctly"
 msgstr ""
 
-#: functions.php:753
+#: functions.php:711
 msgid "The favicon image has been uploaded correctly"
 msgstr "Gambar favicon telah di-upload dengan benar"
 
-#: functions.php:755 functions.php:773 functions.php:820
+#: functions.php:713 functions.php:731 functions.php:778
 msgid "An error has occurred, please try again"
 msgstr "Sebuah kesalahan telah terjadi, silakan coba lagi"
 
-#: functions.php:771
+#: functions.php:729
 msgid "The logo image has been uploaded correctly"
 msgstr "Gambar logo telah di-upload dengan benar"
 
-#: functions.php:785
+#: functions.php:743
 msgid "The favicon image has been removed"
 msgstr "Gambar favicon telah dihapus"
 
-#: functions.php:787 functions.php:801 functions.php:833
+#: functions.php:745 functions.php:759 functions.php:791
 msgid "Image not found"
 msgstr "Gambar tidak ditemukan"
 
-#: functions.php:799
+#: functions.php:757
 msgid "The logo image has been removed"
 msgstr "Gambar logo telah dihapus"
 
-#: functions.php:818
+#: functions.php:776
 msgid "The banner image has been uploaded correctly"
 msgstr "Gambar banner telah di-upload dengan benar"
 
-#: functions.php:831
+#: functions.php:789
 msgid "The banner image has been removed"
 msgstr "Gambar banner telah dihapus"
 
-#: functions.php:856
+#: functions.php:814
 msgid "OsclassWizards"
 msgstr ""
 
-#: functions.php:912 functions.php:932
+#: functions.php:870 functions.php:890
 msgid "All categories"
 msgstr "Semua kategori"
 
-#: functions.php:1012
+#: functions.php:970
 msgid "Choose one category"
 msgstr "Pilih salah satu kategori"
 
-#: functions.php:1015
+#: functions.php:973
 msgid "Title: this field is required"
 msgstr "Judul: bidang ini diperlukan"
 
-#: functions.php:1016
+#: functions.php:974
 msgid "Title too short"
 msgstr "Judul terlalu pendek"
 
-#: functions.php:1019
+#: functions.php:977
 msgid "Description too short"
 msgstr "Deskripsi terlalu pendek"
 
-#: functions.php:1022
+#: functions.php:980
 msgid "Price: no more than 50 characters"
 msgstr "Harga: tidak lebih dari 50 karakter"
 
-#: functions.php:1024
+#: functions.php:982
 msgid "Currency: make your selection"
 msgstr "Mata Uang: membuat pilihan Anda"
 
-#: functions.php:1026
+#: functions.php:984
 msgid "Photo: must be png,gif,jpg,jpeg"
 msgstr "Foto: harus png, gif, jpg, jpeg"
 
-#: functions.php:1029
+#: functions.php:987
 msgid "Name: this field is required"
 msgstr "Nama: bidang ini diperlukan"
 
-#: functions.php:1030
+#: functions.php:988
 msgid "Name: enter at least 3 characters"
 msgstr "Nama: masukkan sedikitnya 3 karakter"
 
-#: functions.php:1031
+#: functions.php:989
 msgid "Name: no more than 35 characters"
 msgstr "Nama: tidak lebih dari 35 karakter"
 
-#: functions.php:1034 user-change_email.php:92
+#: functions.php:992 user-change_email.php:92
 msgid "Email: this field is required"
 msgstr "Email: bidang ini diperlukan"
 
-#: functions.php:1038
+#: functions.php:996
 msgid "Please select a country"
 msgstr "Silakan pilih negara"
 
-#: functions.php:1041 functions.php:1053
+#: functions.php:999 functions.php:1011
 msgid "Region: this field is required"
 msgstr "Wilayah: bidang ini diperlukan"
 
-#: functions.php:1042
+#: functions.php:1000
 msgid "Region: enter at least 3 characters"
 msgstr "Region: masukkan sedikitnya 3 karakter"
 
-#: functions.php:1043
+#: functions.php:1001
 msgid "Region: no more than 100 characters"
 msgstr "Region: tidak lebih dari 100 karakter"
 
-#: functions.php:1046 functions.php:1056
+#: functions.php:1004 functions.php:1014
 msgid "City: this field is required"
 msgstr "Kota: bidang ini diperlukan"
 
-#: functions.php:1047
+#: functions.php:1005
 msgid "City: enter at least 3 characters"
 msgstr "Kota: masukkan sedikitnya 3 karakter"
 
-#: functions.php:1048
+#: functions.php:1006
 msgid "City: no more than 100 characters"
 msgstr "Kota: tidak lebih dari 100 karakter"
 
-#: header.php:136 item-post.php:79 item-post.php:81
+#: header.php:137 item-post.php:79 item-post.php:81
 msgid "Select a category"
 msgstr "Pilih kategori"
 
-#: header.php:143
+#: header.php:144 search-sidebar.php:61
+msgid "Select a country"
+msgstr ""
+
+#: header.php:150 search-sidebar.php:70
 msgid "Select a region"
 msgstr "Memilih suatu wilayah"
 
-#: header.php:145
+#: header.php:155 search-sidebar.php:78
 msgid "Select a city"
 msgstr "Pilih kota"
 
@@ -861,7 +874,7 @@ msgstr "Informasi Umum"
 msgid "Category"
 msgstr "Kategori"
 
-#: item-post.php:88 item.php:232
+#: item-post.php:88 item.php:243
 msgid "Title"
 msgstr "Judul"
 
@@ -869,7 +882,7 @@ msgstr "Judul"
 msgid "Description"
 msgstr "Deskripsi"
 
-#: item-post.php:105 search-sidebar.php:88
+#: item-post.php:105 search-sidebar.php:99
 msgid "Price"
 msgstr "harga"
 
@@ -877,15 +890,23 @@ msgstr "harga"
 msgid "Listing Location"
 msgstr "Daftar Lokasi"
 
-#: item-post.php:129 user-profile.php:88
+#: item-post.php:129 search-sidebar.php:58 user-profile.php:88
 msgid "Country"
 msgstr "Negara"
+
+#: item-post.php:137 search-sidebar.php:67 user-profile.php:96
+msgid "Region"
+msgstr "Provinsi"
+
+#: item-post.php:151 search-sidebar.php:75 user-profile.php:104
+msgid "City"
+msgstr "Kota"
 
 #: item-post.php:165
 msgid "City Area"
 msgstr "Kota"
 
-#: item-post.php:173 user-profile.php:120
+#: item-post.php:173 user-profile.php:120 user-public-profile.php:79
 msgid "Address"
 msgstr "Alamat"
 
@@ -915,7 +936,7 @@ msgstr "Perbarui"
 msgid "Publish"
 msgstr "Publikasikan"
 
-#: item-send-friend.php:59 item.php:223
+#: item-send-friend.php:59 item.php:234
 msgid "Your e-mail"
 msgstr "Email Anda"
 
@@ -969,10 +990,9 @@ msgstr "Masukkan kata-kata di atas"
 msgid "Help"
 msgstr "Bantuan"
 
-#: item.php:74 loop-grid.php:68 loop-grid.php:128 loop-grid.php:188
-#: loop-list.php:73 loop-list.php:132 loop-list.php:192
-#: loop-search-grid.php:70 loop-search-grid.php:128 loop-search-grid.php:185
-#: loop-search-list.php:72 loop-search-list.php:131 loop-search-list.php:191
+#: item.php:66 loop-grid.php:65 loop-list.php:71 loop-search-grid.php:70
+#: loop-search-grid.php:128 loop-search-grid.php:181 loop-search-list.php:72
+#: loop-search-list.php:131 loop-search-list.php:191
 #: loop-user-alerts-grid.php:71 loop-user-alerts-grid.php:129
 #: loop-user-alerts-grid.php:188 loop-user-alerts-list.php:78
 #: loop-user-alerts-list.php:141 loop-user-alerts-list.php:205
@@ -984,12 +1004,12 @@ msgstr "Bantuan"
 msgid "Edit item"
 msgstr "Mengedit Item"
 
-#: item.php:86
+#: item.php:77
 #, php-format
 msgid "<i class=\"fa fa-calendar-o\"></i> Published date: %1$s"
 msgstr "<i class=\"fa fa-calendar-o\"></i> Diterbitkan tanggal: %1$s"
 
-#: item.php:89
+#: item.php:80
 #, php-format
 msgid ""
 "<span class=\"update\"><i class=\"fa fa-calendar\"></i> Modified date:</"
@@ -998,79 +1018,39 @@ msgstr ""
 "<span class=\"update\"><i class=\"fa fa-calendar\"></i> tanggal dimodifikasi:"
 "</span> %1$s"
 
-#: item.php:107 item.php:111 item.php:116 item.php:119
+#: item.php:97 item.php:101 item.php:106 item.php:108
 msgid "Image"
 msgstr "Gambar"
 
-#: item.php:148
+#: item.php:135
 msgid "Contact seller"
 msgstr "Hubungi penjual"
 
-#: item.php:155
+#: item.php:142
 msgid "Share"
 msgstr "Bagikan"
 
-#: item.php:171
-msgid "Comments"
-msgstr "Komentar"
+#: item.php:150
+msgid "See all ads from this advertiser"
+msgstr ""
 
-#: item.php:184
-msgid "by"
-msgstr "oleh"
-
-#: item.php:188
-msgid "Delete your comment"
-msgstr "Hapus komentar Anda"
-
-#: item.php:200
-msgid "Leave your comment (spam and offensive messages will be removed)"
-msgstr "Tinggalkan komentar Anda (spam dan pesan ofensif akan dihapus)"
-
-#: item.php:240
-msgid "Comment"
-msgstr "Komentar"
-
-#: item.php:278
-msgid "Mark as..."
-msgstr "Tandai sebagai ..."
-
-#: item.php:281
-msgid "Mark as spam"
-msgstr "Tandai sebagai spam"
-
-#: item.php:284
-msgid "Mark as misclassified"
-msgstr "Tandai sebagai kesalahan klasifikasi"
-
-#: item.php:287
-msgid "Mark as duplicated"
-msgstr "Tandai sebagai digandakan"
-
-#: item.php:290
-msgid "Mark as expired"
-msgstr "Tandai sebagai kedaluwarsa"
-
-#: item.php:293
-msgid "Mark as offensive"
-msgstr "Tandai sebagai ofensif"
-
-#: item.php:303
+#: item.php:159
 msgid "Useful information"
 msgstr "Informasi yang berguna"
 
-#: item.php:307
+#: item.php:163
 msgid "Avoid scams by acting locally or paying with PayPal"
 msgstr ""
 "Hindari penipuan dengan bertindak secara langsung atau membayar dengan PayPal"
 
-#: item.php:310
+#: item.php:166
 msgid ""
 "Never pay with Western Union, Moneygram or other anonymous payment services"
 msgstr ""
 "Jangan pernah membayar dengan Western Union, Moneygram atau layanan "
 "pembayaran anonim lainnya"
 
-#: item.php:313
+#: item.php:169
 msgid ""
 "Don't buy or sell outside of your country. Don't accept cashier cheques from "
 "outside your country"
@@ -1078,7 +1058,7 @@ msgstr ""
 "Jangan membeli atau menjual di luar negara Anda. Jangan menerima cek kasir "
 "dari luar negara Anda"
 
-#: item.php:316
+#: item.php:172
 msgid ""
 "This site is never involved in any transaction, and does not handle "
 "payments, shipping, guarantee transactions, provide escrow services, or "
@@ -1089,13 +1069,56 @@ msgstr ""
 "uang, atau menawarkan &quot;perlindungan pembeli&quot; atau &quot;"
 "sertifikasi penjual&quot;"
 
-#: item.php:327
+#: item.php:182
+msgid "Comments"
+msgstr "Komentar"
+
+#: item.php:195
+msgid "by"
+msgstr "oleh"
+
+#: item.php:199
+msgid "Delete your comment"
+msgstr "Hapus komentar Anda"
+
+#: item.php:211
+msgid "Leave your comment (spam and offensive messages will be removed)"
+msgstr "Tinggalkan komentar Anda (spam dan pesan ofensif akan dihapus)"
+
+#: item.php:251
+msgid "Comment"
+msgstr "Komentar"
+
+#: item.php:288
+msgid "Mark as..."
+msgstr "Tandai sebagai ..."
+
+#: item.php:291
+msgid "Mark as spam"
+msgstr "Tandai sebagai spam"
+
+#: item.php:294
+msgid "Mark as misclassified"
+msgstr "Tandai sebagai kesalahan klasifikasi"
+
+#: item.php:297
+msgid "Mark as duplicated"
+msgstr "Tandai sebagai digandakan"
+
+#: item.php:300
+msgid "Mark as expired"
+msgstr "Tandai sebagai kedaluwarsa"
+
+#: item.php:303
+msgid "Mark as offensive"
+msgstr "Tandai sebagai ofensif"
+
+#: item.php:316
 msgid "Related listings"
 msgstr "Daftar terkait"
 
-#: loop-grid.php:69 loop-grid.php:129 loop-grid.php:189 loop-list.php:74
-#: loop-list.php:133 loop-list.php:193 loop-search-grid.php:71
-#: loop-search-grid.php:129 loop-search-grid.php:186 loop-search-list.php:73
+#: loop-grid.php:66 loop-list.php:72 loop-search-grid.php:71
+#: loop-search-grid.php:129 loop-search-grid.php:182 loop-search-list.php:73
 #: loop-search-list.php:132 loop-search-list.php:192
 #: loop-user-alerts-grid.php:72 loop-user-alerts-grid.php:130
 #: loop-user-alerts-grid.php:189 loop-user-alerts-list.php:79
@@ -1109,9 +1132,8 @@ msgid "This action can not be undone. Are you sure you want to continue?"
 msgstr ""
 "Tindakan ini tidak bisa dibatalkan. Apakah Anda yakin ingin melanjutkan?"
 
-#: loop-grid.php:74 loop-grid.php:134 loop-grid.php:194 loop-list.php:79
-#: loop-list.php:138 loop-list.php:198 loop-search-grid.php:76
-#: loop-search-grid.php:134 loop-search-grid.php:191 loop-search-list.php:78
+#: loop-grid.php:71 loop-list.php:77 loop-search-grid.php:76
+#: loop-search-grid.php:134 loop-search-grid.php:187 loop-search-list.php:78
 #: loop-search-list.php:137 loop-search-list.php:197
 #: loop-user-alerts-grid.php:77 loop-user-alerts-grid.php:135
 #: loop-user-alerts-grid.php:194 loop-user-alerts-list.php:84
@@ -1128,19 +1150,19 @@ msgstr "Aktifkan"
 msgid "Premium Listings"
 msgstr "Premi Daftar "
 
-#: main.php:112
+#: main.php:108
 msgid "Latest Listings"
 msgstr "Tidak ada iklan terbaru"
 
-#: main.php:118
+#: main.php:114
 msgid "There aren't listings available at this moment"
 msgstr "Tidak ada listing tersedia saat ini"
 
-#: main.php:128
+#: main.php:124
 msgid "See all listings"
 msgstr "Lihat daftar ..."
 
-#: main.php:135
+#: main.php:131
 #, php-format
 msgid "Popular in %s"
 msgstr "Populer di% s"
@@ -1157,27 +1179,27 @@ msgstr "Pencarian Lanjutan"
 msgid "Your search"
 msgstr "Pencarian Anda"
 
-#: search-sidebar.php:74
+#: search-sidebar.php:85
 msgid "Show only"
 msgstr "Tampilkan hanya"
 
-#: search-sidebar.php:79
+#: search-sidebar.php:90
 msgid "listings with pictures"
 msgstr "listing dengan gambar"
 
-#: search-sidebar.php:92
+#: search-sidebar.php:103
 msgid "Min"
 msgstr "menit"
 
-#: search-sidebar.php:97
+#: search-sidebar.php:108
 msgid "Max"
 msgstr "Maks."
 
-#: search-sidebar.php:121
+#: search-sidebar.php:132
 msgid "Apply"
 msgstr "Terapkan"
 
-#: search-sidebar.php:130
+#: search-sidebar.php:141
 msgid "Refine category"
 msgstr "Persempit kategori"
 
@@ -1320,15 +1342,9 @@ msgstr "Kota"
 msgid "Website"
 msgstr "Situs web"
 
-#: user-public-profile.php:79
-#, php-format
-msgid "<strong>Address:</strong> %1$s"
-msgstr "<strong>Alamat:</strong> %1$s"
-
 #: user-public-profile.php:82
-#, php-format
-msgid "<strong>Location:</strong> %1$s"
-msgstr "<strong>Lokasi:</strong> %1$s"
+msgid "Location"
+msgstr "Lokasi"
 
 #: user-public-profile.php:90
 msgid "User description"
@@ -1338,7 +1354,7 @@ msgstr "Deskripsi"
 msgid "Latest listings"
 msgstr "Tidak ada iklan terbaru"
 
-#: user-recover.php:53
+#: user-recover.php:55
 msgid "Send me a new password"
 msgstr "Kirimkan saya kata sandi baru"
 
@@ -1361,6 +1377,15 @@ msgstr "Buat sebuah akun?"
 #: user-sidebar.php:26
 msgid "Are you sure you want to delete your account?"
 msgstr "Apakah Anda yakin ingin menghapus akun Anda?"
+
+#~ msgid "Search select option"
+#~ msgstr "Cari pilih opsi"
+
+#~ msgid "<strong>Address:</strong> %1$s"
+#~ msgstr "<strong>Alamat:</strong> %1$s"
+
+#~ msgid "<strong>Location:</strong> %1$s"
+#~ msgstr "<strong>Lokasi:</strong> %1$s"
 
 #~ msgid "The preferred size of the logo is 16x16 pixels."
 #~ msgstr "Ukuran yang disukai dari logo adalah 16x16 pixel."
@@ -1412,9 +1437,6 @@ msgstr "Apakah Anda yakin ingin menghapus akun Anda?"
 
 #~ msgid "<strong class=\"update\">Modified date:</strong> %1$s"
 #~ msgstr "<strong class=\"update\">Modifikasi date:</strong> %1$s"
-
-#~ msgid "Location"
-#~ msgstr "Lokasi"
 
 #~ msgid "Premium"
 #~ msgstr "Premi"
