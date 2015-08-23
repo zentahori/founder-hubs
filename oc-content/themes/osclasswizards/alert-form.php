@@ -79,6 +79,6 @@ $(document).ready(function(){
             <?php } ?></p>
             
             <button type="submit" class="btn btn-success sub_button">
-			<?php _e('Subscribe now', OSCLASSWIZARDS_THEME_FOLDER); ?>!</button>
+			<?php _e('Subscribe now', OSCLASSWIZARDS_THEME_FOLDER); ?></button>
     </form>
 </div>
