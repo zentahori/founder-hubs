@@ -78,7 +78,7 @@
 			<?php if(osc_get_preference('category_multiple_selects', 'osclasswizards_theme') == '1'){ ?>
 			  <div class="cat_multiselect"><?php ItemForm::category_multiple_selects(null, null, null, __('Select a category', OSCLASSWIZARDS_THEME_FOLDER)); ?></div>
 			<?php }else{ ?>
-              <?php ItemForm::category_select(null, null, __('Select a category', OSCLASSWIZARDS_THEME_FOLDER)); ?>
+                          <?php ItemForm::category_select(null, null, __('Select a category', OSCLASSWIZARDS_THEME_FOLDER)); ?>
 			<?php } ?>
               <?php  } ?>
             </div>
@@ -266,5 +266,13 @@
         });
     });
     <?php }; ?>
+
+    <!-- show description templates associated with a selected option -- >
+    $().ready(function(){
+        $("#catId").change(function() {
+            var selectVal = $("#catId").val();
+            alert(selectVal);
+        });
+    });
 </script>
 <?php osc_current_web_theme_path('footer.php'); ?>
