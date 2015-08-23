@@ -881,5 +881,9 @@ msgstr "メニューを表示する"
 msgid "Are you sure you want to delete your account?"
 msgstr "本当にアカウントを削除しますか？"
 
+#: functions.php:1042
+msgid "Region: enter at least 3 characters"
+msgstr "市区町村: ３文字以上でご記入ください。"
+
 msgid "bender"
 msgstr "bender"
