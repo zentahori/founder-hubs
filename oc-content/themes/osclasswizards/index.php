@@ -23,7 +23,7 @@
 Theme Name: OsclassWizards
 Theme URI: http://www.osclasswizards.com
 Description: A simple and clean responsive theme for your classified site.
-Version: 2.0.1
+Version: 2.0.2
 Author: OsclassWizards
 Author URI: http://www.osclasswizards.com
 Widgets:  header, footer
@@ -32,7 +32,7 @@ Theme update URI: osclasswizards-free-responsive-theme
     function osclasswizards_theme_info() {
         return array(
              'name'        => 'OsclassWizards'
-            ,'version'     => '2.0.1'
+            ,'version'     => '2.0.2'
             ,'description' => 'A simple and clean responsive theme for your classified site.'
             ,'author_name' => 'OsclassWizards'
             ,'author_url'  => 'http://www.osclasswizards.com'

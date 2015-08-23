@@ -25,20 +25,35 @@
         'cancel' => __('Cancel', OSCLASSWIZARDS_THEME_FOLDER)
     );
 
+	osc_register_script('jquery', osc_current_web_theme_js_url('jquery.min.js'));
     osc_enqueue_script('jquery');
     osc_enqueue_script('jquery-ui');
+	
+	osc_register_script('fancybox', osc_current_web_theme_url('js/fancybox/jquery.fancybox.pack.js'), array('jquery'));
+    osc_enqueue_style('fancybox', osc_current_web_theme_url('js/fancybox/jquery.fancybox.css'));
+    osc_enqueue_script('fancybox');
+	
+	osc_register_script('jquery-validate', osc_current_web_theme_js_url('jquery.validate.min.js'));
+    osc_enqueue_script('jquery-validate');
+	
+	osc_enqueue_script('bootstrap-theme-js');
+	osc_register_script('bootstrap-theme-js', osc_current_web_theme_js_url('bootstrap.min.js'), 'jquery');
+	
+	osc_enqueue_script('library-js');
+	osc_register_script('library-js', osc_current_web_theme_js_url('library.js'), 'jquery');
+	
     osc_register_script('global-theme-js', osc_current_web_theme_js_url('global.js'), 'jquery');
     osc_register_script('delete-user-js', osc_current_web_theme_js_url('delete_user.js'), 'jquery-ui');
     osc_enqueue_script('global-theme-js');
-	osc_enqueue_script('bootstrap-theme-js');
-	osc_register_script('bootstrap-theme-js', osc_current_web_theme_js_url('bootstrap.min.js'), 'jquery');
-	osc_enqueue_script('checkbox-theme-js');
-	osc_register_script('checkbox-theme-js', osc_current_web_theme_js_url('checkbox.js'), 'jquery');
-	
-
 ?>
 <meta http-equiv="Content-type" content="text/html; charset=utf-8" />
-<?php osc_run_hook('osclasswizards_head'); ?>
+<title><?php echo osc_esc_html(meta_title()) ; ?></title>
+<?php if( meta_description() != '' ) { ?>
+<meta name="description" content="<?php echo osc_esc_html(meta_description()); ?>" />
+<?php } ?>
+<?php if( meta_keywords() != '' ) { ?>
+<meta name="keywords" content="<?php echo osc_esc_html(meta_keywords()); ?>" />
+<?php } ?>
 <?php if( osc_get_canonical() != '' ) { ?>
 <!-- canonical -->
 <link rel="canonical" href="<?php echo osc_get_canonical(); ?>"/>
@@ -49,6 +64,7 @@
 <meta name="viewport" content="initial-scale = 1.0,maximum-scale = 1.0" />
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link rel="shortcut icon" href="<?php echo osclasswizards_favicon_url(); ?>" type="image/x-icon" />
 <link href="<?php echo osc_current_web_theme_url('js/jquery-ui/jquery-ui-1.10.2.custom.min.css') ; ?>" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
     var osclasswizards = window.osclasswizards || {};
@@ -58,6 +74,7 @@
     osclasswizards.fancybox_next = '<?php echo osc_esc_js( __('Next image',OSCLASSWIZARDS_THEME_FOLDER)) ?>';
     osclasswizards.fancybox_closeBtn = '<?php echo osc_esc_js( __('Close',OSCLASSWIZARDS_THEME_FOLDER)) ?>';
     osclasswizards.locations_input_as = '<?php echo osc_esc_js( osclasswizards_locations_input_as()); ?>';
+    osclasswizards.rtl_view = '<?php echo (osc_get_preference('rtl_view', 'osclasswizards_theme') == '1')? '1': '0'; ?>';
 </script>
 <!--Ie Js-->
 <!--[if lt IE 7]> <html class="no-js ie6 oldie" lang="en"> <![endif]-->

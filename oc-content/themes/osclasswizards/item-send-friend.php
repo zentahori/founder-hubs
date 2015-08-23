@@ -96,10 +96,16 @@
               <?php SendFriendForm::your_message(); ?>
             </div>
           </div>
+		   <?php if( osc_recaptcha_items_enabled() ) { ?>
+		   <div class="form-group">
+            <div class="recap">
+		  <?php osc_show_recaptcha(); ?>
+		  </div>
+		  </div>
+		   <?php } ?>
           <div class="form-group">
             <div class="controls">
               <?php osc_run_hook('contact_form'); ?>
-              <?php osc_show_recaptcha(); ?>
               <button type="submit" class="btn btn-success">
               <?php _e("Send", OSCLASSWIZARDS_THEME_FOLDER);?>
               </button>

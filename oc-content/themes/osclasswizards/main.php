@@ -46,13 +46,13 @@
   <?php _e('Premium Listings',OSCLASSWIZARDS_THEME_FOLDER);?>
 </h1>
 <div id="listing-card-list" class="listing-card-list listings_grid listings_grids">
-  <ul class="row">
+  <ul class="row premium_slider">
     <?php
   $listcount = 1;
 		while ( osc_has_premiums() ) {
 	?>
     <?php $size = explode('x', osc_thumbnail_dimensions()); ?>
-    <li class="listing-card premium col-sm-6 col-md-3">
+    <li class="listing-card premium col-md-3">
       <article class="loop_premium">
         <div class="figure">
           <figure>
@@ -93,11 +93,7 @@
       </article>
     </li>
     <?php
-		if($listcount%4 == 0)
-		{
-			echo '</ul><ul class="row">';
-		}
-		$listcount++;
+		
   } 
   ?>
   </ul>
@@ -159,10 +155,10 @@
       </div>
     </section>
     <?php } ?>
-    <?php if(osclasswizards_popular_citites() && osclasswizards_show_popular_cities() ){ ?>
+    <?php if(osclasswizards_popular_cities() && osclasswizards_show_popular_cities() ){ ?>
     <section id='Cities'>
       <div class="popular_cities">
-        <?php $cities	=	osclasswizards_popular_citites(osclasswizards_popular_cities_limit()); ?>
+        <?php $cities	=	osclasswizards_popular_cities(osclasswizards_popular_cities_limit()); ?>
         <ul>
           <?php foreach($cities as $city => $count){?>
           <li><a href="<?php echo osc_search_url( array( 'sCity' => $city ) ); ?>"><i class="fa fa-map-marker"></i><?php echo $city; ?> <em>(<?php echo $count; ?>)</em></a></li>

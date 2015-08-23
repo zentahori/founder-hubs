@@ -147,11 +147,15 @@ div#recaptcha_widget, div#recaptcha_image > img { width:280px; }
     <?php ContactForm::js_validation(); ?>
     <?php } ?>
   </div>
-  <div class="block_list facebook">
+  
     <?php 
 	if( osc_get_preference('facebook-showitem', 'osclasswizards_theme') == "1"){
-		osclasswizards_facebook_like_box();
+		?>
+		<div class="block_list facebook">
+			<?php osclasswizards_facebook_like_box(); ?>
+		</div>
+	<?php
 	}
   ?>
-  </div>
+  
 </div>

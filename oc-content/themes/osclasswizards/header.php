@@ -35,7 +35,7 @@
         <?php if ( osc_count_web_enabled_locales() > 1) { ?>
         <?php osc_goto_first_locale(); ?>
         <strong>
-        <?php _e('Language:', OSCLASSWIZARDS_THEME_FOLDER); ?> 
+        <?php _e('Language:', OSCLASSWIZARDS_THEME_FOLDER); ?>
         </strong> <span>
         <?php $local = osc_get_current_user_locale(); echo $local['s_name']; ?>
         <i class="fa fa-caret-down"></i></span>
@@ -125,32 +125,39 @@
         <div class="main-search">
           <div class="form-filters">
             <div class="row">
-              <div class="col-md-4">
+              <?php $showCountry  = (osc_get_preference('show_search_country', 'osclasswizards_theme') == '1') ? true : false; ?>
+              <div class="col-md-<?php echo ($showCountry)? '3' : '4'; ?>">
                 <div class="cell">
                   <input type="text" name="sPattern" id="query" class="input-text" value="" placeholder="<?php echo osc_esc_html(__(osc_get_preference('keyword_placeholder', 'osclasswizards_theme'), OSCLASSWIZARDS_THEME_FOLDER)); ?>" />
                 </div>
               </div>
-              <div class="col-md-3">
+              <div class="col-md-2">
                 <?php  if ( osc_count_categories() ) { ?>
                 <div class="cell selector">
                   <?php osc_categories_select('sCategory', null, __('Select a category', OSCLASSWIZARDS_THEME_FOLDER)) ; ?>
                 </div>
                 <?php  } ?>
               </div>
-              <div class="col-md-3">
+              <?php if($showCountry) { ?>
+              <div class="col-md-2">
                 <div class="cell selector">
-                  <?php if(osclasswizards_search_select() == 'region'){?>
+                  <?php osclasswizards_countries_select('sCountry', 'sCountry', __('Select a country', OSCLASSWIZARDS_THEME_FOLDER));?>
+                </div>
+              </div>
+              <?php } ?>
+              <div class="col-md-2">
+                <div class="cell selector">
                   <?php osclasswizards_regions_select('sRegion', 'sRegion', __('Select a region', OSCLASSWIZARDS_THEME_FOLDER)) ; ?>
-                  <?php }else{?>
-                  <?php osclasswizards_cities_select('sCity', null, __('Select a city', OSCLASSWIZARDS_THEME_FOLDER)) ; ?>
-                  <?php } ?>
                 </div>
               </div>
               <div class="col-md-2">
+                <div class="cell selector">
+                  <?php osclasswizards_cities_select('sCity', 'sCity', __('Select a city', OSCLASSWIZARDS_THEME_FOLDER)) ; ?>
+                </div>
+              </div>
+              <div class="col-md-<?php echo ($showCountry)? '1' : '2'; ?>">
                 <div class="cell reset-padding">
-                  <button  class="btn btn-success btn_search">
-                  <?php _e("Search", OSCLASSWIZARDS_THEME_FOLDER);?>
-                  </button>
+                  <button  class="btn btn-success btn_search"><i class="fa fa-search"></i> <span <?php echo ($showCountry)? '' : 'class="showLabel"'; ?>><?php _e("Search", OSCLASSWIZARDS_THEME_FOLDER);?></span> </button>
                 </div>
               </div>
             </div>
@@ -173,14 +180,10 @@
   <div class="breadcrumb">
     <div class="container"> <?php echo $breadcrumb; ?> </div>
   </div>
-  <div class="container">
-    <div class="error_list">
-      <?php
+  <?php
         }
     ?>
-      <?php osc_show_flash_message(); ?>
-    </div>
-  </div>
+  <?php osc_show_flash_message(); ?>
 </div>
 <?php osc_run_hook('before-content'); ?>
 <div class="wrapper" id="content">

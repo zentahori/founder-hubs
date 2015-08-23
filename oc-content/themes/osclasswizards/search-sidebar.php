@@ -52,22 +52,33 @@
                   <input class="input-text" type="text" name="sPattern"  id="query" value="<?php echo osc_esc_html(osc_search_pattern()); ?>" />
                 </div>
               </fieldset>
+			  <?php if(osc_get_preference('show_search_country', 'osclasswizards_theme') == '1'){?>
               <fieldset>
                 <h3>
-                  <?php _e('City', OSCLASSWIZARDS_THEME_FOLDER); ?>
+                  <?php _e('Country', OSCLASSWIZARDS_THEME_FOLDER); ?>
                 </h3>
                 <div>
-                  <input class="input-text" type="text" id="sCity" name="sCity" value="<?php echo osc_esc_html(osc_search_city()); ?>" />
+				 <?php osclasswizards_countries_select('sCountry', 'sCountry', __('Select a country', OSCLASSWIZARDS_THEME_FOLDER), osc_esc_html(Params::getParam('sCountry')));?>
                 </div>
               </fieldset>
-              <fieldset>
+			  <?php } ?>
+			    <fieldset>
                 <h3>
                   <?php _e('Region', OSCLASSWIZARDS_THEME_FOLDER); ?>
                 </h3>
                 <div>
-                  <input class="input-text" type="text" id="sRegion" name="sRegion" value="<?php echo osc_esc_html(osc_search_region()); ?>" />
+					<?php osclasswizards_regions_select('sRegion', 'sRegion', __('Select a region', OSCLASSWIZARDS_THEME_FOLDER), osc_esc_html(osc_search_region())) ; ?>
                 </div>
               </fieldset>
+			  <fieldset>
+                <h3>
+                  <?php _e('City', OSCLASSWIZARDS_THEME_FOLDER); ?>
+                </h3>
+                <div>
+                    <?php osclasswizards_cities_select('sCity', 'sCity', __('Select a city', OSCLASSWIZARDS_THEME_FOLDER), osc_esc_html(osc_search_city())) ; ?>
+                </div>
+              </fieldset>
+
               <?php if( osc_images_enabled_at_items() ) { ?>
               <fieldset>
                 <h3>

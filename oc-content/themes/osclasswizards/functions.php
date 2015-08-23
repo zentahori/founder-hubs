@@ -24,16 +24,12 @@
 DEFINES
 
 */
-    define('OSCLASSWIZARDS_THEME_VERSION', '2.0.1');
+    define('OSCLASSWIZARDS_THEME_VERSION', '2.0.2');
     define('OSCLASSWIZARDS_THEME_FOLDER', 'osclasswizards');
     if( !osc_get_preference('keyword_placeholder', 'osclasswizards_theme') ) {
         osc_set_preference('keyword_placeholder', __('ie. PHP Programmer', OSCLASSWIZARDS_THEME_FOLDER), 'osclasswizards_theme');
     }
-    osc_register_script('fancybox', osc_current_web_theme_url('js/fancybox/jquery.fancybox.pack.js'), array('jquery'));
-    osc_enqueue_style('fancybox', osc_current_web_theme_url('js/fancybox/jquery.fancybox.css'));
-    osc_enqueue_script('fancybox');
-
-    osc_enqueue_style('font-awesome', osc_current_web_theme_url('css/font-awesome-4.1.0/css/font-awesome.min.css'));
+    osc_enqueue_style('font-awesome', osc_current_web_theme_url('css/font-awesome/css/font-awesome.min.css'));
     // used for date/dateinterval custom fields
     osc_enqueue_script('php-date');
     if(!OC_ADMIN) {
@@ -41,26 +37,15 @@ DEFINES
         osc_enqueue_style('osclasswizards-fine-uploader-css', osc_current_web_theme_url('css/ajax-uploader.css'));
     }
     osc_enqueue_script('jquery-fineuploader');
-	
 /**
 ** DEFAULT VALUES
 **/
-
-//general
 	if( !osc_get_preference('welcome_message', 'osclasswizards_theme') ) {
 		osc_set_preference('welcome_message', 'Hello Guest, Welcome to OsclassWizards', 'osclasswizards_theme');
     }
-
-//templates
-
-	if( !osc_get_preference('search_select', 'osclasswizards_theme') ) {
-		osc_set_preference('search_select', 'region', 'osclasswizards_theme');
-	}
-	
 	if( !osc_get_preference('sub_cat_limit', 'osclasswizards_theme') ) {
 		osc_set_preference('sub_cat_limit', 5, 'osclasswizards_theme');
     }
-	
 	if( !osc_get_preference('popular_regions_limit', 'osclasswizards_theme') ) {
 		osc_set_preference('popular_regions_limit', 10, 'osclasswizards_theme');
     }	
@@ -80,17 +65,12 @@ DEFINES
 	if( !osc_get_preference('premium_listings_shown', 'osclasswizards_theme') ) {
 		osc_set_preference('premium_listings_shown', 6, 'osclasswizards_theme');
 	}
-
 	if( !osc_get_preference('title_minimum_length', 'osclasswizards_theme') ) {
 		osc_set_preference('title_minimum_length', 1, 'osclasswizards_theme');
 	}	
-	
 	if( !osc_get_preference('description_minimum_length', 'osclasswizards_theme') ) {
 		osc_set_preference('description_minimum_length', 3, 'osclasswizards_theme');
 	}
-	
-	
-//Cateogires Icons Settings
 	if( osc_get_preference('first_load_cat_icons', 'osclasswizards_theme_cat_icons') == "" ){
 		osc_set_preference('cat-icons-1', 'SHOPPING-CART', 'osclasswizards_theme_cat_icons');
 		osc_set_preference('cat-icons-2', 'CAR', 'osclasswizards_theme_cat_icons');
@@ -103,10 +83,6 @@ DEFINES
 		
 		osc_set_preference('first_load_cat_icons', 'loaded', 'osclasswizards_theme_cat_icons');
 	}
-
-
-	
-// Theme style
 	if( !osc_get_preference('theme_color_mode', 'osclasswizards_theme') ) {
 		osc_set_preference('theme_color_mode', 'green', 'osclasswizards_theme');
 	}
@@ -116,29 +92,17 @@ DEFINES
 	if( !osc_get_preference('google_fonts', 'osclasswizards_theme') ) {
 		osc_set_preference('google_fonts', 'Open Sans', 'osclasswizards_theme');
 	}
-	
-// Facebook Page Like Box Settings
 	if( !osc_get_preference('facebook-url', 'osclasswizards_theme') ) {
 		osc_set_preference('facebook-url', 'https://www.facebook.com/osclasswizards', 'osclasswizards_theme');
 	}
-	
 	if( !osc_get_preference('facebook-width', 'osclasswizards_theme') ) {
 		osc_set_preference('facebook-width', 340, 'osclasswizards_theme');
 	}
-	
 	if( !osc_get_preference('facebook-height', 'osclasswizards_theme') ) {
 		osc_set_preference('facebook-height', 400, 'osclasswizards_theme');
 	}
-	
 	osc_reset_preferences();
-/**
-
-
-FUNCTIONS
-
-*/
-
-    // install options
+	
     if( !function_exists('osclasswizards_theme_install') ) {
         function osclasswizards_theme_install() {
             osc_set_preference('keyword_placeholder', Params::getParam('keyword_placeholder'), 'osclasswizards_theme');
@@ -147,13 +111,13 @@ FUNCTIONS
 			osc_set_preference('show_popular', '1', 'osclasswizards_theme');
 			osc_set_preference('show_popular_regions', '1', 'osclasswizards_theme');
 			osc_set_preference('show_popular_cities', '1', 'osclasswizards_theme');
+			osc_set_preference('show_search_country', '1', 'osclasswizards_theme');
 			osc_set_preference('show_popular_searches', '1', 'osclasswizards_theme');
             osc_set_preference('defaultShowAs@all', 'list', 'osclasswizards_theme');
             osc_set_preference('defaultShowAs@search', 'list');
             osc_set_preference('welcome_message', 'Hello Guest, Welcome to OsclassWizards', 'osclasswizards_theme');
 			osc_set_preference('sub_cat_limit', 5, 'osclasswizards_theme');
 			osc_set_preference('google_fonts', 'Open Sans', 'osclasswizards_theme');
-
             osc_reset_preferences();
         }
     }
@@ -164,7 +128,7 @@ FUNCTIONS
             osc_delete_preference('default_logo', 'osclasswizards_theme');
 
             $logo_prefence = osc_get_preference('logo', 'osclasswizards_theme');
-            $logo_name     = 'osclasswizards_logo';
+            $logo_name     = 'logo';
             $temp_name     = WebThemes::newInstance()->getCurrentThemePath() . 'images/logo.jpg';
             if( file_exists( $temp_name ) && !$logo_prefence) {
 
@@ -199,12 +163,6 @@ FUNCTIONS
     }
     if(!function_exists('osclasswizards_body_class')) {
         function osclasswizards_body_class($echo = true){
-            /**
-            * Print body classes.
-            *
-            * @param string $echo Optional parameter.
-            * @return print string with all body classes concatenated
-            */
             osc_add_filter('osclasswizards_bodyClass','osclasswizards_add_body_class_construct');
             $classes = osc_apply_filter('osclasswizards_bodyClass', array());
             if($echo && count($classes)){
@@ -216,19 +174,12 @@ FUNCTIONS
     }
     if(!function_exists('osclasswizards_add_body_class')) {
         function osclasswizards_add_body_class($class){
-            /**
-            * Add new body class to body class array.
-            *
-            * @param string $class required parameter.
-            */
             $osclasswizardsBodyClass = osclasswizardsBodyClass::newInstance();
             $osclasswizardsBodyClass->add($class);
         }
     }
     if(!function_exists('osclasswizards_nofollow_construct')) {
-        /**
-        * Hook for header, meta tags robots nofollos
-        */
+
         function osclasswizards_nofollow_construct() {
             echo '<meta name="robots" content="noindex, nofollow, noarchive" />' . PHP_EOL;
             echo '<meta name="googlebot" content="noindex, nofollow, noarchive" />' . PHP_EOL;
@@ -236,24 +187,13 @@ FUNCTIONS
         }
     }
     if( !function_exists('osclasswizards_follow_construct') ) {
-        /**
-        * Hook for header, meta tags robots follow
-        */
+
         function osclasswizards_follow_construct() {
             echo '<meta name="robots" content="index, follow" />' . PHP_EOL;
             echo '<meta name="googlebot" content="index, follow" />' . PHP_EOL;
 
         }
     }
-    /* favicon */
-    if( !function_exists('osclasswizards_favicon') ) {
-        function osclasswizards_favicon() {
-			echo '<link rel="shortcut icon" href="'.osclasswizards_favicon_url().'" type="image/x-icon" />';
-			echo "\n";
-        }
-    }  
-	
-	/* logo */
     if( !function_exists('logo_header') ) {
         function logo_header() {
              $logo = osc_get_preference('logo','osclasswizards_theme');
@@ -265,7 +205,6 @@ FUNCTIONS
             }
         }
     }
-	
 	if( !function_exists('homepage_image') ) {
         function homepage_image() {
              $logo = osc_get_preference('homeimage','osclasswizards_theme');
@@ -277,7 +216,6 @@ FUNCTIONS
             }
         }
     }
-    /* favicon */
     if( !function_exists('osclasswizards_favicon_url') ) {
         function osclasswizards_favicon_url() {
             $logo = osc_get_preference('favicon','osclasswizards_theme');
@@ -289,7 +227,7 @@ FUNCTIONS
 				return osc_current_web_theme_url('images/favicon.png'); 
 			}
         }
-    }    /* logo */
+    } 
     if( !function_exists('osclasswizards_logo_url') ) {
         function osclasswizards_logo_url() {
             $logo = osc_get_preference('logo','osclasswizards_theme');
@@ -342,28 +280,23 @@ FUNCTIONS
 <h1 class="title"><?php _e('Categories', OSCLASSWIZARDS_THEME_FOLDER);?></h1>
 <div class="row">
 <?php
-	//cell_3
+
 	$total_categories   = osc_count_categories();
 	$col1_max_cat       = ceil($total_categories/1);
-
 	osc_goto_first_category();
 	$catcount	=	0;
 	while ( osc_has_categories() ) {
 ?>
-
 <ul class="col-sm-6 col-md-3 grid_list">
   <li>
-  
-  <section class="listings">
-  
-    <h2><i class="fa fa-<?php echo osclasswizards_category_icon( osc_category_id() ); ?>"></i>
+    <section class="listings">
+     <h2><i class="fa fa-<?php echo osclasswizards_category_icon( osc_category_id() ); ?>"></i>
       <?php
-                    $_slug      = osc_category_slug();
-                    $_url       = osc_search_category_url();
-                    $_name      = osc_category_name();
-                    $_total_items = osc_category_total_items();
-                    if ( osc_count_subcategories() > 0 ) { ?>
-      
+			$_slug      = osc_category_slug();
+			$_url       = osc_search_category_url();
+			$_name      = osc_category_name();
+			$_total_items = osc_category_total_items();
+			if ( osc_count_subcategories() > 0 ) { ?>
       <?php } ?>
       <?php if($_total_items > 0) { ?>
       <a class="category <?php echo $_slug; ?>" href="<?php echo $_url; ?>"><?php echo $_name ; ?></a> <span><?php echo $_total_items ; ?></span>
@@ -402,10 +335,6 @@ FUNCTIONS
         }
     }
     if( !function_exists('osclasswizards_search_number') ) {
-        /**
-          *
-          * @return array
-          */
         function osclasswizards_search_number() {
             $search_from = ((osc_search_page() * osc_default_results_per_page_at_search()) + 1);
             $search_to   = ((osc_search_page() + 1) * osc_default_results_per_page_at_search());
@@ -420,9 +349,6 @@ FUNCTIONS
             );
         }
     }
-    /*
-     * Helpers used at view
-     */
     if( !function_exists('osclasswizards_item_title') ) {
         function osclasswizards_item_title() {
             $title = osc_item_title();
@@ -485,7 +411,6 @@ FUNCTIONS
             return 0;
         }
     }
-
     if( !function_exists('osc_is_contact_page') ) {
         function osc_is_contact_page() {
             if( Rewrite::newInstance()->get_location() === 'contact' ) {
@@ -495,7 +420,6 @@ FUNCTIONS
             return false;
         }
     }
-
     if( !function_exists('get_breadcrumb_lang') ) {
         function get_breadcrumb_lang() {
             $lang = array();
@@ -622,18 +546,14 @@ FUNCTIONS
 }
 </style>";
 	}	
-
     function theme_osclasswizards_actions_admin() {
-        //if(OC_ADMIN)
         if( Params::getParam('file') == 'oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php' ) {
             if( Params::getParam('donation') == 'successful' ) {
                 osc_set_preference('donation', '1', 'osclasswizards_theme');
                 osc_reset_preferences();
             }
         }
-
         switch( Params::getParam('action_specific') ) {
-			//general
             case('settings'):
                 osc_set_preference('welcome_message', Params::getParam('welcome_message'), 'osclasswizards_theme');
                 osc_set_preference('defaultShowAs@all', Params::getParam('defaultShowAs@all'), 'osclasswizards_theme');
@@ -642,12 +562,10 @@ FUNCTIONS
                 osc_add_flash_ok_message(__('Theme settings updated correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
                 osc_redirect_to(osc_admin_render_theme_url('oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php'));
             break;
-			
-			//templates home
 			case('templates_home'):
                 osc_set_preference('show_banner', ((Params::getParam('show_banner'))? '1' : '0'), 'osclasswizards_theme');
                 osc_set_preference('keyword_placeholder', Params::getParam('keyword_placeholder'), 'osclasswizards_theme');
-                osc_set_preference('search_select', Params::getParam('search_select'), 'osclasswizards_theme');
+				osc_set_preference('show_search_country', ((Params::getParam('show_search_country'))? '1' : '0'), 'osclasswizards_theme');
 				osc_set_preference('premium_listings_shown_home', Params::getParam('premium_listings_shown_home'), 'osclasswizards_theme');
 				osc_set_preference('sub_cat_limit', Params::getParam('sub_cat_limit'), 'osclasswizards_theme');
                 osc_set_preference('show_popular', Params::getParam('show_popular'), 'osclasswizards_theme');
@@ -660,15 +578,11 @@ FUNCTIONS
 
 				osc_add_flash_ok_message(__('Templates settings updated correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
 				osc_redirect_to(osc_admin_render_theme_url( 'oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#templates' ));			break;
-			
-			//templates search
 			case('templates_search'):
 				osc_set_preference('premium_listings_shown', Params::getParam('premium_listings_shown'), 'osclasswizards_theme');
 				
 				osc_add_flash_ok_message(__('Templates settings updated correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
 				osc_redirect_to(osc_admin_render_theme_url( 'oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#templates' ));			break;
-			
-			//templates item post
 			case('templates_item_post'):
 				$locations_input_as	=	Params::getParam('locations_input_as', 'osclasswizards_theme');
 				$locations_required	=	Params::getParam('locations_required', 'osclasswizards_theme');
@@ -682,8 +596,6 @@ FUNCTIONS
 				osc_add_flash_ok_message(__('Templates settings updated correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
 				osc_redirect_to(osc_admin_render_theme_url( 'oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#templates' ));
 			break;
-			
-			//ads
 			case('ads_mgmt'):
                 osc_set_preference('header-728x90',         trim(Params::getParam('header-728x90', false, false, false)),                  'osclasswizards_theme');
                 osc_set_preference('homepage-728x90',       trim(Params::getParam('homepage-728x90', false, false, false)),                'osclasswizards_theme');
@@ -694,8 +606,6 @@ FUNCTIONS
 				osc_add_flash_ok_message(__('Ads management updated correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
 				osc_redirect_to(osc_admin_render_theme_url( 'oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#ads' ));
 			break;
-
-			//category icons
 			case('categories_icons'):
 				$catsIcons  = Params::getParam('cat-icons');
 				foreach($catsIcons as $catId => $iconName)
@@ -705,8 +615,6 @@ FUNCTIONS
 				osc_add_flash_ok_message(__('Category icons settings updated correctly', OSCLASSWIZARDS_THEME_FOLDER), 'admin');
 				osc_redirect_to(osc_admin_render_theme_url( 'oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#category-icons' ));
 			break;
-			
-			//theme style
 			case('theme_style'):	
 				$color_mode  = Params::getParam('theme_color_mode');
 				osc_set_preference('theme_color_mode', $color_mode, 'osclasswizards_theme');
@@ -720,8 +628,6 @@ FUNCTIONS
 				osc_redirect_to(osc_admin_render_theme_url( 'oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#theme-style' ));
 				
 			break;
-
-			//facebook page
 			case('facebook'):	
 
                 osc_set_preference('facebook-url',         trim(Params::getParam('facebook-url', false, false, false)),                  'osclasswizards_theme');
@@ -737,7 +643,6 @@ FUNCTIONS
 				osc_redirect_to(osc_admin_render_theme_url( 'oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php#facebook' ));
 				
 			break;
-			
 			case('upload_favicon'):
                 $package = Params::getFiles('favicon');
                 if( $package['error'] == UPLOAD_ERR_OK ) {
@@ -761,7 +666,7 @@ FUNCTIONS
                 if( $package['error'] == UPLOAD_ERR_OK ) {
                     $img = ImageResizer::fromFile($package['tmp_name']);
                     $ext = $img->getExt();
-                    $logo_name     = 'osclasswizards_logo';
+                    $logo_name     = 'logo';
                     $logo_name    .= '.'.$ext;
                     $path = osc_uploads_path() . $logo_name ;
                     $img->saveToFile($path);
@@ -854,11 +759,7 @@ FUNCTIONS
     osc_add_hook('init_admin', 'theme_osclasswizards_actions_admin');
     osc_add_hook('theme_delete_osclasswizards', 'osclasswizards_delete');
     osc_admin_menu_appearance(__('OsclassWizards', OSCLASSWIZARDS_THEME_FOLDER), osc_admin_render_theme_url('oc-content/themes/'.OSCLASSWIZARDS_THEME_FOLDER.'/admin/settings.php'), 'settings_osclasswizards');
-/**
 
-TRIGGER FUNCTIONS
-
-*/
 check_install_osclasswizards_theme();
 if(osc_is_home_page()){
     osc_add_hook('inside-main','osclasswizards_draw_categories_list');
@@ -945,7 +846,6 @@ function osclasswizards_print_sidebar_category_search($aCategories, $current_cat
     }
 }
 
-//item post form validate
 function osclasswizards_item_post_form_validate(){
 ?>
 <script type="text/javascript">
@@ -1076,11 +976,6 @@ if(osc_is_publish_page()){
 	osc_add_hook('footer', 'osclasswizards_item_post_form_validate');
 }
 
-/**
-
-CLASSES
-
-*/
 class osclasswizardsBodyClass
 {
     /**
@@ -1116,22 +1011,12 @@ class osclasswizardsBodyClass
     }
 }
 
-/**
-
-HELPERS
-
-*/
 if( !function_exists('osc_uploads_url') ){
     function osc_uploads_url($item = ''){
         return osc_base_url().'oc-content/uploads/'.$item;
     }
 }
 
-
-/**
-* welcome message 
-*
-*/
 function osclasswizards_welcome_message(){
 	if( osc_get_preference('welcome_message', 'osclasswizards_theme') ) {
 		return osc_get_preference('welcome_message', 'osclasswizards_theme');
@@ -1139,48 +1024,26 @@ function osclasswizards_welcome_message(){
 		return false;
 	}
 }
-
-
 function osclasswizards_premium_listings_shown_home(){
 	return osc_get_preference('premium_listings_shown_home', 'osclasswizards_theme');
 }
 
-//search select
-function osclasswizards_search_select(){
-	return osc_get_preference('search_select', 'osclasswizards_theme');
-}
-
-//title minimum length
 function osclasswizards_title_minimum_length(){
 	return osc_get_preference('title_minimum_length', 'osclasswizards_theme');
 }
-//search page premiums
 function osclasswizards_description_minimum_length(){
 	return osc_get_preference('description_minimum_length', 'osclasswizards_theme');
 }
-//search page premiums
 function osclasswizards_premium_listings_shown(){
 	return osc_get_preference('premium_listings_shown', 'osclasswizards_theme');
 }
-
-//item post locations input
 function osclasswizards_locations_input_as(){
 	return osc_get_preference('locations_input_as', 'osclasswizards_theme');
 }
-
-//item post locations required
 function osclasswizards_locations_required(){
 	return (osc_get_preference('locations_required', 'osclasswizards_theme') == '1')? 'true': 'false';
 }
-
-
-/**
-* select categories 
-*
-*/
-
-function osclasswizards_categories_select($name, $id, $label)
-{
+function osclasswizards_categories_select($name, $id, $label){
     $categories = Category::newInstance()->toTreeAll();
 
 	if(count($categories) > 0 ) {
@@ -1202,47 +1065,48 @@ function osclasswizards_categories_select($name, $id, $label)
 
 	echo $html;
 }
-
-/**
-* select regions 
-*
-*/
-
-function osclasswizards_regions_select($name, $id, $label)
-{
-	$aRegions = Region::newInstance()->listAll(); 
-	if(count($aRegions) > 0 ) { 
+function osclasswizards_countries_select($name, $id, $label, $value=NULL){
+	$aCountries = Country::newInstance()->listAll(); 
+	if(count($aCountries) > 0 ) { 
 		$html  = '<select name="'.$name.'" id="'.$id.'">';
 		$html .= '<option value="">'.$label.'</option>';
-		foreach($aRegions as $region) { 
-			$html .= '<option value="'. $region['s_name'].'">'. $region['s_name'].'</option>';
+		foreach($aCountries as $country) {
+			if($value == $country['pk_c_code']) $selected = 'selected="selected"'; else $selected = '';
+			$html .= '<option value="'. $country['pk_c_code'].'" '.$selected.'>'. $country['s_name'].'</option>';
 		} 
 		$html .= '</select>';
 	} 
 
 	echo $html;
 }
+function osclasswizards_regions_select($name, $id, $label, $value=NULL){
+	$aRegions = Region::newInstance()->listAll(); 
+	if(count($aRegions) > 0 ) { 
 
-/**
-* select cities 
-*
-*/
+		$html  = '<select name="'.$name.'" id="'.$id.'">';
+		$html .= '<option value="" id="sRegionSelect">'.$label.'</option>';
+		foreach($aRegions as $region) {
+			if($value == $region['s_name']) $selected = 'selected="selected"'; else $selected = '';
+			$html .= '<option value="'. $region['s_name'].'" '.$selected.'>'. $region['s_name'].'</option>';
+		} 
+		$html .= '</select>';
+	} 
 
-function osclasswizards_cities_select($name, $id, $label)
-{
+	echo $html;
+}
+function osclasswizards_cities_select($name, $id, $label, $value=NULL){
 	$html  = '<select name="'.$name.'" id="'.$id.'">';
-	$html .= '<option value="">'.$label.'</option>';
+	$html .= '<option value="" id="sCitySelect">'.$label.'</option>';
 	if(osc_count_list_cities() > 0 ) {
 		while(osc_has_list_cities() ) { 
-			$html .= '<option value="'. osc_list_city_name().'">'. osc_list_city_name().'</option>';
+			if($value == osc_list_city_name()) $selected = 'selected="selected"'; else $selected = '';
+			$html .= '<option value="'. osc_list_city_name().'" '.$selected.'>'. osc_list_city_name().'</option>';
 		}
 	}
 	$html .= '</select>';
 
 	echo $html;
 }
-
-// popular regions
 function osclasswizards_popular_regions($limit = 20){
 	View::newInstance()->_exportVariableToView('list_regions', Search::newInstance()->listRegions('%%%%', '>=') ) ;
 	if(osc_count_list_regions() > 0 ) { 
@@ -1259,9 +1123,7 @@ function osclasswizards_popular_regions($limit = 20){
 		return false;
 	}
 }
-
-// popular cities
-function osclasswizards_popular_citites($limit = 20){
+function osclasswizards_popular_cities($limit = 20){
 	View::newInstance()->_exportVariableToView('list_cities', Search::newInstance()->listCities('%%%%', '>=') ) ;
 	if(osc_count_list_cities() > 0 ) { 
 		$array	=	array();
@@ -1277,8 +1139,6 @@ function osclasswizards_popular_citites($limit = 20){
 		return false;
 	}
 }
-
-// popular search
 function osclasswizards_popular_searches($limit = 20){
 
 	if(osc_count_latest_searches() > 0){
@@ -1297,10 +1157,7 @@ function osclasswizards_popular_searches($limit = 20){
 		return false;
 	}
 }
-
-//insert search in db
 function osclasswizards_insert_search(){
-
 	$search_word	=	Params::getParam('sPattern');
 	if(isset($search_word) && $search_word!="" ){
 		$conn = getConnection() ;
@@ -1315,14 +1172,7 @@ function osclasswizards_insert_search(){
 		$conn->autocommit(true);
 	}
 }
-
 osc_add_hook('search', 'osclasswizards_insert_search');
-
-
-/**
-* function to get category icon name
-*
-*/
 function osclasswizards_category_icon($catId){
 	$icon = osc_esc_html( strtolower(osc_get_preference('cat-icons-'.$catId, 'osclasswizards_theme_cat_icons') ) );
 	if($icon!="")
@@ -1330,27 +1180,12 @@ function osclasswizards_category_icon($catId){
 	else
 	return "shopping-cart";
 }
-
-
-/**
-* function to get theme color mode
-*
-*/
-function osclasswizards_theme_color_mode()
-{
+function osclasswizards_theme_color_mode(){
 	return osc_get_preference('theme_color_mode', 'osclasswizards_theme');
-
 }
-
-function osclasswizards_google_fonts()
-{
+function osclasswizards_google_fonts(){
 	return trim(osc_get_preference('google_fonts', 'osclasswizards_theme'));
-
 }
-
-//show populars
-
-//regions
 function osclasswizards_show_popular_regions(){
 	if(osc_get_preference('show_popular_regions', 'osclasswizards_theme') == 1){
 		return true;
@@ -1359,12 +1194,9 @@ function osclasswizards_show_popular_regions(){
 		return false;
 	}
 }
-//limit
 function osclasswizards_popular_regions_limit(){
 	return osc_get_preference('popular_regions_limit', 'osclasswizards_theme');
 }
-
-//ciities
 function osclasswizards_show_popular_cities(){
 	if(osc_get_preference('show_popular_cities', 'osclasswizards_theme') == 1){
 		return true;
@@ -1373,12 +1205,9 @@ function osclasswizards_show_popular_cities(){
 		return false;
 	}
 }
-//limit
 function osclasswizards_popular_cities_limit(){
 	return osc_get_preference('popular_cities_limit', 'osclasswizards_theme');
 }
-
-//regions
 function osclasswizards_show_popular_searches(){
 	if(osc_get_preference('show_popular_searches', 'osclasswizards_theme') == 1){
 		return true;
@@ -1387,68 +1216,27 @@ function osclasswizards_show_popular_searches(){
 		return false;
 	}
 }
-//limit
 function osclasswizards_popular_searches_limit(){
 	return osc_get_preference('popular_searches_limit', 'osclasswizards_theme');
 }
 
-
-/**
-* facebook like box
-**/
 function osclasswizards_facebook_like_box(){
 ?>
 <div class="fb-page" data-href="<?php echo osc_esc_html( osc_get_preference('facebook-url', 'osclasswizards_theme') ); ?>" data-width="<?php echo osc_esc_html( osc_get_preference('facebook-width', 'osclasswizards_theme') ); ?>" data-height="<?php echo osc_esc_html( osc_get_preference('facebook-height', 'osclasswizards_theme') ); ?>" data-hide-cover="<?php echo (osc_esc_html( osc_get_preference('facebook-hidecover', 'osclasswizards_theme')) == "1" ) ? "true":"false"; ?>" data-show-facepile="<?php echo (osc_esc_html( osc_get_preference('facebook-showface', 'osclasswizards_theme')) == "1" ) ? "true":"false"; ?>" data-show-posts="<?php echo (osc_esc_html( osc_get_preference('facebook-showpost', 'osclasswizards_theme')) == "1" ) ? "true":"false"; ?>"></div>
 <?php
 }
-
-
-/** 
-* function to add head title and meta tags
-*
-*/
-function osclasswizards_meta(){
-?>
-<title><?php echo osc_esc_html(meta_title()) ; ?></title>
-<?php if( meta_description() != '' ) { ?><meta name="description" content="<?php echo osc_esc_html(meta_description()); ?>" /><?php } ?>
-<?php if( meta_keywords() != '' ) { ?><meta name="keywords" content="<?php echo osc_esc_html(meta_keywords()); ?>" /><?php } ?>
-<?php
-}
-osc_add_hook('osclasswizards_head', 'osclasswizards_meta');
-
-//remove default item title and meta tags
-if( function_exists('ocw_seo_item_meta') && osc_is_ad_page()){
-	osc_remove_hook('osclasswizards_head', 'osclasswizards_meta');
-}
-
-//add favicon
-osc_add_hook('osclasswizards_head', 'osclasswizards_favicon');
-
-//footer css
 function osclasswizards_footer_css(){
-	
-	echo '<link href="'.osc_current_web_theme_url('css/apps.css').'" rel="stylesheet" type="text/css" />';
-
 	osclasswizards_add_google_fonts();
-	
 	$custom_css = trim(osc_get_preference('custom_css', 'osclasswizards_theme'));
 	if( $custom_css != "" ){
 		echo "<style>";
 		echo $custom_css;
 		echo "</style>";
 	}
-
 }
 osc_add_hook('footer', 'osclasswizards_footer_css');
-
-//footer js
 function osclasswizards_footer_js(){
-	
 	echo '<script type="text/javascript" src="'.osc_current_web_theme_js_url('main.js').'"></script>';
-
 }
 osc_add_hook('footer', 'osclasswizards_footer_js');
-
-
-
 ?>
