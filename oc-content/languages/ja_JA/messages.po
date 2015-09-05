@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Flash Messages package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-08-09 03:00+0900\n"
+"PO-Revision-Date: 2015-09-05 13:12+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.1\n"
+"X-Generator: Poedit 1.8.4\n"
 "Project-Id-Version: Flash Messages\n"
 "POT-Creation-Date: \n"
 "Last-Translator: \n"
@@ -24,19 +24,19 @@ msgstr "詳細長さ：半角数字のみ入力可"
 
 #: oc-includes/osclass/ItemActions.php:106
 msgid "Title too short (%s)."
-msgstr "タイトル：短すぎます(%s)"
+msgstr "タイトル：短すぎます"
 
 #: oc-includes/osclass/ItemActions.php:107
 msgid "Title too long (%s)."
-msgstr "タイトル：長すぎます(%s)"
+msgstr "タイトル：長すぎます"
 
 #: oc-includes/osclass/ItemActions.php:119
 msgid "Description too short (%s)."
-msgstr "詳細：短すぎます(%s)"
+msgstr "詳細：短すぎます"
 
 #: oc-includes/osclass/ItemActions.php:120
 msgid "Description too long (%s)."
-msgstr "詳細：長すぎます(%s)"
+msgstr "詳細：長すぎます"
 
 #: oc-includes/osclass/controller/login.php:102
 msgid "The user has not been validated yet. Would you like to re-send your <a href=\"%s\">activation?</a>"
@@ -433,13 +433,12 @@ msgstr "テーマのフォルダーが書き込み可能になっていません
 msgid "The theme has been installed correctly"
 msgstr "テーマがインストールされました。"
 
-#: oc-admin/appearance.php:58 oc-admin/languages.php:71
-#: oc-admin/plugins.php:64
+#: oc-admin/appearance.php:58 oc-admin/languages.php:71 oc-admin/plugins.php:64
 msgid "The zip file is not valid"
 msgstr "ZIPファイルが有効なものではありません。"
 
-#: oc-admin/appearance.php:61 oc-admin/languages.php:74
-#: oc-admin/plugins.php:67 oc-admin/tools.php:59
+#: oc-admin/appearance.php:61 oc-admin/languages.php:74 oc-admin/plugins.php:67
+#: oc-admin/tools.php:59
 msgid "No file was uploaded"
 msgstr "ファイルはアップロードされませんでした。"
 
