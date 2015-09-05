@@ -277,6 +277,38 @@
         <?php
         }
 
+        // added a new function for category template
+        static public function get_category_template($catId, $item = null)
+        {
+            if ($item == null)
+                $item = osc_item();
+
+            var_dump($item);
+        ?>
+
+<script type="text/javascript">
+    <!-- show description templates associated with a selected option -- >
+    $().ready(function(){
+        $("#catId").change(function() {
+            var cat_id = $(this).val();
+            alert(cat_id);
+
+            $.ajax({
+                type: "POST",
+                url: url,
+                data: 'page=ajax&action=runhook&hook=item_form&catId=' + cat_id,
+                dataType: 'html',
+                success: function(data){
+                    $("#template").html(data);
+                }
+            });
+        });
+    });
+</script>
+<div id="template" class="form-group">
+</div>
+<?php
+        }
 
         static public function subcategory_select($categories, $item, $default_item = null, $deep = 0)
         {
