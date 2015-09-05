@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Bender package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-08-24 02:10+0900\n"
+"PO-Revision-Date: 2015-09-05 12:52+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.1\n"
+"X-Generator: Poedit 1.8.4\n"
 "Project-Id-Version: Bender\n"
 "POT-Creation-Date: \n"
 "Last-Translator: \n"
@@ -183,8 +183,7 @@ msgstr "この検索条件を登録する。"
 msgid "Subscribe now"
 msgstr "登録"
 
-#: common/head.php:3 item.php:157 loop-single-premium.php:26
-#: loop-single.php:26
+#: common/head.php:3 item.php:157 loop-single-premium.php:26 loop-single.php:26
 msgid "Delete"
 msgstr "削除"
 
@@ -201,8 +200,7 @@ msgstr "問い合わせる"
 msgid "Your name"
 msgstr "お名前"
 
-#: contact.php:41 contact.php:54 item-sidebar.php:84
-#: user-public-sidebar.php:41
+#: contact.php:41 contact.php:54 item-sidebar.php:84 user-public-sidebar.php:41
 msgid "optional"
 msgstr "任意"
 
@@ -428,8 +426,7 @@ msgstr "案件を掲載した人の情報"
 msgid "Name"
 msgstr "名前"
 
-#: item-post.php:127 user-login.php:38 user-recover.php:37
-#: user-register.php:45
+#: item-post.php:127 user-login.php:38 user-recover.php:37 user-register.php:45
 msgid "E-mail"
 msgstr "E-mail"
 
@@ -582,11 +579,11 @@ msgstr "参考情報"
 
 #: item.php:125
 msgid "Avoid scams by acting locally or paying with PayPal"
-msgstr "有料であなたの掲載案件をプレミアムとして登録することができます。プレミアム案件にて掲載されるとより注目が集まりやすなり、コンタクト数も増えます。"
+msgstr "有料であなたの掲載案件をプレミアムとして登録することができます。プレミアム案件にて掲載されることにより注目が集まりやすくなり、コンタクト数も増えます。"
 
 #: item.php:126
 msgid "Never pay with Western Union, Moneygram or other anonymous payment services"
-msgstr "実際に案件交渉が進んできたら、実際に当事者同士で会ってみましょう。顔の見えない関係性よりも、実際に会うことでお互いの信頼感を得ることができます。"
+msgstr "案件交渉が進んできたら、実際に当事者同士で会ってみましょう。顔の見えない関係性よりも、実際に会うことでお互いの信頼感を得ることができます。"
 
 #: item.php:127
 msgid "Don't buy or sell outside of your country. Don't accept cashier cheques from outside your country"
