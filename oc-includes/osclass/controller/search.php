@@ -163,7 +163,8 @@
                 }
             }
 
-
+            // Remove the first letter beginning with a slash to avoid redirect loop
+            $this->uri = preg_replace('/^\//', '', $this->uri);
             $uriParams = Params::getParamsAsArray();
             $searchUri = osc_search_url($uriParams);
             if($this->uri!='feed') {
