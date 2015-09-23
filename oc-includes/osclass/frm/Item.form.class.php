@@ -208,7 +208,7 @@
                     $tmp_cat = array();
                     foreach($categories as $c) {
                         if( $c['fk_i_parent_id']==null ) { $c['fk_i_parent_id'] = 0; };
-                        $tmp_cat[$c['fk_i_parent_id']][] = array($c['pk_i_id'], $c['s_name']);
+                        $tmp_cat[$c['fk_i_parent_id']][] = array($c['pk_i_id'], $c['s_name'], $c['s_template']);
                     }
                     foreach($tmp_cat as $k => $v) {
                         echo 'var categories_'.$k.' = '.json_encode($v).';'.PHP_EOL;
@@ -251,6 +251,7 @@
                         }
                         return true;
                     });
+                    insert_selected_category_template(1);
                 });
 
                 function draw_select(select, categoryID) {
@@ -272,6 +273,18 @@
                         $('#select_'+select).trigger("created");
                     };
 
+                }
+
+                function insert_selected_category_template(select) {
+                    $("#select_"+select).change(function() {
+                        var cat_id = $(this).val();
+                        $.each(categories_0, function(index, value) {
+                            if (value[0] == cat_id) {
+                                //alert('categories_' + cat_id + ': ' + value[2]);
+                                $("#descriptionja_JA").html(value[2]);
+                            }
+                        });
+                    });
                 }
             </script>
         <?php
