@@ -2,7 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
         <loc>http://localhost/founder-hubs/</loc>
-        <lastmod>2015-08-23</lastmod>
+        <lastmod>2015-09-22</lastmod>
         <changefreq>always</changefreq>
+    </url>
+    <url>
+        <loc>http://localhost/founder-hubs/index.php?page=search&amp;sCategory=%2525e8%2525b5%2525b7%2525e6%2525a5%2525ad%2525e3%252582%252584%2525e3%252582%2525a4%2525e3%252583%252599%2525e3%252583%2525b3%2525e3%252583%252588%2525e7%2525ad%252589%2525e3%252581%2525ae%2525e3%252583%252597%2525e3%252583%2525ad%2525</loc>
+        <lastmod>2015-09-22</lastmod>
+        <changefreq>hourly</changefreq>
+    </url>
+    <url>
+        <loc>http://localhost/founder-hubs/index.php?page=search&amp;sCategory=%2525e3%252582%2525b9%2525e3%252582%2525bf%2525e3%252583%252583%2525e3%252583%252595%2525e5%25258b%25259f%2525e9%25259b%252586</loc>
+        <lastmod>2015-09-22</lastmod>
+        <changefreq>hourly</changefreq>
+    </url>
+    <url>
+        <loc>http://localhost/founder-hubs/index.php?page=search&amp;sCategory=%2525e8%2525b5%2525b7%2525e6%2525a5%2525ad%2525e3%252581%252599%2525e3%252582%25258b</loc>
+        <lastmod>2015-09-22</lastmod>
+        <changefreq>hourly</changefreq>
+    </url>
+    <url>
+        <loc>http://localhost/founder-hubs/index.php?page=search&amp;sCategory=%2525e4%2525bb%2525b2%2525e9%252596%252593%2525e5%25258b%25259f%2525e9%25259b%252586</loc>
+        <lastmod>2015-09-22</lastmod>
+        <changefreq>hourly</changefreq>
+    </url>
+    <url>
+        <loc>http://localhost/founder-hubs/index.php?page=search&amp;sCategory=%2525e6%25258a%252595%2525e8%2525b3%252587%2525e5%2525ae%2525b6%2525e3%252582%252584%2525e3%252583%252597%2525e3%252583%2525ad%2525e3%252582%2525b8%2525e3%252582%2525a7%2525e3%252582%2525af%2525e3%252583%252588%2525e3%252581%2525ab%2525</loc>
+        <lastmod>2015-09-22</lastmod>
+        <changefreq>hourly</changefreq>
+    </url>
+    <url>
+        <loc>http://localhost/founder-hubs/index.php?page=search&amp;sCategory=%2525e3%252583%252591%2525e3%252583%2525bc%2525e3%252583%252588%2525e3%252583%25258a%2525e3%252583%2525bc%2525e4%2525b8%252580%2525e8%2525a6%2525a7</loc>
+        <lastmod>2015-09-22</lastmod>
+        <changefreq>hourly</changefreq>
     </url>
 </urlset>
