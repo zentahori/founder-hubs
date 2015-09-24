@@ -108,12 +108,17 @@
                     $value = (isset($category['locale'][$locale['pk_c_code']])) ? $category['locale'][$locale['pk_c_code']]['s_name'] : "";
                     $name = $locale['pk_c_code'] . '#s_name';
                     $nameTextarea = $locale['pk_c_code'] . '#s_description';
+                    $nameTemplate = $locale['pk_c_code'] . '#s_template';
                     $valueTextarea = (isset($category['locale'][$locale['pk_c_code']])) ? $category['locale'][$locale['pk_c_code']]['s_description'] : "";
+                    $valueTemplate = $category['s_template'];
 
                     $contentTemp  = '<div id="'.$category['pk_i_id'].'-'.$locale['pk_c_code'].'" class="category-details-form">';
                     $contentTemp .= '<div class="FormElement"><label>' . __('Name') . '</label><input id="' . $name .'" type="text" name="' . $name .'" value="' . osc_esc_html(htmlentities($value, ENT_COMPAT, "UTF-8")) . '"/></div>';
                     $contentTemp .= '<div class="FormElement"><label>' . __('Description') . '</label>';
                     $contentTemp .= '<textarea id="' . $nameTextarea . '" name="' . $nameTextarea . '" rows="10">' . $valueTextarea . '</textarea>';
+
+                    $contentTemp .= '<div class="FormElement"><label>' . __('Template') . '</label>';
+                    $contentTemp .= '<textarea id="' . $nameTemplate . '" name="' . $nameTemplate . '" rows="50">' . $valueTemplate . '</textarea>';
                     $contentTemp .= '</div></div>';
                     $tabs[] = '<li><a href="#'.$category['pk_i_id'].'-'.$locale['pk_c_code'].'">' . $locale['s_name'] . '</a></li>';
                     $content[] = $contentTemp;
