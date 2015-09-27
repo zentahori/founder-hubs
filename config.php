@@ -27,7 +27,8 @@ if ($_SERVER['SERVER_ADDR'] == '127.0.0.1'
 
     define('WEB_PATH', 'http://localhost/founder-hubs/');
 
-} else if ($_SERVER['HTTP_HOST'] == "ciao-spider-net.ssl-lolipop.jp") { // Production
+} else if ($_SERVER['HTTP_HOST'] == "ciao-spider-net.ssl-lolipop.jp"
+              || $_SERVER['HTTP_HOST'] == "spider-net.ciao.jp") { // Production
 
     /** MySQL database name for Osclass */
     define('DB_NAME', 'LAA0658931-osclass');
@@ -46,7 +47,8 @@ if ($_SERVER['SERVER_ADDR'] == '127.0.0.1'
 
     define('REL_WEB_URL', '');
 
-    define('WEB_PATH', 'https://ciao-spider-net.ssl-lolipop.jp/');
+    $domain = $_SERVER['HTTP_HOST'] == "ciao-spider-net.ssl-lolipop.jp" ? "https://ciao-spider-net.ssl-lolipop.jp/" : "http://spider-net.ciao.jp/";
+    define('WEB_PATH', $domain);
 
 } else { // Staging
 
