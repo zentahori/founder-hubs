@@ -67,6 +67,15 @@
         </div>
         <div class="listing-attr">
           <h4><a href="<?php echo osc_premium_url() ; ?>" title="<?php echo osc_esc_html(osc_premium_title()) ; ?>"><?php echo osc_premium_title() ; ?></a></h4>
+          <!-- Added a new feature for contacts -->
+          <div>
+            <span class="contact"> <?php _e("Contacts", OSCLASSWIZARDS_THEME_FOLDER);?> : <?php echo cc_contacts_by_listing( osc_item_id() ); ?> </span> <br>
+            <?php if (cc_contacts_by_listing(osc_item_id()) > 0) { ?>
+                <span> <?php _e('Status', 'osclasswizards');?> : <?php _e('In progress', 'osclasswizards');?> </span>
+            <?php } else { ?>
+                <span><?php _e('Status', 'osclasswizards');?> : <font color=red><?php _e('Waiting', 'osclasswizards');?> </font> </span>
+            <?php } ?>
+          </div>
           <article> <span class="category"><i class="fa fa-<?php echo osclasswizards_category_icon( osc_premium_category_id() ); ?>"></i><?php echo osc_premium_category() ; ?></span> <span class="location"><i class="fa fa-map-marker"></i><?php echo osc_premium_city(); ?>
             <?php if(osc_premium_region()!='') { ?>
             (<?php echo osc_premium_region(); ?>)
