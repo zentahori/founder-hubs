@@ -266,13 +266,5 @@
         });
     });
     <?php }; ?>
-
-    <!-- show description templates associated with a selected option -- >
-    $().ready(function(){
-        $("#catId").change(function() {
-            var selectVal = $("#catId").val();
-            alert(selectVal);
-        });
-    });
 </script>
 <?php osc_current_web_theme_path('footer.php'); ?>
