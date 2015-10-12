@@ -52,7 +52,7 @@ input[type=text], input[type=password], textarea, select {height: 35px;width: 10
 }
 input[type=text]:focus, input[type=password]:focus, textarea:focus {outline: none;
 }
-textarea {height: 200px;
+textarea {height: 500px;
 }
 .form-group label, .meta label, .meta, .row label {font-weight: 700;text-transform: capitalize;
 }
