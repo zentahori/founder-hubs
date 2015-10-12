@@ -28,7 +28,8 @@ if ($_SERVER['SERVER_ADDR'] == '127.0.0.1'
     define('WEB_PATH', 'http://localhost/founder-hubs/');
 
 } else if ($_SERVER['HTTP_HOST'] == "ciao-spider-net.ssl-lolipop.jp"
-              || $_SERVER['HTTP_HOST'] == "spider-net.ciao.jp") { // Production
+              || $_SERVER['HTTP_HOST'] == "spider-net.ciao.jp"
+                  || $_SERVER['HTTP_HOST'] == "founderhubs.com") { // Production
 
     /** MySQL database name for Osclass */
     define('DB_NAME', 'LAA0658931-osclass');
