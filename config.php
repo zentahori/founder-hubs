@@ -5,6 +5,11 @@
  */
 define('MULTISITE', 0);
 
+$production_hosts = array(
+    "https" => array("ciao-spider-net.ssl-lolipop.jp"),
+    "http"  => array("spider-net.ciao.jp", "founderhubs.com")
+);
+
 if ($_SERVER['SERVER_ADDR'] == '127.0.0.1'
         || $_SERVER['SERVER_ADDR'] == '::1') {  // Development
 
@@ -27,9 +32,8 @@ if ($_SERVER['SERVER_ADDR'] == '127.0.0.1'
 
     define('WEB_PATH', 'http://localhost/founder-hubs/');
 
-} else if ($_SERVER['HTTP_HOST'] == "ciao-spider-net.ssl-lolipop.jp"
-              || $_SERVER['HTTP_HOST'] == "spider-net.ciao.jp"
-                  || $_SERVER['HTTP_HOST'] == "founderhubs.com") { // Production
+} else if (in_array($_SERVER['HTTP_HOST'], $production_hosts("https"))
+              || in_array($_SERVER['HTTP_HOST'], $production_hosts("http"))) { // Production
 
     /** MySQL database name for Osclass */
     define('DB_NAME', 'LAA0658931-osclass');
@@ -48,7 +52,9 @@ if ($_SERVER['SERVER_ADDR'] == '127.0.0.1'
 
     define('REL_WEB_URL', '');
 
-    $domain = $_SERVER['HTTP_HOST'] == "ciao-spider-net.ssl-lolipop.jp" ? "https://ciao-spider-net.ssl-lolipop.jp/" : "http://spider-net.ciao.jp/";
+    $domain = $_SERVER['HTTP_HOST'] == in_array($_SERVER['HTTP_HOST'], $production_hosts("https"))
+                                       ? "https://" . $_SERVER['HTTP_HOST'] . "/"
+                                       : "http://" . $_SERVER['HTTP_HOST'] . "/";
     define('WEB_PATH', $domain);
 
 } else { // Staging
