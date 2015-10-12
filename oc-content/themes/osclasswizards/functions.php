@@ -988,12 +988,12 @@ function osclasswizards_item_post_form_validate(){
 			},
 			region: {
 				required: <?php echo osclasswizards_locations_required(); ?>,
-				minlength: 3,
+				minlength: 2,
 				maxlength: 100
 			},
 			city: {
 				required: <?php echo osclasswizards_locations_required(); ?>,
-				minlength: 3,
+				minlength: 1,
 				maxlength: 100
 			}
 			<?php if(osclasswizards_locations_input_as()=='select'){ ?>
@@ -1039,12 +1039,12 @@ function osclasswizards_item_post_form_validate(){
 			},
 			region: {
 				required: "<?php echo osc_esc_js(__("Region: this field is required", OSCLASSWIZARDS_THEME_FOLDER)); ?>.",
-				minlength: "<?php echo osc_esc_js(__("Region: enter at least 3 characters", OSCLASSWIZARDS_THEME_FOLDER)); ?>.",
+				minlength: "<?php echo osc_esc_js(__("Region: enter at least 2 characters", OSCLASSWIZARDS_THEME_FOLDER)); ?>.",
 				maxlength: "<?php echo osc_esc_js(__("Region: no more than 100 characters", OSCLASSWIZARDS_THEME_FOLDER)); ?>."
 			},
 			city: {
 				required: "<?php echo osc_esc_js(__("City: this field is required", OSCLASSWIZARDS_THEME_FOLDER)); ?>.",
-				minlength: "<?php echo osc_esc_js(__("City: enter at least 3 characters", OSCLASSWIZARDS_THEME_FOLDER)); ?>.",
+				minlength: "<?php echo osc_esc_js(__("City: enter at least 1 character", OSCLASSWIZARDS_THEME_FOLDER)); ?>.",
 				maxlength: "<?php echo osc_esc_js(__("City: no more than 100 characters", OSCLASSWIZARDS_THEME_FOLDER)); ?>."
 			}
 			<?php if(osclasswizards_locations_input_as()=='select'){ ?>
