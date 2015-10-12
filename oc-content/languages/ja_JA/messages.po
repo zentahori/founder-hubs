@@ -2,12 +2,12 @@
 # This file is distributed under the same license as the Flash Messages package.
 msgid ""
 msgstr ""
-"PO-Revision-Date: 2015-09-05 13:12+0900\n"
+"PO-Revision-Date: 2015-10-12 15:18+0900\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=1; plural=0;\n"
-"X-Generator: Poedit 1.8.4\n"
+"X-Generator: Poedit 1.8.5\n"
 "Project-Id-Version: Flash Messages\n"
 "POT-Creation-Date: \n"
 "Last-Translator: \n"
@@ -65,14 +65,14 @@ msgstr "Osclassの更新に成功しました。 <a href=\"http://forums.osclass
 #: oc-includes/osclass/controller/ajax.php:115
 #: oc-includes/osclass/controller/item.php:320
 msgid "The listing doesn't exist"
-msgstr "広告は存在しません。"
+msgstr "案件は存在しません。"
 
 #: oc-includes/osclass/controller/ajax.php:124
 #: oc-includes/osclass/controller/ajax.php:132
 #: oc-includes/osclass/controller/item.php:326
 #: oc-includes/osclass/controller/item.php:331
 msgid "The listing doesn't belong to you"
-msgstr "この広告はあなたが出したものではありません。"
+msgstr "この案件はあなたが出したものではありません。"
 
 #: oc-includes/osclass/controller/ajax.php:90
 #: oc-includes/osclass/controller/ajax.php:155
@@ -111,32 +111,32 @@ msgstr "登録ユーザーのみ案件を掲載することができます。"
 
 #: oc-includes/osclass/controller/item.php:166
 msgid "Your listing has been published"
-msgstr "広告が公開されました。"
+msgstr "案件が公開されました。"
 
 #: oc-includes/osclass/controller/item.php:240
 msgid "Great! We've just updated your listing"
-msgstr "広告の更新が完了しました。"
+msgstr "案件の更新が完了しました。"
 
 #: oc-includes/osclass/controller/item.php:267
 msgid "The listing has been validated"
-msgstr "広告の認証が完了しました。"
+msgstr "案件の認証が完了しました。"
 
 #: oc-includes/osclass/controller/item.php:269
 msgid "The listing can't be validated"
-msgstr "広告の認証ができませんでした。"
+msgstr "案件の認証ができませんでした。"
 
 #: oc-includes/osclass/controller/item.php:272
 msgid "The listing has already been validated"
-msgstr "広告はすでに認証済みです。"
+msgstr "案件はすでに認証済みです。"
 
 #: oc-includes/osclass/controller/item.php:285
 msgid "Your listing has been deleted"
-msgstr "広告は削除されました。"
+msgstr "案件は削除されました。"
 
 #: oc-includes/osclass/controller/item.php:287
 #: oc-includes/osclass/controller/item.php:295
 msgid "The listing you are trying to delete couldn't be deleted"
-msgstr "広告を削除することができませんでした。"
+msgstr "案件を削除することができませんでした。"
 
 #: oc-includes/osclass/controller/item.php:372
 msgid "Thanks! That's very helpful"
@@ -145,12 +145,12 @@ msgstr "ご協力ありがとうございました。"
 #: oc-includes/osclass/controller/item.php:418
 #: oc-includes/osclass/controller/item.php:525
 msgid "This listing doesn't exist"
-msgstr "広告は存在しません。"
+msgstr "案件は存在しません。"
 
 #: oc-includes/osclass/controller/item.php:424
 #: oc-includes/osclass/controller/item.php:462
 msgid "We're sorry, but the listing has expired. You can't contact the seller"
-msgstr "申し訳ございませんが、広告は掲載期限切れとなっています。広告をだした人に連絡する事ができません。"
+msgstr "申し訳ございませんが、案件は掲載期限切れとなっています。案件を出した人に連絡する事はできません。"
 
 #: oc-includes/osclass/controller/item.php:431
 msgid "You can't contact the seller, only registered users can"
@@ -540,23 +540,23 @@ msgstr "少なくとも1つの項目が空欄になっているため、メー�
 
 #: oc-admin/items.php:63
 msgid "%d listing has been enabled"
-msgstr "%d 件の広告が有効になりました。"
+msgstr "%d 件の案件が有効になりました。"
 
 #: oc-admin/items.php:75
 msgid "%d listing has been disabled"
-msgstr "%d 件の広告が無効になりました。"
+msgstr "%d 件の案件が無効になりました。"
 
 #: oc-admin/items.php:87
 msgid "%d listing has been activated"
-msgstr "%d 件の広告が有効になりました。"
+msgstr "%d 件の案件が有効になりました。"
 
 #: oc-admin/items.php:99
 msgid "%d listing has been deactivated"
-msgstr "%d 件の広告が無効になりました。"
+msgstr "%d 件の案件が無効になりました。"
 
 #: oc-admin/items.php:111
 msgid "%d listing has been marked as premium"
-msgstr "%d 件の広告がプレミアムに指定されました。"
+msgstr "%d 件の案件がプレミアムに指定されました。"
 
 #: oc-admin/items.php:123 oc-admin/items.php:148
 msgid "%d change has been made"
@@ -564,31 +564,31 @@ msgstr "%d 件の変更がおこなわれました。"
 
 #: oc-admin/items.php:135
 msgid "%d listing has been marked as spam"
-msgstr "%d 件の広告がスパムに指定されました。"
+msgstr "%d 件の案件がスパムに指定されました。"
 
 #: oc-admin/items.php:166
 msgid "%d listing has been deleted"
-msgstr "%d 件の広告が削除されました。"
+msgstr "%d 件の案件が削除されました。"
 
 #: oc-admin/items.php:183
 msgid "%d listing has been unmarked as spam"
-msgstr "%d 件の広告がスパムから除外されました。"
+msgstr "%d 件の案件がスパムから除外されました。"
 
 #: oc-admin/items.php:200
 msgid "%d listing has been unmarked as missclassified"
-msgstr "%d 件の広告が誤分類という指定から除外されました。"
+msgstr "%d 件の案件が誤分類という指定から除外されました。"
 
 #: oc-admin/items.php:217
 msgid "%d listing has been unmarked as duplicated"
-msgstr "%d 件の広告が多重登録という指定から除外されました。"
+msgstr "%d 件の案件が多重登録という指定から除外されました。"
 
 #: oc-admin/items.php:234
 msgid "%d listing has been unmarked as expired"
-msgstr "%d 件の広告が期限切れという指定から除外されました。"
+msgstr "%d 件の案件が期限切れという指定から除外されました。"
 
 #: oc-admin/items.php:251
 msgid "%d listing has been unmarked as offensive"
-msgstr "%d 件の広告が攻撃的内容という指定から除外されました。"
+msgstr "%d 件の案件が攻撃的内容という指定から除外されました。"
 
 #: oc-admin/items.php:326 oc-admin/items.php:338 oc-admin/items.php:348
 #: oc-admin/items.php:358 oc-admin/items.php:387 oc-admin/items.php:413
@@ -598,27 +598,27 @@ msgstr "エラーが発生しました"
 
 #: oc-admin/items.php:293
 msgid "The listing has been deleted"
-msgstr "広告は削除されました。"
+msgstr "案件は削除されました。"
 
 #: oc-admin/items.php:295
 msgid "The listing couldn't be deleted"
-msgstr "広告は削除されませんでした。"
+msgstr "案件は削除されませんでした。"
 
 #: oc-admin/items.php:324
 msgid "The listing has been activated"
-msgstr "広告は有効にされました。"
+msgstr "案件は有効にされました。"
 
 #: oc-admin/items.php:336
 msgid "The listing has been deactivated"
-msgstr "広告は無効にされました。"
+msgstr "案件は無効にされました。"
 
 #: oc-admin/items.php:346
 msgid "The listing has been enabled"
-msgstr "広告は有効にされました。"
+msgstr "案件は有効にされました。"
 
 #: oc-admin/items.php:356
 msgid "The listing has been disabled"
-msgstr "広告は無効にされました。"
+msgstr "案件は無効にされました。"
 
 #: oc-admin/items.php:385 oc-admin/items.php:411
 msgid "Changes have been applied"
@@ -626,11 +626,11 @@ msgstr "変更が適用されました。"
 
 #: oc-admin/items.php:437
 msgid "The listing has been unmarked as"
-msgstr "広告は次の指定から除外されました："
+msgstr "案件は次の指定から除外されました："
 
 #: oc-admin/items.php:439
 msgid "The listing hasn't been unmarked as"
-msgstr "広告は次の指定から除外されていません："
+msgstr "案件は次の指定から除外されていません："
 
 #: oc-admin/items.php:526
 msgid "Changes saved correctly"
@@ -642,11 +642,11 @@ msgstr "リソースが削除されました。"
 
 #: oc-admin/items.php:608
 msgid "A new listing has been added"
-msgstr "新しい広告が追加されました。"
+msgstr "新しい案件が追加されました。"
 
 #: oc-admin/items.php:703
 msgid "Listings' settings have been updated"
-msgstr "広告の設定が更新されました"
+msgstr "案件の設定が更新されました"
 
 #: oc-admin/languages.php:60
 msgid "The translation folder is not writable"
@@ -1234,7 +1234,7 @@ msgstr "アップロードしようとしたファイルの一つが上限サイ
 
 #: oc-includes/osclass/controller/item.php:164
 msgid "Check your inbox to validate your listing"
-msgstr "広告を認証するには、受信箱を確認してください。"
+msgstr "案件を認証するには、受信箱を確認してください。"
 
 #: oc-admin/comments.php:92
 msgid "The comments have been unblocked"
@@ -1246,7 +1246,7 @@ msgstr "コメントはブロックされました。"
 
 #: oc-admin/items.php:268
 msgid "%d listing has been unmarked"
-msgstr "%d 件の広告がマークを外されました。"
+msgstr "%d 件の案件がマークを外されました。"
 
 #: oc-admin/controller/settings/main.php:33
 msgid "Last check"
@@ -1290,7 +1290,7 @@ msgstr "申し訳ありませんがコメントは利用できません。"
 
 #: oc-includes/osclass/controller/item.php:585
 msgid "The listing hasn't been enabled. Please enable it in order to make it public"
-msgstr "広告はまだ有効になっていません。公開するには有効にしてください。"
+msgstr "案件はまだ有効になっていません。公開するには有効にしてください。"
 
 #: oc-admin/users.php:88 oc-admin/users.php:150
 #: oc-includes/osclass/controller/register.php:103
@@ -1335,7 +1335,7 @@ msgstr "そのIDを持つ管理者はいません。"
 
 #: oc-admin/items.php:328
 msgid "The listing can't be activated because it's blocked"
-msgstr "ブロックされているため、その広告を有効にすることはできません。"
+msgstr "ブロックされているため、その案件を有効にすることはできません。"
 
 #: oc-admin/items.php:657
 msgid "Wait time must only contain numeric characters"
@@ -1343,11 +1343,11 @@ msgstr "待ち時間は数字のみ入力可能です。"
 
 #: oc-admin/items.php:660
 msgid "Number of moderated listings must only contain numeric characters"
-msgstr "モデレートされた広告数は、数字のみ入力可能です。"
+msgstr "モデレートされた案件数は、数字のみ入力可能です。"
 
 #: oc-admin/items.php:663
 msgid "Images per listing must only contain numeric characters"
-msgstr "広告あたりの画像数は、数字のみ入力可能です。"
+msgstr "案件あたりの画像数は、数字のみ入力可能です。"
 
 #: oc-admin/languages.php:157
 msgid "Number of decimals must only contain numeric characters"
@@ -1432,7 +1432,7 @@ msgstr "以下が<b>.htaccess</b>ファイルに追記するべきものです�
 
 #: oc-admin/controller/settings/currencies.php:148
 msgid "%s couldn't be deleted because it has listings associated to it"
-msgstr "%s は関連する広告が存在するため削除できません。"
+msgstr "%s は関連する案件が存在するため削除できません。"
 
 #: oc-admin/controller/settings/currencies.php:150
 msgid "%s couldn't be deleted because it's the default currency"
@@ -1440,23 +1440,23 @@ msgstr "%s はデフォルトの通貨のため削除できません。"
 
 #: oc-admin/controller/settings/main.php:83
 msgid "Number of listings in the RSS has to be a numeric value"
-msgstr "RSSに含む広告数は、数字のみ入力可能です。"
+msgstr "RSSに含む案件数は、数字のみ入力可能です。"
 
 #: oc-admin/controller/settings/main.php:86
 msgid "Max latest listings has to be a numeric value"
-msgstr "最新の広告の最大表示件数は、数字のみ入力可能です。"
+msgstr "最新の案件の最大表示件数は、数字のみ入力可能です。"
 
 #: oc-admin/controller/settings/main.php:89
 msgid "Number of listings on search has to be a numeric value"
-msgstr "検索の際の広告の件数は、数字のみ入力可能です。"
+msgstr "検索する案件件数は、数字のみ入力可能です。"
 
 #: oc-admin/controller/settings/main.php:114
 msgid "Number of listings in the RSS must be an integer"
-msgstr "最新の広告の最大表示件数は、整数のみ入力可能です。"
+msgstr "最新の案件の最大表示件数は、整数のみ入力可能です。"
 
 #: oc-admin/controller/settings/main.php:121
 msgid "Number of recent listings displayed at home must be an integer"
-msgstr "ホーム画面における最新の広告の最大表示件数は、整数のみ入力可能です。"
+msgstr "ホーム画面における最新の案件の最大表示件数は、整数のみ入力可能です。"
 
 #: oc-admin/themes/modern/market/header.php:5
 msgid "<code>downloads</code> folder has to be writable, i.e.: <code>chmod a+w %soc-content/downloads/</code>"
@@ -1616,11 +1616,11 @@ msgstr "お使いのIPアドレスは許可されていません。"
 
 #: oc-includes/osclass/controller/item.php:195
 msgid "Sorry, we don't have any listings with that ID"
-msgstr "申し訳ありません。そのIDを持つ広告はみつかりませんでした。"
+msgstr "申し訳ありません。そのIDを持つ案件はみつかりませんでした。"
 
 #: oc-includes/osclass/controller/item.php:578
 msgid "The listing hasn't been validated. Please validate it in order to make it public"
-msgstr "広告はまだ認証されていません。公開するには、まず認証を行ってください。"
+msgstr "案件はまだ認証されていません。公開するには、まず認証を行ってください。"
 
 #: oc-includes/osclass/controller/login.php:132
 msgid "This should never happen"
