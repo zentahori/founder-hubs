@@ -7,7 +7,7 @@ define('MULTISITE', 0);
 
 $production_hosts = array(
     "https" => array("ciao-spider-net.ssl-lolipop.jp"),
-    "http"  => array("spider-net.ciao.jp", "founderhubs.com")
+    "http"  => array("spider-net.ciao.jp", "founderhubs.com", "www.founderhubs.com")
 );
 
 if ($_SERVER['SERVER_ADDR'] == '127.0.0.1'
